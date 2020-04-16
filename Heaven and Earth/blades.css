@@ -2235,7 +2235,7 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-chosen-type[value="horned_one"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/horned_one.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/horned_one1.png");
 }
 
 .sheet-chosen-type[value="horned_one"] ~ .sheet-favor > .sheet-text-button:not(.sheet-horned_one):not(.sheet-all),

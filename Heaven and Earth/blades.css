@@ -164,23 +164,23 @@
 }
 
 .sheet-size[value="4"] ~ .sheet-clock-container .sheet-input-progress[value="0"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-4 .sheet-input-progress[value="0"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/0.png");
 }
 
 .sheet-size[value="4"] ~ .sheet-clock-container .sheet-input-progress[value="1"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-4 .sheet-input-progress[value="1"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/1.png");
 }
 
 .sheet-size[value="4"] ~ .sheet-clock-container .sheet-input-progress[value="2"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-4 .sheet-input-progress[value="2"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/2.png");
 }
 
 .sheet-size[value="4"] ~ .sheet-clock-container .sheet-input-progress[value="3"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-4 .sheet-input-progress[value="3"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/3.png");
 }
 
 .sheet-size[value="4"] ~ .sheet-clock-container .sheet-input-progress[value="4"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-4 .sheet-input-progress[value="4"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/4.png");
 }
 
 .sheet-size[value="4"] ~ .sheet-clock-container input:not(.sheet-zero), .sheet-clock-container.sheet-size-4 input:not(.sheet-zero) {
@@ -225,31 +225,31 @@
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="0"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="0"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/0.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="1"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="1"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/1.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="2"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="2"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/2.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="3"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="3"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/3.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="4"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="4"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/4.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="5"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="5"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/5.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container .sheet-input-progress[value="6"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-6 .sheet-input-progress[value="6"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/6.png");
 }
 
 .sheet-size[value="6"] ~ .sheet-clock-container input:not(.sheet-zero), .sheet-clock-container.sheet-size-6 input:not(.sheet-zero) {
@@ -314,39 +314,39 @@
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="0"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="0"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/0.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="1"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="1"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/1.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="2"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="2"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/2.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="3"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="3"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/3.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="4"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="4"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/4.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="5"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="5"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/5.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="6"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="6"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/6.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="7"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="7"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/7.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/7.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container .sheet-input-progress[value="8"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-8 .sheet-input-progress[value="8"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/8.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/8.png");
 }
 
 .sheet-size[value="8"] ~ .sheet-clock-container input:not(.sheet-zero), .sheet-clock-container.sheet-size-8 input:not(.sheet-zero) {
@@ -427,47 +427,47 @@
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="0"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="0"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/0.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="1"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="1"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/1.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="2"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="2"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/2.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="3"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="3"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/3.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="4"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="4"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/4.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="5"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="5"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/5.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="6"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="6"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/6.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="7"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="7"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/7.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/7.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="8"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="8"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/8.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/8.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="9"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="9"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/9.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/9.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container .sheet-input-progress[value="10"]:checked ~ .sheet-clock, .sheet-clock-container.sheet-size-10 .sheet-input-progress[value="10"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/10.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/10.png");
 }
 
 .sheet-size[value="10"] ~ .sheet-clock-container input:not(.sheet-zero), .sheet-clock-container.sheet-size-10 input:not(.sheet-zero) {
@@ -1321,39 +1321,39 @@
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="0"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/0.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="1"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/1.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="2"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/2.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="3"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/3.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="4"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/4.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="5"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/5.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="6"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/6.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="7"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/7.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/7.png");
 }
 
 .sheet-flag-8clock .sheet-input-progress[value="8"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/xp/8.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/xp/8.png");
 }
 
 .sheet-flag-8clock .sheet-clock {
@@ -1607,7 +1607,7 @@ input[type="text"].sheet-inherit {
 }
 
 .sheet-logo {
-  background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/logo_flat.png");
+  background: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/logo_flat.png");
   background-size: 100% 100%;
   height: 35px;
   margin-bottom: 5px;
@@ -2224,7 +2224,7 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-chosen-type[value="shreya"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/divine/shreya.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/shreya.png");
 }
 
 .sheet-chosen-type[value="shreya"] ~ .sheet-favor > .sheet-text-button:not(.sheet-shreya):not(.sheet-all),
@@ -2235,7 +2235,7 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-chosen-type[value="horned_one"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/divine/horned_one.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/horned_one.png");
 }
 
 .sheet-chosen-type[value="horned_one"] ~ .sheet-favor > .sheet-text-button:not(.sheet-horned_one):not(.sheet-all),
@@ -2246,7 +2246,7 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-chosen-type[value="zora"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/divine/zora.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/zora.png");
 }
 
 .sheet-chosen-type[value="zora"] ~ .sheet-favor > .sheet-text-button:not(.sheet-zora):not(.sheet-all),
@@ -2257,15 +2257,15 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-broken-type[value="blighter"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/divine/blighter.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/blighter.png");
 }
 
 .sheet-broken-type[value="breaker"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/divine/breaker.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/breaker.png");
 }
 
 .sheet-broken-type[value="render"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/divine/render.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/render.png");
 }
 
 .sheet-divine-pic {
@@ -2311,23 +2311,23 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-flag-4clock .sheet-input-progress[value="0"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/favor/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/favor/0.png");
 }
 
 .sheet-flag-4clock .sheet-input-progress[value="1"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/favor/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/favor/1.png");
 }
 
 .sheet-flag-4clock .sheet-input-progress[value="2"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/favor/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/favor/2.png");
 }
 
 .sheet-flag-4clock .sheet-input-progress[value="3"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/favor/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/favor/3.png");
 }
 
 .sheet-flag-4clock .sheet-input-progress[value="4"]:checked ~ .sheet-clock {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/favor/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/favor/4.png");
 }
 
 .sheet-flag-4clock input:not(.sheet-zero) {
@@ -3019,27 +3019,27 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-spies .sheet-spy-pic-antoinette {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/spies/antoinette.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/spies/antoinette.png");
 }
 
 .sheet-spies .sheet-spy-pic-bortis {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/spies/bortis.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/spies/bortis.png");
 }
 
 .sheet-spies .sheet-spy-pic-crimson_vexing_gale {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/spies/crimson_vexing_gale.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/spies/crimson_vexing_gale.png");
 }
 
 .sheet-spies .sheet-spy-pic-igrid {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/spies/igrid.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/spies/igrid.png");
 }
 
 .sheet-spies .sheet-spy-pic-liya {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/spies/liya.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/spies/liya.png");
 }
 
 .sheet-spies .sheet-spy-pic-onyetin {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/spies/onyetin.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/spies/onyetin.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content {
@@ -3119,31 +3119,31 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-d {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/d.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/d.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-d_long {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/d_long.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/d_long.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-dr {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/dr.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/dr.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-r {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/r.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/r.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-u {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/u.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/u.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-ur {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/ur.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/ur.png");
 }
 
 .sheet-type-spymaster .sheet-network .sheet-content .sheet-arrow.sheet-ur_curved {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/arrows/ur_curved.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/arrows/ur_curved.png");
 }
 
 .sheet-show-menu:not([value="1"]) ~ .sheet-container .sheet-menu {
@@ -3339,18 +3339,18 @@ button.sheet-generatebutton .sheet-optional {
   height: 100%;
   background-repeat: no-repeat;
   background-size: 299px auto;
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/action.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/action.gif");
   background-color: black;
 }
 
 .sheet-rolltemplate-blades .sheet-holder.sheet-action .fullcrit ~ .fullcrit ~ .sheet-background {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/action_critical.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/action_critical.gif");
 }
 
 .sheet-rolltemplate-blades .sheet-holder.sheet-fortune {
   grid: "title image" 43px "subtitle subtitle" 35px "dice dice" 43px "n n" 15px "notes notes" auto/auto 91px;
   min-height: 200px;
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/fortune.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/fortune.gif");
   background-color: #080808;
   padding: 25px 0 15px 30px;
   color: white;
@@ -3361,7 +3361,7 @@ button.sheet-generatebutton .sheet-optional {
   grid: "top top" 31px "title image" 45px "dice dice" 67px "n n" 45px "notes notes" auto/auto 91px;
   min-height: 220px;
   padding: 10px 0 15px 35px;
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/resist.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/resist.gif");
   color: white;
 }
 
@@ -3376,7 +3376,7 @@ button.sheet-generatebutton .sheet-optional {
   align-items: start;
   text-align: center;
   padding: 30px 30px 15px;
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/engagement.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/engagement.gif");
   background-color: white;
   color: white;
 }
@@ -3473,7 +3473,7 @@ button.sheet-generatebutton .sheet-optional {
 }
 
 .sheet-rolltemplate-blades .sheet-action .sheet-char-image .sheet-border {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/image_border_black.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/image_border_black.png");
 }
 
 .sheet-rolltemplate-blades .sheet-fortune .sheet-title {
@@ -3489,7 +3489,7 @@ button.sheet-generatebutton .sheet-optional {
 }
 
 .sheet-rolltemplate-blades .sheet-fortune .sheet-char-image .sheet-border {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/image_border_white.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/image_border_white.png");
 }
 
 .sheet-rolltemplate-blades .sheet-resist .sheet-title {
@@ -3511,11 +3511,11 @@ button.sheet-generatebutton .sheet-optional {
 }
 
 .sheet-rolltemplate-blades .sheet-resist .sheet-label-dice {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/dice_white.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/dice_white.png");
 }
 
 .sheet-rolltemplate-blades .sheet-resist .sheet-char-image .sheet-border {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/image_border_white.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/image_border_white.png");
 }
 
 .sheet-rolltemplate-blades .sheet-engagement .sheet-results {
@@ -3524,7 +3524,7 @@ button.sheet-generatebutton .sheet-optional {
 }
 
 .sheet-rolltemplate-blades .sheet-engagement .sheet-label-dice {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/dice_white.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/dice_white.png");
 }
 
 .sheet-rolltemplate-blades .sheet-engagement .sheet-dice .sheet-label {
@@ -3575,23 +3575,23 @@ button.sheet-generatebutton .sheet-optional {
 }
 
 .sheet-rolltemplate-blades .sheet-label-dice {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/dice.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/dice.png");
 }
 
 .sheet-rolltemplate-blades .sheet-label-position {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/position.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/position.png");
 }
 
 .sheet-rolltemplate-blades .sheet-label-effect {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/effect.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/effect.png");
 }
 
 .sheet-rolltemplate-blades .sheet-label-primary_mission {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/primary_mission.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/primary_mission.png");
 }
 
 .sheet-rolltemplate-blades .sheet-label-secondary_mission {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/rolltemplate/secondary_mission.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/secondary_mission.png");
 }
 
 .sheet-rolltemplate-blades .sheet-mission-type {
@@ -3817,131 +3817,131 @@ button.sheet-generatebutton .sheet-optional {
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-4.sheet-progress-0 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/0.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-4.sheet-progress-1 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/1.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-4.sheet-progress-2 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/2.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-4.sheet-progress-3 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/3.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-4.sheet-progress-4 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/4/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/4/4.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-0 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/0.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-1 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/1.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-2 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/2.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-3 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/3.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-4 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/4.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-5 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/5.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-6.sheet-progress-6 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/6/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/6/6.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-0 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/0.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-1 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/1.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-2 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/2.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-3 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/3.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-4 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/4.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-5 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/5.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-6 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/6.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-7 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/7.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/7.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-8.sheet-progress-8 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/8/8.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/8/8.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-0 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/0.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/0.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-1 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/1.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/1.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-2 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/2.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/2.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-3 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/3.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/3.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-4 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/4.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/4.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-5 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/5.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/5.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-6 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/6.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/6.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-7 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/7.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/7.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-8 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/8.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/8.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-9 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/9.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/9.png");
 }
 
 .sheet-rolltemplate-blades-broadcast .sheet-size-10.sheet-progress-10 {
-  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Band%20of%20Blades%20Official/Assets/clocks/10/10.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/clocks/10/10.png");
 }
 
 /* Version text */

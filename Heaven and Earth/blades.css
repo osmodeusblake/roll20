@@ -2257,15 +2257,15 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-broken-type[value="blighter"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/blighter.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/saros.png");
 }
 
 .sheet-broken-type[value="breaker"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/breaker.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/mithra.png");
 }
 
 .sheet-broken-type[value="render"] ~ .sheet-divine-pic {
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/render.png");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/divine/rasmus.png");
 }
 
 .sheet-divine-pic {

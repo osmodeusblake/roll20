@@ -223,9 +223,9 @@
         <button class="generatebutton" type="action" name="act_generate_horned_one" data-i18n="chosen_horned_one"></button>
         <button class="generatebutton" type="action" name="act_generate_zora" data-i18n="chosen_zora"></button>
         <div class="label" data-i18n="broken"></div>
-		<button class="generatebutton" type="action" name="act_generate_breaker" data-i18n="broken_breaker"></button>
-		<button class="generatebutton" type="action" name="act_generate_render" data-i18n="broken_render"></button>
-	    <button class="generatebutton" type="action" name="act_generate_blighter" data-i18n="broken_blighter"></button>
+		<!--<button class="generatebutton" type="action" name="act_generate_breaker" data-i18n="broken_breaker"></button>-->
+      <button class="generatebutton" type="action" name="act_generate_blighter" data-i18n="broken_blighter"></button>
+      <button class="generatebutton" type="action" name="act_generate_render" data-i18n="broken_render"></button>
       </div>
       <div class="footer" data-i18n="choose_sheet_type"></div>
       <button class="cancelbutton" type="action" name="act_menu_cancel" data-i18n="cancel"></button>
@@ -590,6 +590,30 @@
               </li>
             </ul>
           </div>
+		  
+          <input class="hider" type="hidden" name="attr_show_heritage_zemyati" value="1"/>
+
+          <div class="heritage">
+            <div class="label" data-i18n="zemyati_traits"></div>
+            <ul class="traits">
+              <input class="trait-hider" type="hidden" name="attr_trait_artisan" value="0"/>
+              <li>
+                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_artisan" value="1"/><span></span><span class="smallcaps" data-i18n="trait_artisan"></span>: <span data-i18n="trait_artisan_desc"></span>
+              </li>
+              <input class="trait-hider" type="hidden" name="attr_trait_educated" value="0"/>
+              <li>
+                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_educated" value="1"/><span></span><span class="smallcaps" data-i18n="trait_educated"></span>: <span data-i18n="trait_educated_desc"></span>
+              </li>
+              <input class="trait-hider" type="hidden" name="attr_trait_marked" value="0"/>
+              <li>
+                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_marked" value="1"/><span></span><span class="smallcaps" data-i18n="trait_marked"></span>: <span data-i18n="trait_marked_desc"></span>
+              </li>
+              <input class="trait-hider" type="hidden" name="attr_trait_shrewd" value="0"/>
+              <li>
+                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_shrewd" value="1"/><span></span><span class="smallcaps" data-i18n="trait_shrewd"></span>: <span data-i18n="trait_shrewd_desc"></span>
+              </li>
+            </ul>
+          </div>
 
           <input class="hider" type="hidden" name="attr_show_heritage_panyar" value="1"/>
 
@@ -638,30 +662,6 @@
                 <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_vengeful" value="1"/><span></span><span class="smallcaps" data-i18n="trait_vengeful"></span>: <span data-i18n="trait_vengeful_desc"></span>
               </li>
 
-            </ul>
-          </div>
-
-          <input class="hider" type="hidden" name="attr_show_heritage_zemyati" value="1"/>
-
-          <div class="heritage">
-            <div class="label" data-i18n="zemyati_traits"></div>
-            <ul class="traits">
-              <input class="trait-hider" type="hidden" name="attr_trait_artisan" value="0"/>
-              <li>
-                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_artisan" value="1"/><span></span><span class="smallcaps" data-i18n="trait_artisan"></span>: <span data-i18n="trait_artisan_desc"></span>
-              </li>
-              <input class="trait-hider" type="hidden" name="attr_trait_educated" value="0"/>
-              <li>
-                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_educated" value="1"/><span></span><span class="smallcaps" data-i18n="trait_educated"></span>: <span data-i18n="trait_educated_desc"></span>
-              </li>
-              <input class="trait-hider" type="hidden" name="attr_trait_marked" value="0"/>
-              <li>
-                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_marked" value="1"/><span></span><span class="smallcaps" data-i18n="trait_marked"></span>: <span data-i18n="trait_marked_desc"></span>
-              </li>
-              <input class="trait-hider" type="hidden" name="attr_trait_shrewd" value="0"/>
-              <li>
-                <input class="checkbox diamondbox small" type="checkbox" name="attr_trait_shrewd" value="1"/><span></span><span class="smallcaps" data-i18n="trait_shrewd"></span>: <span data-i18n="trait_shrewd_desc"></span>
-              </li>
             </ul>
           </div>
 
@@ -2332,7 +2332,68 @@
         </fieldset>
       </div>
       <div class="specialists standard-margin">
-            <div class="blackheader"><span class="label" data-i18n="playbook_heavy"></span><span>—</span><span data-i18n="heavy_missions"></span>
+
+        <div class="blackheader"><span class="label" data-i18n="playbook_officer"></span><span>—</span><span data-i18n="officer_missions"></span>
+        </div>
+        <div class="content standard-margin">
+          <div class="specialist-row label">
+            <div class="header name" data-i18n="name"></div>
+            <div class="header stress" data-i18n="stress"></div>
+            <div class="header wounds" data-i18n="wounds"></div>
+            <div class="header abilities" data-i18n="abilities"></div>
+            <div class="header actions" data-i18n="actions"></div>
+          </div>
+          <fieldset class="repeating_specialist-officer">
+            <div class="specialist-row">
+              <input class="name" type="text" spellcheck="false" name="attr_specialist_name"/>
+              <input class="stress" type="number" name="attr_specialist_stress" value="0" min="0"/>
+              <div class="wounds flex-center">
+                <input class="hidden fakeradio" type="checkbox" name="attr_specialist_wounds" value="0" checked="checked"/>
+                <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="1"/><span></span>
+                <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="2"/><span></span>
+                <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="3"/><span></span>
+              </div>
+              <div class="auto-expand abilities"><span name="attr_specialist_abilities"></span>
+                <textarea spellcheck="false" name="attr_specialist_abilities"></textarea>
+              </div>
+              <div class="auto-expand actions"><span name="attr_specialist_actions"></span>
+                <textarea spellcheck="false" name="attr_specialist_actions"></textarea>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="blackheader"><span class="label" data-i18n="playbook_medic"></span><span>—</span><span data-i18n="medic_missions"></span>
+        </div>
+        <div class="content standard-margin">
+          <div class="specialist-row label">
+            <div class="header name" data-i18n="name"></div>
+            <div class="header stress" data-i18n="stress"></div>
+            <div class="header wounds" data-i18n="wounds"></div>
+            <div class="header abilities" data-i18n="abilities"></div>
+            <div class="header actions" data-i18n="actions"></div>
+          </div>
+          <fieldset class="repeating_specialist-medic">
+            <div class="specialist-row">
+              <input class="name" type="text" spellcheck="false" name="attr_specialist_name"/>
+              <input class="stress" type="number" name="attr_specialist_stress" value="0" min="0"/>
+              <div class="wounds flex-center">
+                <input class="hidden fakeradio" type="checkbox" name="attr_specialist_wounds" value="0" checked="checked"/>
+                <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="1"/><span></span>
+                <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="2"/><span></span>
+                <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="3"/><span></span>
+              </div>
+              <div class="auto-expand abilities"><span name="attr_specialist_abilities"></span>
+                <textarea spellcheck="false" name="attr_specialist_abilities"></textarea>
+              </div>
+              <div class="auto-expand actions"><span name="attr_specialist_actions"></span>
+                <textarea spellcheck="false" name="attr_specialist_actions"></textarea>
+              </div>
+            </div>
+          </fieldset>
+        </div>    
+        
+        <div class="blackheader"><span class="label" data-i18n="playbook_heavy"></span><span>—</span><span data-i18n="heavy_missions"></span>
             </div>
             <div class="content standard-margin">
               <div class="specialist-row label">
@@ -2361,93 +2422,7 @@
                 </div>
               </fieldset>
             </div>
-            <div class="blackheader"><span class="label" data-i18n="playbook_medic"></span><span>—</span><span data-i18n="medic_missions"></span>
-            </div>
-            <div class="content standard-margin">
-              <div class="specialist-row label">
-                <div class="header name" data-i18n="name"></div>
-                <div class="header stress" data-i18n="stress"></div>
-                <div class="header wounds" data-i18n="wounds"></div>
-                <div class="header abilities" data-i18n="abilities"></div>
-                <div class="header actions" data-i18n="actions"></div>
-              </div>
-              <fieldset class="repeating_specialist-medic">
-                <div class="specialist-row">
-                  <input class="name" type="text" spellcheck="false" name="attr_specialist_name"/>
-                  <input class="stress" type="number" name="attr_specialist_stress" value="0" min="0"/>
-                  <div class="wounds flex-center">
-                    <input class="hidden fakeradio" type="checkbox" name="attr_specialist_wounds" value="0" checked="checked"/>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="1"/><span></span>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="2"/><span></span>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="3"/><span></span>
-                  </div>
-                  <div class="auto-expand abilities"><span name="attr_specialist_abilities"></span>
-                    <textarea spellcheck="false" name="attr_specialist_abilities"></textarea>
-                  </div>
-                  <div class="auto-expand actions"><span name="attr_specialist_actions"></span>
-                    <textarea spellcheck="false" name="attr_specialist_actions"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <div class="blackheader"><span class="label" data-i18n="playbook_officer"></span><span>—</span><span data-i18n="officer_missions"></span>
-            </div>
-            <div class="content standard-margin">
-              <div class="specialist-row label">
-                <div class="header name" data-i18n="name"></div>
-                <div class="header stress" data-i18n="stress"></div>
-                <div class="header wounds" data-i18n="wounds"></div>
-                <div class="header abilities" data-i18n="abilities"></div>
-                <div class="header actions" data-i18n="actions"></div>
-              </div>
-              <fieldset class="repeating_specialist-officer">
-                <div class="specialist-row">
-                  <input class="name" type="text" spellcheck="false" name="attr_specialist_name"/>
-                  <input class="stress" type="number" name="attr_specialist_stress" value="0" min="0"/>
-                  <div class="wounds flex-center">
-                    <input class="hidden fakeradio" type="checkbox" name="attr_specialist_wounds" value="0" checked="checked"/>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="1"/><span></span>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="2"/><span></span>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="3"/><span></span>
-                  </div>
-                  <div class="auto-expand abilities"><span name="attr_specialist_abilities"></span>
-                    <textarea spellcheck="false" name="attr_specialist_abilities"></textarea>
-                  </div>
-                  <div class="auto-expand actions"><span name="attr_specialist_actions"></span>
-                    <textarea spellcheck="false" name="attr_specialist_actions"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <div class="blackheader"><span class="label" data-i18n="playbook_scout"></span><span>—</span><span data-i18n="scout_missions"></span>
-            </div>
-            <div class="content standard-margin">
-              <div class="specialist-row label">
-                <div class="header name" data-i18n="name"></div>
-                <div class="header stress" data-i18n="stress"></div>
-                <div class="header wounds" data-i18n="wounds"></div>
-                <div class="header abilities" data-i18n="abilities"></div>
-                <div class="header actions" data-i18n="actions"></div>
-              </div>
-              <fieldset class="repeating_specialist-scout">
-                <div class="specialist-row">
-                  <input class="name" type="text" spellcheck="false" name="attr_specialist_name"/>
-                  <input class="stress" type="number" name="attr_specialist_stress" value="0" min="0"/>
-                  <div class="wounds flex-center">
-                    <input class="hidden fakeradio" type="checkbox" name="attr_specialist_wounds" value="0" checked="checked"/>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="1"/><span></span>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="2"/><span></span>
-                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="3"/><span></span>
-                  </div>
-                  <div class="auto-expand abilities"><span name="attr_specialist_abilities"></span>
-                    <textarea spellcheck="false" name="attr_specialist_abilities"></textarea>
-                  </div>
-                  <div class="auto-expand actions"><span name="attr_specialist_actions"></span>
-                    <textarea spellcheck="false" name="attr_specialist_actions"></textarea>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
+            
             <div class="blackheader"><span class="label" data-i18n="playbook_sniper"></span><span>—</span><span data-i18n="sniper_missions"></span>
             </div>
             <div class="content standard-margin">
@@ -2477,6 +2452,37 @@
                 </div>
               </fieldset>
             </div>
+
+            <div class="blackheader"><span class="label" data-i18n="playbook_scout"></span><span>—</span><span data-i18n="scout_missions"></span>
+            </div>
+            <div class="content standard-margin">
+              <div class="specialist-row label">
+                <div class="header name" data-i18n="name"></div>
+                <div class="header stress" data-i18n="stress"></div>
+                <div class="header wounds" data-i18n="wounds"></div>
+                <div class="header abilities" data-i18n="abilities"></div>
+                <div class="header actions" data-i18n="actions"></div>
+              </div>
+              <fieldset class="repeating_specialist-scout">
+                <div class="specialist-row">
+                  <input class="name" type="text" spellcheck="false" name="attr_specialist_name"/>
+                  <input class="stress" type="number" name="attr_specialist_stress" value="0" min="0"/>
+                  <div class="wounds flex-center">
+                    <input class="hidden fakeradio" type="checkbox" name="attr_specialist_wounds" value="0" checked="checked"/>
+                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="1"/><span></span>
+                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="2"/><span></span>
+                    <input class="checkbox fakeradio" type="checkbox" name="attr_specialist_wounds" value="3"/><span></span>
+                  </div>
+                  <div class="auto-expand abilities"><span name="attr_specialist_abilities"></span>
+                    <textarea spellcheck="false" name="attr_specialist_abilities"></textarea>
+                  </div>
+                  <div class="auto-expand actions"><span name="attr_specialist_actions"></span>
+                    <textarea spellcheck="false" name="attr_specialist_actions"></textarea>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
             <div class="blackheader"><span class="label" data-i18n="playbook_other"></span>
             </div>
             <div class="content standard-margin">
@@ -2696,22 +2702,11 @@
           <div data-i18n="supply_desc"></div>
         </div>
       </div>
-      <div class="mercies">
-        <div class="blackheader label standard-margin" data-i18n="mercies"></div>
-        <fieldset class="repeating_mercy">
-          <div class="mercy flex-center">
-            <input class="name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="mercy"/>
-            <label class="flex-center"><span class="smallcaps" data-i18n="wounded"></span>
-              <input class="checkbox small" type="checkbox" name="attr_mercy_wounded" value="1"/><span></span>
-            </label>
-          </div>
-        </fieldset>
-      </div>
       <div class="alchemists">
         <div class="blackheader label standard-margin" data-i18n="alchemists"></div>
         <fieldset class="repeating_alchemist">
           <div class="alchemist flex-center">
-            <input class="name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="alchemist"/><span class="smallcaps" data-i18n="corruption"></span>
+            <input class="name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="alchemist"/><span class="smallcaps" data-i18n-placeholder="oath"></span>
             <div class="clock-container size-8">
               <input class="zero input-progress" type="radio" name="attr_alchemist_corruption" value="0" checked="checked"/><span></span>
               <input class="input-progress" type="radio" name="attr_alchemist_corruption" value="1"/>
@@ -2724,6 +2719,17 @@
               <input class="input-progress" type="radio" name="attr_alchemist_corruption" value="8"/>
               <div class="clock"></div>
             </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="mercies">
+        <div class="blackheader label standard-margin" data-i18n="mercies"></div>
+        <fieldset class="repeating_mercy">
+          <div class="mercy flex-center">
+            <input class="name" type="text" spellcheck="false" name="attr_name" data-i18n-placeholder="mercy"/>
+            <label class="flex-center"><span class="smallcaps" data-i18n="wounded"></span>
+              <input class="checkbox small" type="checkbox" name="attr_mercy_wounded" value="1"/><span></span>
+            </label>
           </div>
         </fieldset>
       </div>
@@ -3316,22 +3322,28 @@
       <div class="favor greyholder">
         <div class="colon-after label" data-i18n="favor"></div>
         <label class="text-button all">
-          <input type="checkbox" name="attr_chosen_favor_holy" value="1"/><span data-i18n="favor_holy"></span>
-        </label><span class="all">—</span>
-        <label class="text-button all">
-          <input type="checkbox" name="attr_chosen_favor_mystic" value="1"/><span data-i18n="favor_mystic"></span>
-        </label><span class="shreya">—</span>
-        <label class="text-button shreya">
-          <input type="checkbox" name="attr_chosen_favor_mercy" value="1"/><span data-i18n="favor_mercy"></span>
-        </label><span class="zora">—</span>
-        <label class="text-button zora">
           <input type="checkbox" name="attr_chosen_favor_glory" value="1"/><span data-i18n="favor_glory"></span>
-        </label><span class="horned_one">—</span>
-        <label class="text-button horned_one">
+        </label><span class="all">–</span>
+        <!--<label class="text-button all">
+          <input type="checkbox" name="attr_chosen_favor_holy" value="1"/><span data-i18n="favor_holy"></span>
+        </label><span class="all">–</span>-->
+        <label class="text-button all">
+          <input type="checkbox" name="attr_chosen_favor_knowledge" value="1"/><span data-i18n="favor_knowledge"></span>
+        </label><span class="all">–</span>
+       <!--<label class="text-button all">
+          <input type="checkbox" name="attr_chosen_favor_mystic" value="1"/><span data-i18n="favor_mystic"></span>
+        </label><span class="all">–</span>-->
+        <label class="text-button all">
+          <input type="checkbox" name="attr_chosen_favor_mercy" value="1"/><span data-i18n="favor_mercy"></span>
+        </label><!--<span class="all">–</span>
+        <label class="text-button all">
           <input type="checkbox" name="attr_chosen_favor_wild" value="1"/><span data-i18n="favor_wild"></span>
-        </label>
+        </label>-->
       </div>
-      <div class="features greyholder">
+      <!--<div class="favor greyholder">
+		    <span class="all">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </div>-->
+      <!--<div class="features greyholder">
         <div class="colon-after label" data-i18n="features"></div>
         <label class="text-button all">
           <input type="checkbox" name="attr_chosen_feature_alluring" value="1"/><span data-i18n="feature_alluring"></span>
@@ -3372,7 +3384,7 @@
         <label class="text-button all">
           <input type="checkbox" name="attr_chosen_feature_transcendent" value="1"/><span data-i18n="feature_transcendent"></span>
         </label>
-      </div>
+      </div>-->
       <div class="divine-pic"></div>
     </div>
     <div class="right-column">
@@ -3413,8 +3425,11 @@
     </div>
   </div>
   <div class="sheet-type-broken">
-    <div class="left-column">
+    <div class="left-column" style="display:none;">
       <!--<div class="logo"></div>-->
+
+    </div>
+    <div class="right-column">
       <input class="broken-type" type="hidden" name="attr_broken_type"/>
       <div class="name blackheader label">
         <input class="inherit" type="text" spellcheck="false" name="attr_character_name" data-i18n-placeholder="broken_name"/>
@@ -3422,9 +3437,7 @@
       <div class="details blackheader">
         <input class="inherit" type="text" spellcheck="false" name="attr_broken_info" data-i18n-placeholder="details"/>
       </div>
-      <div class="divine-pic"></div>
-    </div>
-    <div class="right-column">
+      <!--<div class="divine-pic"></div>-->
       <div class="advancement greyholder standard-margin">
         <div class="plainheader" data-i18n="broken_advancement"></div>
         <ul>
@@ -3801,9 +3814,9 @@ function dataSetup() {
       name: getTranslation(`divine_ability_${name}`),
       description: getTranslation(`divine_ability_${name}_desc`),
     }));
-    if (info.base.sheet_type === "broken") {
+    //if (info.base.sheet_type === "broken") {
       info.ability[0].check = "1";
-    }
+    //}
   });
   const playbookAbilityMap = new Map(
     [
@@ -4846,6 +4859,7 @@ const playbookData = {
 const divineData = {
   shreya: {
     ability: [
+      "battle-saint",
       "blood_of_the_chosen",
       "war-saint",
       "asrika’s_blessing",
@@ -4863,12 +4877,13 @@ const divineData = {
   },
   horned_one: {
     ability: [
+      "hide_of_the_white_hind",
       "horned_god’s_eyes",
       "horned_god’s_bounty",  
       "anointed_horned",
+      "great_hunter",
       "forest’s_wings",
       "horned_god’s_thews",
-      "great_hunter",
       "shapeshifter",
     ],
     base: {
@@ -4879,6 +4894,7 @@ const divineData = {
   },
   zora: {
     ability: [
+      "blood_of_fire",
       "sacred_seals",
       "living_god’s_fury",
       "heart_of_heroes",
@@ -4895,14 +4911,14 @@ const divineData = {
   },
   blighter: {
     ability: [
-      "abominable_science",
-      "attrition_strategies",
-      "cruel_gluttony",
-      "toxic_bile",
-      "modern_warfare",
-      "scars_of_war",
-      "toxic_mutagen",
-      "violent_emulsion",
+    "abominable_science",
+    "modern_warfare",
+	  "cruel_gluttony",
+	  "toxic_mutagen",
+	  "toxic_bile",
+    "attrition_strategies",
+    "violent_emulsion",
+    "scars_of_war",
     ],
     base: {
       broken_type: "blighter",
@@ -4913,14 +4929,13 @@ const divineData = {
   },
   breaker: {
     ability: [
-      "the_coven",
-      "the_changing_curse",
-      "pillar_of_skulls",
-      "nature’s_fury",
-      "storm_riding",
-      "wild_awakening",
-      "dark_visions",
-      "defilement",
+    "the_coven",
+    "defilement",
+    "nature’s_fury",
+    "dark_visions",
+	  "storm_riding",
+    "the_changing_curse",
+    "pillar_of_skulls",
     ],
     base: {
       broken_type: "breaker",
@@ -4931,14 +4946,14 @@ const divineData = {
   },
   render: {
     ability: [
-      "the_sworn",
-      "the_forge",
-      "heartless",
-      "spearforge",
-      "fury",
-      "shredders",
-      "forced_march",
-      "massacre",
+    "the_sworn",
+    "fury",
+    "shredders",
+	  "massacre",
+    "forced_march",
+    "the_forge",
+    "spearforge",
+    "heartless", 
     ],
     base: {
       broken_type: "render",
@@ -5011,9 +5026,9 @@ const startingMateriel = [
 ];
 const heritageData = {
   bartan: ["loyal", "stubborn", "tough", "warm"],
-  orite: ["artisan", "educated", "marked", "shrewd"],
+  orite: ["bold", "noble", "stern", "vengeful"],
   panyar: ["connected", "pious", "stoic", "traveler"],
-  zemyati: ["bold", "noble", "stern", "vengeful"],
+  zemyati: ["artisan", "educated", "marked", "shrewd"],
 };
 const ABILITY_PLUS_HERITAGE = "playbook_ability_every_inch_a";
 const ABILITY_ROOKIE_EXTRA_TRAUMA = "playbook_ability_gotta_make_it_out_alive";

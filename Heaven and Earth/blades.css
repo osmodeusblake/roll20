@@ -2182,11 +2182,13 @@ button[type="roll"].sheet-fortunebutton {
   width: 670px;
 }
 
-.sheet-type-broken,
 .sheet-type-chosen {
   display: grid;
   grid: auto / 275px 1fr;
   grid-gap: 5px;
+}
+
+.sheet-type-broken {
 }
 
 .sheet-type-broken > .sheet-left-column,
@@ -3182,7 +3184,7 @@ button[type="roll"].sheet-fortunebutton {
 }
 
 .sheet-menu .sheet-sheet_choice {
-  width: 600px;
+  width: 660px;
   display: grid;
   grid: auto/repeat(3, 33%);
   grid-row-gap: 5px;

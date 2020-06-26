@@ -3353,7 +3353,7 @@ button.sheet-generatebutton .sheet-optional {
 .sheet-rolltemplate-blades .sheet-holder.sheet-fortune {
   grid: "title image" 43px "subtitle subtitle" 35px "dice dice" 43px "n n" 15px "notes notes" auto/auto 91px;
   min-height: 200px;
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/fortune.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/fortune.png");
   background-color: #080808;
   padding: 25px 0 15px 30px;
   color: white;
@@ -3364,7 +3364,7 @@ button.sheet-generatebutton .sheet-optional {
   grid: "top top" 31px "title image" 45px "dice dice" 67px "n n" 45px "notes notes" auto/auto 91px;
   min-height: 220px;
   padding: 10px 0 15px 35px;
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/resist.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/resist.png");
   color: white;
 }
 

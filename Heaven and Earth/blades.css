@@ -2043,6 +2043,7 @@ input.sheet-checkbox {
 }
 
 /* Sheet types */
+
 .sheet-type:not([value="character"]) ~ .sheet-container .sheet-type-character {
   display: none;
 }
@@ -3341,12 +3342,12 @@ button.sheet-generatebutton .sheet-optional {
   height: 100%;
   background-repeat: no-repeat;
   background-size: 299px auto;
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/action.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/action.png");
   background-color: black;
 }
 
 .sheet-rolltemplate-blades .sheet-holder.sheet-action .fullcrit ~ .fullcrit ~ .sheet-background {
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/action_critical.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/action_critical.png");
 }
 
 .sheet-rolltemplate-blades .sheet-holder.sheet-fortune {
@@ -3378,7 +3379,7 @@ button.sheet-generatebutton .sheet-optional {
   align-items: start;
   text-align: center;
   padding: 30px 30px 15px;
-  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/engagement.gif");
+  background-image: url("https://raw.githubusercontent.com/osmodeusblake/roll20/master/Heaven%20and%20Earth/Assets/rolltemplate/engagement.png");
   background-color: white;
   color: white;
 }

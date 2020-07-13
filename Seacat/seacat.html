@@ -1,0 +1,488 @@
+<div>
+	<div class="gridcontainer">
+		<div class="row0">
+			<div class="field hero">
+				<label class="labelh1">HERO:</label>
+				<input type="text" name="attr_hero" tabindex=1>
+			</div>
+		</div>
+		<div class="row1">
+			<div class="info">
+				<div class="infobox">
+					<div class="info1">
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label>Name:</label>
+							<input type="text" name="attr_character_name" tabindex=1>
+						</div>
+						<div class="field">
+							<label>Friends:</label>
+							<input type="text" name="attr_friends" tabindex=2>
+						</div>
+						<div class="field">
+							<label>Enemies:</label>
+							<input type="text" name="attr_enemies"tabindex=2>
+						</div>
+						<div class="field">
+							<label>Title:</label>
+							<input type="text" name="attr_title" tabindex=3>
+						</div>
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label class="labelh1">EXPERIENCE:</label>
+							<input type="number"  name="attr_experience" tabindex=8>
+						</div>
+						<div class="field">
+							<label>Invested:</label>
+							<input type="number"  name="attr_invested" tabindex=9>
+						</div>
+					</div>
+					<div class="info2">
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label>Species:</label>
+							<input type="text" name="attr_species" tabindex=4>
+						</div>
+						<div class="field">
+							<label>Looks:</label>
+							<input type="text" name="attr_looks" tabindex=5>
+						</div>
+						<div class="field">
+							<label>Debt:</label>
+							<input type="text" name="attr_debt" tabindex=6>
+						</div>
+						<div class="field">
+							<label>Likes:</label>
+							<input type="text" name="attr_likes" tabindex=7>
+						</div>
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label class="labelh1">LEVEL:</label>
+							<input type="number"  name="attr_level" tabindex=10>
+						</div>
+						<div class="field">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+			<div class="skills">
+				<div class="field">
+					<label class="labelh1">SKILLS</label>
+				</div>
+				<div class="field">
+					<label for="attr_skill1">1.</label>
+					<input type="text" name="attr_skill1">
+				</div>
+				<div class="field">
+					<label for="attr_skill2">2.</label>
+					<input type="text" name="attr_skill2">
+				</div>
+				<div class="field">
+					<label for="attr_skill3">3.</label>
+					<input type="text" name="attr_skill3">
+				</div>
+				<div class="field">
+					<label for="attr_skill4">4.</label>
+					<input type="text" name="attr_skill4">
+				</div>
+				<div class="field">
+					<label for="attr_skill5">5.</label>
+					<input type="text" name="attr_skill5">
+				</div>
+				<div class="field">
+					<label for="attr_skill6">6.</label>
+					<input type="text" name="attr_skill6">
+				</div>
+				<div class="field">&nbsp;</div>
+			</div>
+			<div class="abilities">
+				<div class="field">
+					<label class="labelh1">ABILITIES</label>
+				</div>
+				<div class="field">
+					<label for="attr_ability1">1.</label>
+					<input type="text" name="attr_ability1">
+				</div>
+				<div class="field">
+					<label for="attr_ability2">2.</label>
+					<input type="text" name="attr_ability2">
+				</div>
+				<div class="field">
+					<label for="attr_ability3">3.</label>
+					<input type="text" name="attr_ability3">
+				</div>
+				<div class="field">
+					<label for="attr_ability4">4.</label>
+					<input type="text" name="attr_ability4">
+				</div>
+				<div class="field">
+					<label for="attr_ability5">5.</label>
+					<input type="text" name="attr_ability5">
+				</div>
+				<div class="field">
+					<label for="attr_ability6">6.</label>
+					<input type="text" name="attr_ability6">
+				</div>
+				<div class="field">&nbsp;</div>
+			</div>
+		</div>
+		<div class="row2">
+			<div class="statbox">
+				<div class="stat">
+					<div class="statfields">
+						<div class="statbig">
+							<input type="number"name="attr_strength">
+						</div>
+						<div class="statsmall">
+							OF <input type="number" name="attr_strength_max">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{strength}" name="rollstrength">Strength</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statbig">
+							<input type="number"name="attr_endurance">
+						</div>
+						<div class="statsmall">
+							OF <input type="number" name="attr_endurance_max">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{endurance}" name="rollendurance">Endurance</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statbig">
+							<input type="number"name="attr_agility">
+						</div>
+						<div class="statsmall">
+							OF <input type="number" name="attr_agility_max">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{agility}" name="rollagility">Agility</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfieldsprof">
+						<div class="statprof">
+							<input type="number"name="attr_proficiency">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{proficiency}" name="rollagility">Proficiency</button>
+					</div>				
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statbig">
+							<input type="number"name="attr_charisma">
+						</div>
+						<div class="statsmall">
+							OF <input type="number" name="attr_charisma_max">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{charisma}" name="rollcharisma">Charisma</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statbig">
+							<input type="number"name="attr_aura">
+						</div>
+						<div class="statsmall">
+							OF <input type="number" name="attr_aura_max">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{aura}" name="rollaura">Aura</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statbig">
+							<input type="number"name="attr_thought">
+						</div>
+						<div class="statsmall">
+							OF <input type="number" name="attr_thought_max">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{thought}" name="rollthought">Thought</button>
+					</div>
+				</div>
+			</div>
+			<div class="lifebox">
+				<div class="field">
+					<label class="labelh1">LIFE:</label>
+					<input type="number" name="attr_life">
+				</div>
+				<div class="field">
+					<label>Remaining:</label>
+					<input type="number" name="attr_life_max">
+				</div>
+			</div>
+		</div>
+		<div class="row3">
+			<div class="gearbox">
+				<div class="gear1">
+					<div class="field">
+						<label class="labelh1">GEAR</label>
+					</div>
+					<div class="field">
+						<label for="gear1item1">1.</label>
+						<input type="text" name="attr_gear1item1">
+					</div>
+					<div class="field">
+						<label for="gear1item2">2.</label>
+						<input type="text" name="attr_gear1item2">
+					</div>
+					<div class="field">
+						<label for="gear1item3">3.</label>
+						<input type="text" name="attr_gear1item3">
+					</div>
+					<div class="field">
+						<label for="gear1item4">4.</label>
+						<input type="text" name="attr_gear1item4">
+					</div>
+					<div class="field">
+						<label for="gear1item5">5.</label>
+						<input type="text" name="attr_gear1item5">
+					</div>
+					<div class="field">
+						<label for="gear1item6">6.</label>
+						<input type="text" name="attr_gear1item6">
+					</div>
+				</div>
+				<div class="gear2">
+					<div class="field">
+						<label class="labelh1">CUMBERSOME GEAR</label>
+					</div>
+					<div class="field">
+						<label for="gear2item1">1.</label>
+						<input type="text" name="attr_gear2item1">
+					</div>
+					<div class="field">
+						<label for="gear2item2">2.</label>
+						<input type="text" name="attr_gear2item2">
+					</div>
+					<div class="field">
+						<label for="gear2item3">3.</label>
+						<input type="text" name="attr_gear2item3">
+					</div>
+					<div class="field">
+						<label for="gear2item4">4.</label>
+						<input type="text" name="attr_gear2item4">
+					</div>
+					<div class="field">
+						<label for="gear2item5">5.</label>
+						<input type="text" name="attr_gear2item5">
+					</div>
+					<div class="field">
+						<label for="gear2item6">6.</label>
+						<input type="text" name="attr_gear2item6">
+					</div>
+				</div>
+			</div>
+			<div class="dicebox">
+				<div class="field">
+					<label class="labelh1">MAGIC COST:</label>
+					<input type="number" name="attr_magiccost">
+				</div>
+				<div class="field">
+					<label class="labelh1">HERO DICE:</label>
+					<input type="number" name="attr_herodicecurrent">
+					<label>of:</label>
+					<input type="number" name="attr_herodice_max">
+				</div>		
+				<div class="field">
+					<label class="labelh1">LIFE:</label>
+				</div>
+			</div>
+		</div>
+		<div class="row4">
+			<div class="mode1">
+				<div class="field">
+					<label class="labelh1">ATTACK MODES</label>
+				</div>
+				<div class="field">
+						<label class="labelh2">Method:</label>
+					<input type="text" name="attr_Method1">
+				</div>
+				<div class="field">
+					<label for="Damage1">Damage:</label>
+					<input type="text" name="attr_Damage1">
+				</div>
+				<div class="field">
+					<label for="Range1">Range:</label>
+					<input type="text" name="attr_Range1">
+				</div>
+				<div class="field">
+					<label for="Tags1">Tags:</label>
+					<input type="text" name="attr_Tags1">
+				</div>
+			</div>
+			<div class="mode2">
+				<div class="field">&nbsp;</div>
+				<div class="field">
+					<label class="labelh2">Method:</label>
+					<input type="text" name="attr_Method2">
+				</div>
+				<div class="field">
+					<label for="Damage1">Damage:</label>
+					<input type="text" name="attr_Damage2">
+				</div>
+				<div class="field">
+					<label for="Range1">Range:</label>
+					<input type="text" name="attr_Range2">
+				</div>
+				<div class="field">
+					<label for="Tags1">Tags:</label>
+					<input type="text" name="attr_Tags2">
+				</div>
+			</div>
+			<div class="mode3">
+				<div class="field">&nbsp;</div>
+				<div class="field">
+					<label class="labelh2">Method:</label>
+					<input type="text" name="attr_Method3">
+				</div>
+				<div class="field">
+					<label for="Damage1">Damage:</label>
+					<input type="text" name="attr_Damage3">
+				</div>
+				<div class="field">
+					<label for="Range1">Range:</label>
+					<input type="text" name="attr_Range3">
+				</div>
+				<div class="field">
+					<label for="Tags1">Tags:</label>
+					<input type="text" name="attr_Tags3">
+				</div>
+			</div>
+			<div class="physicalcombat">
+				<div class="field">
+					<label class="labelh1">COMBAT</label>
+				</div>
+				<div class="field">
+					<label class="labelh2">Physical</label>
+				</div>
+				<div class="field">
+					<label>Defense:</label>
+					<input type="text" name="attr_defense">
+				</div>
+				<div class="field">
+					<label>Range Attack:</label>
+					<input type="text" name="attr_rangeattack">
+				</div>
+				<div class="field">
+					<label>Melee Attack:</label>
+					<input type="text" name="attr_meleeattack">
+				</div>
+			</div>
+		</div>
+		<div class="row5">
+			<div class="petcolumn1">
+				<div class="field">
+					<label class="labelh1">SIDEKICK/PET</label>
+				</div>
+				<div class="field">
+					<label>Name:</label>
+					<input type="text" name="attr_PetName">
+				</div>
+				<div class="field">
+					<label>Invested XP:</label>
+					<input type="text" name="attr_PetInvestedXP">
+				</div>
+				<div class="field">
+					<label>Level:</label>
+					<input type="text" name="attr_PetLevel">
+				</div>
+			</div>
+			<div class="petcolumn2">
+				<div class="field">&nbsp;</div>
+				<div class="field">
+					<label>Defense:</label>
+					<input type="text" name="attr_PetDefense">
+				</div>
+				<div class="field">
+					<label>Sum:</label>
+					<input type="text" name="attr_PetSum">
+				</div>
+				<div class="field">
+					<label>Life:</label>
+					<input type="text" name="attr_PetLife">
+				</div>			
+			</div>
+			<div class="petcolumn3">
+				<div class="field">&nbsp;</div>
+				<div class="field">
+					<label for="PetAbility1">Ability:</label>
+					<input type="text" name="attr_PetAbility1">
+				</div>
+				<div class="field">
+					<label for="PetAbility2">Ability:</label>
+					<input type="text" name="attr_PetAbility2">
+				</div>	
+				<div class="field">
+					<label for="PetAbility3">Ability:</label>
+					<input type="text" name="attr_PetAbility3">
+				</div>	
+			</div>
+			<div class="metaphysicalcombat">
+				<div class="field">
+					<label class="labelh2">Metaphysical</label>
+				</div>
+				<div class="field">
+					<label>Warding:</label>
+					<input type="text" name="attr_warding">
+				</div>
+				<div class="field">
+					<label>Magic Attack:</label>
+					<input type="text" name="attr_magicattack">
+				</div>
+				<div class="field">
+					<label>Social Attack:</label>
+					<input type="text" name="attr_socialattack">
+				</div>
+			</div>
+		</div>
+		<div class="row6">
+			<div class="field">
+				<div class="heading">
+					<label class="labelh1">OTHER THINGS</label>
+				</div>
+			</div>
+		</div>
+		<div class="row7">
+			<div class="notes">
+				<div class="notes1">
+					<textarea name="attr_notes1"></textarea>
+				</div>
+				<div class="notes2">
+					<textarea name="attr_notes2"></textarea>
+				</div>
+				<div class="notes3">
+					<textarea name="attr_notes3"></textarea>
+				</div>
+				<div class="notes4">
+					<textarea name="attr_notes4"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Sheet Workers -->
+
+<script type="text/worker">
+
+	on("change:herodice_max", function() {
+	
+	});
+	
+</script>

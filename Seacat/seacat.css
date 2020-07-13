@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700|Bebas+Neue|Share+Tech+Mono&display=swap");
+
+input, textarea {
+	font-family: "Share Tech Mono";
+	border-radius: 0%;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+	padding: 0px;
+}
+
+button[type=roll].sheet-blankrollbutton::before { content: ""; }
+
+label {
+	font-weight: normal;
+}
+
+.sheet-gridcontainer {
+	font-family: "Alegreya Sans", sans-serif;
+	font-size: 12px;
+	white-space: nowrap;
+    height: 100%;
+    margin: 0;
+	display: grid;
+	grid-template-rows: min-content min-content min-content min-content min-content min-content auto;
+	margin: 16px;
+}
+
+.sheet-row0 {
+	display: grid;
+	margin-bottom: 12px;
+	gap: 0px;
+}
+
+.sheet-row1 {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin-bottom: 24px;
+	gap: 0px;
+}
+
+.sheet-row2 {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	margin-bottom: 24px;
+	gap: 0px;
+}
+
+.sheet-row3 {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	margin-bottom: 24px;
+	gap: 0px;
+}
+
+.sheet-row4 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-bottom: 24px;
+	gap: 0px;
+}
+
+.sheet-row5 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-bottom: 24px;
+	gap: 0px;
+}
+
+.sheet-row6{
+	display: grid;
+	gap: 0px;
+}
+
+.sheet-row7 {
+	display: grid;
+	height: 320px;
+	gap: 0px;
+}
+
+label.sheet-labelh1 {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: "Bebas Neue", sans-serif;
+	color: #A2A062;
+}
+
+label.sheet-labelh2 {
+	font-weight: bold;
+}
+
+.sheet-info {
+	display: grid;
+}
+
+.sheet-infobox {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.sheet-gearbox {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.sheet-hero, .sheet-gear1, .sheet-gear2, .sheet-info1, .sheet-info2, .sheet-skills, .sheet-mode1, .sheet-mode2, .sheet-mode3, .sheet-petcolumn1, .sheet-petcolumn2, .sheet-petcolumn3 {
+	display: grid;
+	margin-right: 13px;
+}
+
+.sheet-abilities, .sheet-dicebox, .sheet-lifebox, .sheet-physicalcombat, .sheet-metaphysicalcombat {
+	display: grid;
+}
+
+.sheet-statbox {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	margin-right: 13px;
+}
+
+.sheet-statfields{
+	display: grid;
+	grid-template-columns: .8fr 1fr;
+}
+
+.sheet-statfieldsprof{
+	display: grid;
+}
+
+.sheet-proficiencylabel {
+	display: flex;
+	height: 24px;
+}
+
+.sheet-statlabel {
+	text-align: center;
+	margin: 0;
+}
+
+.sheet-statlabel label {
+	text-align: center;
+	margin: 0;
+}
+
+.sheet-stat button[type=roll] {
+	width: 90%;
+	height: inherit;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Bebas Neue', sans-serif;
+	border: 0px;
+	border-radius: 0px;
+	background-image: none;
+	text-shadow: none;
+	color: black;
+	background-color: #ddddbd;
+}
+
+.sheet-statbig input[type=number] {
+	text-align: right;
+	padding: 0px;
+	padding-right: 5px;
+	margin: 0px;
+	width: 100%;
+	font-size: 28px;
+	border: 0px;
+}
+
+.sheet-statprof input[type=number] {
+	text-align: center;
+	padding: 0px;
+	padding-right: 5px;
+	margin: 0px;
+	width: 100%;
+	font-size: 28px;
+	border: 0px;
+}
+
+.sheet-statsmall input[type=number] {
+	text-align: left;
+	padding: 0px;
+	padding-left: 5px;
+	margin: 0px;
+	width: 100%;
+	font-size: 18px;
+	border: 0px;
+}
+
+.sheet-statbig {
+	display: flex;
+	justify-content: right;
+	align-items: flex-end;
+}
+
+.sheet-statsmall {
+	display: flex;
+	align-items: flex-end;
+	justify-content: left;
+	padding-bottom: 3px;
+}
+
+.sheet-statprof {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.sheet-statsmall input {
+	border: 0px;
+}
+
+.sheet-field {
+	display: flex;
+	flex-direction: row;
+	height: 18px;
+}
+
+.sheet-field label {
+	width: 100px;
+	height: 18px;
+}
+
+.sheet-field input{
+	border: 0px;
+	border-bottom: 2px dotted #ccc;
+	height: 18px;
+}
+
+.sheet-field input[type=number]{
+	margin-left: 8px;
+	width: 100%;
+}
+
+.sheet-field input[type=text] {
+	margin-left: 8px;
+	width: 100%;
+}
+
+.sheet-hero input[type=text]{
+	width: 50%
+}
+
+.sheet-dicebox .sheet-field label {
+	width: 50%;
+}
+
+.sheet-dicebox .sheet-hurtfield label {
+	width: 25%;
+}
+
+.sheet-dicebox input {
+	text-align: center;
+}
+
+.sheet-herodice {
+	width: 50%;
+}
+
+.sheet-hurtfield .sheet-buttons {
+	display: flex;
+	align-items: center;
+}
+
+
+.sheet-lifebox .sheet-field input {
+	text-align: center;
+}
+
+.sheet-skills .sheet-field label, .sheet-abilities .sheet-field label, .sheet-gear-1 .sheet-field label, .sheet-gear2 .sheet-field label {
+	width: 18px;
+}
+
+.sheet-buttons {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+	grid-area: buttons;
+}
+
+.sheet-notes {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.sheet-notes textarea {
+	height: 97%;
+	width: 97%;
+	resize: none;
+	border: 1px solid #ccc;
+
+}
+
+/* For presentation only, no need to copy the code below */
+/* .sheet-gridcontainer * { 
+ border: 1px solid rgba(199, 18, 18, 0.527);
+ position: relative;
+} */
+
+/* .sheet-row1, .sheet-row2, .sheet-row3, .sheet-row4, .sheet-row5, .sheet-row6, .sheet-row7 {
+	border: 1px solid grey;
+} */

@@ -1,0 +1,17 @@
+/roll ?{Stat|
+    Strength, @{Crystal Jim|strength}|
+    Endurance, @{Crystal Jim|endurance}|
+    Agility, @{Crystal Jim|agility}|
+    Charisma, @{Crystal Jim|charisma}|
+    Aura, @{Crystal Jim|aura}|
+    Thought, @{Crystal Jim|thought}
+}+ {1d20?{Skill level|
+    No relevant skill [-],&#44;1d20&#125kl1|
+    Gifted amateur[+],&#44;1d20&#125kh1|
+    Skilled, &#125+@{Crystal Jim|proficiency}|
+    Perfect Match [+],&#44;1d20&#125kh1+@{Crystal Jim|proficiency}|
+    Expert, &#125+@{Crystal Jim|proficiency}+@{Crystal Jim|proficiency}|
+    Expert & Perfect Match[+],&#44;1d20&#125kh1+@{Crystal Jim|proficiency}+@{Crystal Jim|proficiency}
+}}
+
+/roll ?{Stat|Strength, @{strength}|Endurance, @{endurance}|Agility, @{agility}|Charisma, @{charisma}|Aura, @{aura}|Thought, @{thought}}+ {1d20?{Skill level|No relevant skill [-],&#44;1d20&#125kl1|Gifted amateur[+],&#44;1d20&#125kh1|Skilled, &#125+@{proficiency}|Perfect Match [+],&#44;1d20&#125kh1+@{proficiency}|Expert, &#125+@{proficiency}+@{proficiency}|Expert & Perfect Match[+],&#44;1d20&#125kh1+@{proficiency}+@{proficiency}}}

@@ -1,61 +1,39 @@
-<input type="hidden" name="attr_rollquery1" value="
-?{Skill level&#124;
-	Unskilled, 
-		?{Advantage&amp;#124;
-			D&amp;#44;2d20kl1&amp;#124;
-			0&amp;#44;1d20&amp;#124;
-			1&amp;#44;2d20kh1&amp;#124;
-			2&amp;#44;3d20kh1&amp;#124;
-			3&amp;#44;4d20kh1&amp;#124;
-			4&amp;#44;5d20kh1&amp;#124;
-			5&amp;#44;6d20kh1&amp;#124;
-			6&amp;#44;7d20kh1
-		&amp;#125;
-	&#124;
-	Skilled, 
-		?{Advantage&amp;#124;
-			0&amp;#44;1d20&amp;#124;
-			1&amp;#44;2d20kh1&amp;#124;
-			2&amp;#44;3d20kh1&amp;#124;
-			3&amp;#44;4d20kh1&amp;#124;
-			4&amp;#44;5d20kh1&amp;#124;
-			5&amp;#44;6d20kh1&amp;#124;
-			6&amp;#44;7d20kh1&amp;#124;
-			D&amp;#44;2d20kl1
-		&amp;#125;
-	&#124;
-	Expert, 
-		?{Advantage&amp;#124;
-			0&amp;#44;1d20&amp;#124;
-			1&amp;#44;2d20kh1&amp;#124;
-			2&amp;#44;3d20kh1&amp;#124;
-			3&amp;#44;4d20kh1&amp;#124;
-			4&amp;#44;5d20kh1&amp;#124;
-			5&amp;#44;6d20kh1&amp;#124;
-			6&amp;#44;7d20kh1&amp;#124;
-			D&amp;#44;2d20kl1
-		&amp;#125;
-	&#125;
-">
+<button type="roll" value="&{template:seacatroll} {{name=@{character_name}}} {{rollstat=?{Stat|Strength,strength|Endurance,endurance|Agility,agility|Charisma,charisma|Aura,aura|Thought,thought}}} {{rollcount=[[?{Skill ranks|0|1|2}+?{Advantage|-1|0|1|2|3|4|5|6}]]}} {{roll0=[[2d20kl1]]}} {{roll1=[[1d20]]}} {{roll2=[[2d20kh1]]}} {{roll3=[[3d20kh1]]}} {{roll4=[[4d20kh1]]}} {{roll5=[[5d20kh1]]}} {{roll6=[[6d20kh1]]}} {{roll7=[[7d20kh1]]}}">Roll Template</button>
 
-<input type="hidden" name="attr_rollquery2" value="?{Skill level&#124;Unskilled,?{Advantage&amp;#124;D&amp;#44;[[2d20kl1+@{strength}]]&amp;#124;0&amp;#44;[[1d20+@{strength}]]&amp;#124;1&amp;#44;[[2d20kh1+@{strength}]]&amp;#124;2&amp;#44;[[3d20kh1+@{strength}]]&amp;#124;3&amp;#44;[[4d20kh1+@{strength}]]&amp;#124;4&amp;#44;[[5d20kh1+@{strength}]]&amp;#124;5&amp;#44;[[6d20kh1+@{strength}]]&amp;#124;6&amp;#44;[[7d20kh1+@{strength}]]&amp;#125;&#124;Skilled, ?{Advantage&amp;#124;0&amp;#44;[[1d20+@{strength}+@{proficiency}]]&amp;#124;1&amp;#44;[[2d20kh1+@{strength}+@{proficiency}]]&amp;#124;2&amp;#44;[[3d20kh1+@{strength}+@{proficiency}]]&amp;#124;3&amp;#44;[[4d20kh1+@{strength}+@{proficiency}]]&amp;#124;4&amp;#44;[[5d20kh1+@{strength}+@{proficiency}]]&amp;#124;5&amp;#44;[[6d20kh1+@{strength}+@{proficiency}]]&amp;#124;6&amp;#44;[[7d20kh1+@{strength}+@{proficiency}]]&amp;#124;D&amp;#44;[[2d20kl1+@{strength}+@{proficiency}]]&amp;#125;&#124;Expert, ?{Advantage&amp;#124;0&amp;#44;[[1d20+@{strength}+2*@{proficiency}]]&amp;#124;1&amp;#44;[[2d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;2&amp;#44;[[3d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;3&amp;#44;[[4d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;4&amp;#44;[[5d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;5&amp;#44;[[6d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;6&amp;#44;[[7d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;D&amp;#44;[[2d20kl1+@{strength}+2*@{proficiency}]]&amp;#125;&#125;">
-
-<button type="roll" value="&{template:default} {{name=Strength}} {{Result=@{rollquery2}}} {{Note=This is some words}}">Roll Template</button>
-
-<button type="roll" value="?{Stat&#124;
-	Strength,@{strength}
-	&#124;
-	Endurance,@{endurance}
-	&#124;
-	Agility,@{agility}
-	&#124;
-	Charisma,@{charisma}
-	&#124;
-	Aura,@{aura}
-	&#124;
-	Thought,@{thought}
-	&#125;
-">Choose Stat</button>
+<rolltemplate class="sheet-rolltemplate-seacatroll">
+	<span>{{rollname}}</span>
+	<span>Stat: {{rollstat}}</span>
+	<span>Dice to Roll: {{rollcount}}</span>
+	{{#rollLess() rollcount 1}}
+		<span>Disadvantage!</span>
+		<span>Result: {{roll0}}</span>
+	{{/rollLess() rollcount 1}}
+	{{#rollTotal() rollcount 1}}
+		<span>Normal</span>
+		<span>Result: {{roll1}}</span>
+	{{/rollTotal() rollcount 1}}
+	{{#rollGreater() rollcount 1}}
+		<span>Advantage!</span>
+			{{#rollTotal() rollcount 2}}
+			<span>Result: {{roll2}}</span>
+			{{/rollTotal() rollcount 2}}
+			{{#rollTotal() rollcount 3}}
+			<span>Result: {{roll3}}</span>
+			{{/rollTotal() rollcount 3}}
+			{{#rollTotal() rollcount 4}}
+			<span>Result: {{roll4}}</span>
+			{{/rollTotal() rollcount 4}}
+			{{#rollTotal() rollcount 5}}
+			<span>Result: {{roll5}}</span>
+			{{/rollTotal() rollcount 5}}
+			{{#rollTotal() rollcount 6}}
+			<span>Result: {{roll6}}</span>
+			{{/rollTotal() rollcount 6}}
+			{{#rollTotal() rollcount 7}}
+			<span>Result: {{roll6}}</span>
+			{{/rollTotal() rollcount 7}}
+	{{/rollGreater() rollcount 1}}
+</rolltemplate>
 
 <div></div>
 	<div class="gridcontainer">

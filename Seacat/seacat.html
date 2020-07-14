@@ -1,4 +1,4 @@
-<input type="hidden" name="attr_macrotest" value="
+<input type="hidden" name="attr_rollquery1" value="
 ?{Skill level&#124;
 	Unskilled, 
 		?{Advantage&amp;#124;
@@ -38,45 +38,9 @@
 	&#125;
 ">
 
-<button type="roll" name="testrollbutton" value="
-?{Skill level&#124;
-	Unskilled, 
-		?{Advantage&amp;#124;
-			D&amp;#44;[[2d20kl1+@{strength}]]&amp;#124;
-			0&amp;#44;[[1d20+@{strength}]]&amp;#124;
-			1&amp;#44;[[2d20kh1+@{strength}]]&amp;#124;
-			2&amp;#44;[[3d20kh1+@{strength}]]&amp;#124;
-			3&amp;#44;[[4d20kh1+@{strength}]]&amp;#124;
-			4&amp;#44;[[5d20kh1+@{strength}]]&amp;#124;
-			5&amp;#44;[[6d20kh1+@{strength}]]&amp;#124;
-			6&amp;#44;[[7d20kh1+@{strength}]]
-		&amp;#125;
-	&#124;
-	Skilled, 
-		?{Advantage&amp;#124;
-			0&amp;#44;[[1d20+@{strength}+@{proficiency}]]&amp;#124;
-			1&amp;#44;[[2d20kh1+@{strength}+@{proficiency}]]&amp;#124;
-			2&amp;#44;[[3d20kh1+@{strength}+@{proficiency}]]&amp;#124;
-			3&amp;#44;[[4d20kh1+@{strength}+@{proficiency}]]&amp;#124;
-			4&amp;#44;[[5d20kh1+@{strength}+@{proficiency}]]&amp;#124;
-			5&amp;#44;[[6d20kh1+@{strength}+@{proficiency}]]&amp;#124;
-			6&amp;#44;[[7d20kh1+@{strength}+@{proficiency}]]&amp;#124;
-			D&amp;#44;[[2d20kl1+@{strength}+@{proficiency}]]
-		&amp;#125;
-	&#124;
-	Expert, 
-		?{Advantage&amp;#124;
-			0&amp;#44;[[1d20+@{strength}+2*@{proficiency}]]&amp;#124;
-			1&amp;#44;[[2d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
-			2&amp;#44;[[3d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
-			3&amp;#44;[[4d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
-			4&amp;#44;[[5d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
-			5&amp;#44;[[6d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
-			6&amp;#44;[[7d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
-			D&amp;#44;[[2d20kl1+@{strength}+2*@{proficiency}]]
-		&amp;#125;
-	&#125;
-">Roll</button>
+<input type="hidden" name="attr_rollquery2" value="?{Skill level&#124;Unskilled,?{Advantage&amp;#124;D&amp;#44;[[2d20kl1+@{strength}]]&amp;#124;0&amp;#44;[[1d20+@{strength}]]&amp;#124;1&amp;#44;[[2d20kh1+@{strength}]]&amp;#124;2&amp;#44;[[3d20kh1+@{strength}]]&amp;#124;3&amp;#44;[[4d20kh1+@{strength}]]&amp;#124;4&amp;#44;[[5d20kh1+@{strength}]]&amp;#124;5&amp;#44;[[6d20kh1+@{strength}]]&amp;#124;6&amp;#44;[[7d20kh1+@{strength}]]&amp;#125;&#124;Skilled, ?{Advantage&amp;#124;0&amp;#44;[[1d20+@{strength}+@{proficiency}]]&amp;#124;1&amp;#44;[[2d20kh1+@{strength}+@{proficiency}]]&amp;#124;2&amp;#44;[[3d20kh1+@{strength}+@{proficiency}]]&amp;#124;3&amp;#44;[[4d20kh1+@{strength}+@{proficiency}]]&amp;#124;4&amp;#44;[[5d20kh1+@{strength}+@{proficiency}]]&amp;#124;5&amp;#44;[[6d20kh1+@{strength}+@{proficiency}]]&amp;#124;6&amp;#44;[[7d20kh1+@{strength}+@{proficiency}]]&amp;#124;D&amp;#44;[[2d20kl1+@{strength}+@{proficiency}]]&amp;#125;&#124;Expert, ?{Advantage&amp;#124;0&amp;#44;[[1d20+@{strength}+2*@{proficiency}]]&amp;#124;1&amp;#44;[[2d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;2&amp;#44;[[3d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;3&amp;#44;[[4d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;4&amp;#44;[[5d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;5&amp;#44;[[6d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;6&amp;#44;[[7d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;D&amp;#44;[[2d20kl1+@{strength}+2*@{proficiency}]]&amp;#125;&#125;">
+
+<button type="roll" value="&{template:default} {{name=Strength}} {{Result=@{rollquery2}}} {{Note=This is some words}}">Roll Template</button>
 
 <button type="roll" value="?{Stat&#124;
 	Strength,@{strength}

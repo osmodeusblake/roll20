@@ -1,4 +1,59 @@
-<div>
+<button type="roll" value="
+?{Skill level&#124;
+	Unskilled, 
+		?{Advantage&amp;#124;
+			D&amp;#44;[[2d20kl1]]&amp;#124;
+			0&amp;#44;[[1d20]]&amp;#124;
+			1&amp;#44;[[2d20kh1]]&amp;#124;
+			2&amp;#44;[[3d20kh1]]&amp;#124;
+			3&amp;#44;[[4d20kh1]]&amp;#124;
+			4&amp;#44;[[5d20kh1]]&amp;#124;
+			5&amp;#44;[[6d20kh1]]&amp;#124;
+			6&amp;#44;[[7d20kh1]]
+		&amp;#125;
+	&#124;
+	Skilled, 
+		?{Advantage&amp;#124;
+			0&amp;#44;[[1d20]]&amp;#124;
+			1&amp;#44;[[2d20kh1]]&amp;#124;
+			2&amp;#44;[[3d20kh1]]&amp;#124;
+			3&amp;#44;[[4d20kh1]]&amp;#124;
+			4&amp;#44;[[5d20kh1]]&amp;#124;
+			5&amp;#44;[[6d20kh1]]&amp;#124;
+			6&amp;#44;[[7d20kh1]]&amp;#124;
+			D&amp;#44;[[2d20kl1]]
+		&amp;#125;
+	&#124;
+	Expert, 
+		?{Advantage&amp;#124;
+			0&amp;#44;[[1d20]]&amp;#124;
+			1&amp;#44;[[2d20kh1]]&amp;#124;
+			2&amp;#44;[[3d20kh1]]&amp;#124;
+			3&amp;#44;[[4d20kh1]]&amp;#124;
+			4&amp;#44;[[5d20kh1]]&amp;#124;
+			5&amp;#44;[[6d20kh1]]&amp;#124;
+			6&amp;#44;[[7d20kh1]]&amp;#124;
+			D&amp;#44;[[2d20kl1]]
+		&amp;#125;
+	&#125;
+">Roll</button>
+
+<button type="roll" value="?{Stat&#124;
+	Strength,@{strength}
+	&#124;
+	Endurance,@{endurance}
+	&#124;
+	Agility,@{agility}
+	&#124;
+	Charisma,@{charisma}
+	&#124;
+	Aura,@{aura}
+	&#124;
+	Thought,@{thought}
+	&#125;
+">Choose Stat</button>
+
+<div></div>
 	<div class="gridcontainer">
 		<div class="row0">
 			<div class="field hero">
@@ -173,7 +228,7 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll @{statselection} + @{skilllevelselection}" name="rollagility">Proficiency</button>
+						<button class="sheet-blankrollbutton" type="roll" value="/roll [[@{combo}]]" name="rollproficiency">Proficiency</button>
 					</div>				
 				</div>
 				<div class="stat">
@@ -479,34 +534,6 @@
 
 <!-- Roll Queries -->
 
-<input type="hidden" name="attr_statselection" value="?{Stat|Strength,@{strength}|Endurance,@{endurance}|Agility,@{agility}|Charisma,@{charisma}|Aura,@{aura}|Thought,@{thought}}">
-
-<input type="hidden" name="attr_skilllevelselection" value="?{Skill Level Selection&#124;
-	Unskilled,?{Advantage Selection&amp;#124;
-	   1&#44;1&amp;#124;
-	   2&#44;2&amp;#124;
-	   3&#44;3&amp;#124;
-	   4&#44;4&amp;#124;
-	   5&#44;5&amp;#124;
-	   6&#44;6&amp;#124;
-	   D&#44;0&amp;#125; &#124;
-	Skilled,?{Advantage Selection&amp;#124;
-		1&#44;1&amp;#124;
-		2&#44;2&amp;#124;
-		3&#44;3&amp;#124;
-		4&#44;4&amp;#124;
-		5&#44;5&amp;#124;
-		6&#44;6&amp;#124;
-		D&#44;0&amp;#125; &#124;
-	 Expert,?{Advantage Selection&amp;#124;
-		1&#44;1&amp;#124;
-		2&#44;2&amp;#124;
-		3&#44;3&amp;#124;
-		4&#44;4&amp;#124;
-		5&#44;5&amp;#124;
-		6&#44;6&amp;#124;
-		D&#44;0&amp;#125;
- &#125;">
 
 <!-- Sheet Workers -->
 

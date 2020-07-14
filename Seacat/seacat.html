@@ -1,39 +1,79 @@
-<button type="roll" value="
+<input type="hidden" name="attr_macrotest" value="
 ?{Skill level&#124;
 	Unskilled, 
 		?{Advantage&amp;#124;
-			D&amp;#44;[[2d20kl1]]&amp;#124;
-			0&amp;#44;[[1d20]]&amp;#124;
-			1&amp;#44;[[2d20kh1]]&amp;#124;
-			2&amp;#44;[[3d20kh1]]&amp;#124;
-			3&amp;#44;[[4d20kh1]]&amp;#124;
-			4&amp;#44;[[5d20kh1]]&amp;#124;
-			5&amp;#44;[[6d20kh1]]&amp;#124;
-			6&amp;#44;[[7d20kh1]]
+			D&amp;#44;2d20kl1&amp;#124;
+			0&amp;#44;1d20&amp;#124;
+			1&amp;#44;2d20kh1&amp;#124;
+			2&amp;#44;3d20kh1&amp;#124;
+			3&amp;#44;4d20kh1&amp;#124;
+			4&amp;#44;5d20kh1&amp;#124;
+			5&amp;#44;6d20kh1&amp;#124;
+			6&amp;#44;7d20kh1
 		&amp;#125;
 	&#124;
 	Skilled, 
 		?{Advantage&amp;#124;
-			0&amp;#44;[[1d20]]&amp;#124;
-			1&amp;#44;[[2d20kh1]]&amp;#124;
-			2&amp;#44;[[3d20kh1]]&amp;#124;
-			3&amp;#44;[[4d20kh1]]&amp;#124;
-			4&amp;#44;[[5d20kh1]]&amp;#124;
-			5&amp;#44;[[6d20kh1]]&amp;#124;
-			6&amp;#44;[[7d20kh1]]&amp;#124;
-			D&amp;#44;[[2d20kl1]]
+			0&amp;#44;1d20&amp;#124;
+			1&amp;#44;2d20kh1&amp;#124;
+			2&amp;#44;3d20kh1&amp;#124;
+			3&amp;#44;4d20kh1&amp;#124;
+			4&amp;#44;5d20kh1&amp;#124;
+			5&amp;#44;6d20kh1&amp;#124;
+			6&amp;#44;7d20kh1&amp;#124;
+			D&amp;#44;2d20kl1
 		&amp;#125;
 	&#124;
 	Expert, 
 		?{Advantage&amp;#124;
-			0&amp;#44;[[1d20]]&amp;#124;
-			1&amp;#44;[[2d20kh1]]&amp;#124;
-			2&amp;#44;[[3d20kh1]]&amp;#124;
-			3&amp;#44;[[4d20kh1]]&amp;#124;
-			4&amp;#44;[[5d20kh1]]&amp;#124;
-			5&amp;#44;[[6d20kh1]]&amp;#124;
-			6&amp;#44;[[7d20kh1]]&amp;#124;
-			D&amp;#44;[[2d20kl1]]
+			0&amp;#44;1d20&amp;#124;
+			1&amp;#44;2d20kh1&amp;#124;
+			2&amp;#44;3d20kh1&amp;#124;
+			3&amp;#44;4d20kh1&amp;#124;
+			4&amp;#44;5d20kh1&amp;#124;
+			5&amp;#44;6d20kh1&amp;#124;
+			6&amp;#44;7d20kh1&amp;#124;
+			D&amp;#44;2d20kl1
+		&amp;#125;
+	&#125;
+">
+
+<button type="roll" name="testrollbutton" value="
+?{Skill level&#124;
+	Unskilled, 
+		?{Advantage&amp;#124;
+			D&amp;#44;[[2d20kl1+@{strength}]]&amp;#124;
+			0&amp;#44;[[1d20+@{strength}]]&amp;#124;
+			1&amp;#44;[[2d20kh1+@{strength}]]&amp;#124;
+			2&amp;#44;[[3d20kh1+@{strength}]]&amp;#124;
+			3&amp;#44;[[4d20kh1+@{strength}]]&amp;#124;
+			4&amp;#44;[[5d20kh1+@{strength}]]&amp;#124;
+			5&amp;#44;[[6d20kh1+@{strength}]]&amp;#124;
+			6&amp;#44;[[7d20kh1+@{strength}]]
+		&amp;#125;
+	&#124;
+	Skilled, 
+		?{Advantage&amp;#124;
+			0&amp;#44;[[1d20+@{strength}+@{proficiency}]]&amp;#124;
+			1&amp;#44;[[2d20kh1+@{strength}+@{proficiency}]]&amp;#124;
+			2&amp;#44;[[3d20kh1+@{strength}+@{proficiency}]]&amp;#124;
+			3&amp;#44;[[4d20kh1+@{strength}+@{proficiency}]]&amp;#124;
+			4&amp;#44;[[5d20kh1+@{strength}+@{proficiency}]]&amp;#124;
+			5&amp;#44;[[6d20kh1+@{strength}+@{proficiency}]]&amp;#124;
+			6&amp;#44;[[7d20kh1+@{strength}+@{proficiency}]]&amp;#124;
+			D&amp;#44;[[2d20kl1+@{strength}+@{proficiency}]]
+		&amp;#125;
+	&#124;
+	Expert, 
+		?{Advantage&amp;#124;
+			0&amp;#44;[[1d20+@{strength}+2*@{proficiency}]]&amp;#124;
+			1&amp;#44;[[2d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
+			2&amp;#44;[[3d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
+			3&amp;#44;[[4d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
+			4&amp;#44;[[5d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
+			5&amp;#44;[[6d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
+			6&amp;#44;[[7d20kh1+@{strength}+2*@{proficiency}]]&amp;#124;
+			D&amp;#44;[[2d20kl1+@{strength}+2*@{proficiency}]]
 		&amp;#125;
 	&#125;
 ">Roll</button>
@@ -185,10 +225,10 @@
 				<div class="stat">
 					<div class="statfields">
 						<div class="statbig">
-							<input type="number"name="attr_strength">
+							<input type="number" name="attr_strength" value="0">
 						</div>
 						<div class="statsmall">
-							OF <input type="number" name="attr_strength_max">
+							OF <input type="number" name="attr_strength_max" value="0">
 						</div>
 					</div>
 					<div class="statlabel">
@@ -198,10 +238,10 @@
 				<div class="stat">
 					<div class="statfields">
 						<div class="statbig">
-							<input type="number"name="attr_endurance">
+							<input type="number"name="attr_endurance" value="0">
 						</div>
 						<div class="statsmall">
-							OF <input type="number" name="attr_endurance_max">
+							OF <input type="number" name="attr_endurance_max" value="0">
 						</div>
 					</div>
 					<div class="statlabel">
@@ -211,10 +251,10 @@
 				<div class="stat">
 					<div class="statfields">
 						<div class="statbig">
-							<input type="number"name="attr_agility">
+							<input type="number"name="attr_agility" value="0">
 						</div>
 						<div class="statsmall">
-							OF <input type="number" name="attr_agility_max">
+							OF <input type="number" name="attr_agility_max" value="0">
 						</div>
 					</div>
 					<div class="statlabel">
@@ -224,7 +264,7 @@
 				<div class="stat">
 					<div class="statfieldsprof">
 						<div class="statprof">
-							<input type="number"name="attr_proficiency">
+							<input type="number"name="attr_proficiency" value="0">
 						</div>
 					</div>
 					<div class="statlabel">
@@ -234,10 +274,10 @@
 				<div class="stat">
 					<div class="statfields">
 						<div class="statbig">
-							<input type="number"name="attr_charisma">
+							<input type="number"name="attr_charisma" value="0">
 						</div>
 						<div class="statsmall">
-							OF <input type="number" name="attr_charisma_max">
+							OF <input type="number" name="attr_charisma_max" value="0">
 						</div>
 					</div>
 					<div class="statlabel">
@@ -247,10 +287,10 @@
 				<div class="stat">
 					<div class="statfields">
 						<div class="statbig">
-							<input type="number"name="attr_aura">
+							<input type="number"name="attr_aura" value="0">
 						</div>
 						<div class="statsmall">
-							OF <input type="number" name="attr_aura_max">
+							OF <input type="number" name="attr_aura_max" value="0">
 						</div>
 					</div>
 					<div class="statlabel">
@@ -260,10 +300,10 @@
 				<div class="stat">
 					<div class="statfields">
 						<div class="statbig">
-							<input type="number"name="attr_thought">
+							<input type="number"name="attr_thought" value="0">
 						</div>
 						<div class="statsmall">
-							OF <input type="number" name="attr_thought_max">
+							OF <input type="number" name="attr_thought_max" value="0">
 						</div>
 					</div>
 					<div class="statlabel">

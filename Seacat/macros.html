@@ -1,17 +1,61 @@
-/roll ?{Stat|
-    Strength, @{Crystal Jim|strength}|
-    Endurance, @{Crystal Jim|endurance}|
-    Agility, @{Crystal Jim|agility}|
-    Charisma, @{Crystal Jim|charisma}|
-    Aura, @{Crystal Jim|aura}|
-    Thought, @{Crystal Jim|thought}
-}+ {1d20?{Skill level|
-    No relevant skill [-],&#44;1d20&#125kl1|
-    Gifted amateur[+],&#44;1d20&#125kh1|
-    Skilled, &#125+@{Crystal Jim|proficiency}|
-    Perfect Match [+],&#44;1d20&#125kh1+@{Crystal Jim|proficiency}|
-    Expert, &#125+@{Crystal Jim|proficiency}+@{Crystal Jim|proficiency}|
-    Expert & Perfect Match[+],&#44;1d20&#125kh1+@{Crystal Jim|proficiency}+@{Crystal Jim|proficiency}
-}}
+PROFICIENCY ROLL MACRO
 
-/roll ?{Stat|Strength, @{strength}|Endurance, @{endurance}|Agility, @{agility}|Charisma, @{charisma}|Aura, @{aura}|Thought, @{thought}}+ {1d20?{Skill level|No relevant skill [-],&#44;1d20&#125kl1|Gifted amateur[+],&#44;1d20&#125kh1|Skilled, &#125+@{proficiency}|Perfect Match [+],&#44;1d20&#125kh1+@{proficiency}|Expert, &#125+@{proficiency}+@{proficiency}|Expert & Perfect Match[+],&#44;1d20&#125kh1+@{proficiency}+@{proficiency}}}
+/roll ?{Stat|Strength,@{strength}|Endurance,@{endurance}|Agility,@{agility}|Charisma,@{charisma}|Aura,@{aura}|Thought,@{thought}}+?{Skill level|Skilled,?{Advantages&#124;0&#44;1d20+@{proficiency}&#124;1&#44;2d20kh1+@{proficiency}&#124;2&#44;3d20kh1+@{proficiency}&#124;3&#44;4d20kh1+@{proficiency}&#124;4&#44;5d20kh1+@{proficiency}&#124;5&#44;6d20kh1+@{proficiency}&#124;6&#44;7d20kh1+@{proficiency}&#124;Disadvantage&#44;2d20kl1+@{proficiency}&#125;|Expert,?{Advantages&#124;0&#44;1d20+2*@{proficiency}&#124;1&#44;2d20kh1+2*@{proficiency}&#124;2&#44;3d20kh1+2*@{proficiency}&#124;3&#44;4d20kh1+2*@{proficiency}&#124;4&#44;5d20kh1+2*@{proficiency}&#124;5&#44;6d20kh1+2*@{proficiency}&#124;6&#44;7d20kh1+2*@{proficiency}&#124;Disadvantage&#44;2d20kl1+2*@{proficiency}&#125;}
+
+/roll ?{Stat|Strength,@{Crystal Jim|strength}|Endurance,@{Crystal Jim|endurance}|Agility,@{Crystal Jim|agility}|Charisma,@{Crystal Jim|charisma}|Aura,@{Crystal Jim|aura}|Thought,@{Crystal Jim|thought}}+?{Skill level|Skilled,?{Advantages&#124;0&#44;1d20+@{Crystal Jim|proficiency}&#124;1&#44;2d20kh1+@{Crystal Jim|proficiency}&#124;2&#44;3d20kh1+@{Crystal Jim|proficiency}&#124;3&#44;4d20kh1+@{Crystal Jim|proficiency}&#124;4&#44;5d20kh1+@{Crystal Jim|proficiency}&#124;5&#44;6d20kh1+@{Crystal Jim|proficiency}&#124;6&#44;7d20kh1+@{Crystal Jim|proficiency}&#124;Disadvantage&#44;2d20kl1+@{Crystal Jim|proficiency}&#125;|Expert,?{Advantages&#124;0&#44;1d20+2*@{Crystal Jim|proficiency}&#124;1&#44;2d20kh1+2*@{Crystal Jim|proficiency}&#124;2&#44;3d20kh1+2*@{Crystal Jim|proficiency}&#124;3&#44;4d20kh1+2*@{Crystal Jim|proficiency}&#124;4&#44;5d20kh1+2*@{Crystal Jim|proficiency}&#124;5&#44;6d20kh1+2*@{Crystal Jim|proficiency}&#124;6&#44;7d20kh1+2*@{Crystal Jim|proficiency}&#124;Disadvantage&#44;2d20kl1+2*@{Crystal Jim|proficiency}&#125;}
+
+STAT ROLL MACRO
+
+/roll ?{Skill level|
+    No relevant skill,?{Advantages&#124;
+        0&#44;2d20kl1&#124;
+        1&#44;1d20&#124;
+        2&#44;2d20kh1&#124;
+        3&#44;3d20kh1&#124;
+        4&#44;4d20kh1&#124;
+        5&#44;5d20kh1&#124;
+        6&#44;6d20kh1&#124;
+        Disadvantage&#44;2d20kl1&#125;
+    |Skilled,?{Advantages&#124;
+        0&#44;1d20+@{proficiency}&#124;
+        1&#44;2d20kh1+@{proficiency}&#124;
+        2&#44;3d20kh1+@{proficiency}&#124;
+        3&#44;4d20kh1+@{proficiency}&#124;
+        4&#44;5d20kh1+@{proficiency}&#124;
+        5&#44;6d20kh1+@{proficiency}&#124;
+        6&#44;7d20kh1+@{proficiency}&#124;
+        Disadvantage&#44;2d20kl1+@{proficiency}&#125;
+    |Expert,?{Advantages&#124;
+        0&#44;1d20+2*@{proficiency}&#124;
+        1&#44;2d20kh1+2*@{proficiency}&#124;
+        2&#44;3d20kh1+2*@{proficiency}&#124;
+        3&#44;4d20kh1+2*@{proficiency}&#124;
+        4&#44;5d20kh1+2*@{proficiency}&#124;
+        5&#44;6d20kh1+2*@{proficiency}&#124;
+        6&#44;7d20kh1+2*@{proficiency}&#124;
+        Disadvantage&#44;2d20kl1+2*@{proficiency}&#125;
+}+@{charisma}
+
+/roll ?{Skill level|No relevant skill,?{Advantages&#124;0&#44;2d20kl1&#124;1&#44;1d20&#124;2&#44;2d20kh1&#124;3&#44;3d20kh1&#124;4&#44;4d20kh1&#124;5&#44;5d20kh1&#124;6&#44;6d20kh1&#124;Disadvantage&#44;2d20kl1&#125;|Skilled,?{Advantages&#124;0&#44;1d20+@{proficiency}&#124;1&#44;2d20kh1+@{proficiency}&#124;2&#44;3d20kh1+@{proficiency}&#124;3&#44;4d20kh1+@{proficiency}&#124;4&#44;5d20kh1+@{proficiency}&#124;5&#44;6d20kh1+@{proficiency}&#124;6&#44;7d20kh1+@{proficiency}&#124;Disadvantage&#44;2d20kl1+@{proficiency}&#125;|Expert,?{Advantages&#124;0&#44;1d20+2*@{proficiency}&#124;1&#44;2d20kh1+2*@{proficiency}&#124;2&#44;3d20kh1+2*@{proficiency}&#124;3&#44;4d20kh1+2*@{proficiency}&#124;4&#44;5d20kh1+2*@{proficiency}&#124;5&#44;6d20kh1+2*@{proficiency}&#124;6&#44;7d20kh1+2*@{proficiency}&#124;Disadvantage&#44;2d20kl1+2*@{proficiency}&#125;}+@{charisma}
+
+
+<input type="hidden" name="attr_bonusdice" value="Bonus dice"/>
+<input type="hidden" name="attr_changed_attributes" value=""/>
+<input type="hidden" name="attr_effect_query" value="?{Effect|Standard|Limited|Great|Extreme|Zero}"/>
+<input type="hidden" name="attr_engagement_roll_query" value=""/>
+<input type="hidden" name="attr_notes_query" value="?{Notes}"/>
+<input type="hidden" name="attr_numberofdice" value="?{Number of dice|0,{{zerodie1=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{zerodie2=[[d6]]&amp;#125;&amp;#125;|1,{{die1=[[d6]]&amp;#125;&amp;#125;|2,{{die1=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die2=[[d6]]&amp;#125;&amp;#125;|3,{{die1=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die2=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die3=[[d6]]&amp;#125;&amp;#125;|4,{{die1=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die2=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die3=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die4=[[d6]]&amp;#125;&amp;#125;|5,{{die1=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die2=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die3=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die4=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die5=[[d6]]&amp;#125;&amp;#125;|6,{{die1=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die2=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die3=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die4=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die5=[[d6]]&amp;#44;&amp;#125;&amp;#125; {{die6=[[d6]]&amp;#125;&amp;#125;}"/>
+<input type="hidden" name="attr_position_query" value="?{Position|Risky,position=Risky|Controlled,position=Controlled|Desperate,position=Desperate|Fortune roll,short=short}"/>
+<input type="hidden" name="attr_title_text" value=""/>
+<input type="hidden" name="attr_upgraded_from_rookie" value="0"/>
+<input type="hidden" name="attr_upgraded_from_soldier" value="0"/>
+
+<input type="hidden" name="attr_statselection" value="?{Stat|Strength,@{strength}|Endurance,@{endurance}|Agility,@{agility}|Charisma,@{charisma}|Aura,@{aura}|Thought,@{thought}}">
+
+<input type="hidden" name="attr_skilllevelselection" value="?{Skill level|No relevant skill,@{attr_unskilledadvantageselection}|Skilled,{attr_skilledadvantageselection}|Expert,{attr_expertadvantageselection}}">
+
+<input type="hidden" name="attr_unskilledadvantageselection" value="?{Advantages|0,2d20kl1|1,1d20|2,2d20kh1|3,3d20kh1|4,4d20kh1|5,5d20kh1|6,6d20kh1|Disadvantage,2d20kl1}">
+
+<input type="hidden" name="attr_skilledadvantageselection" value="?{Advantages|0,1d20+@{proficiency}|1,2d20kh1+@{proficiency}|2,3d20kh1+@{proficiency}|3,4d20kh1+@{proficiency}|4,5d20kh1+@{proficiency}|56d20kh1+@{proficiency}|6,7d20kh1+@{proficiency}|Disadvantage,2d20kl1+@{proficiency}}">
+
+<input type="hidden" name="attr_expertadvantageselection" value="?{Advantages|0,1d20+@{proficiency}|1,2d20kh1+@{proficiency}|2,3d20kh1+@{proficiency}|3,4d20kh1+@{proficiency}|4,5d20kh1+@{proficiency}|56d20kh1+@{proficiency}|6,7d20kh1+@{proficiency}|Disadvantage,2d20kl1+@{proficiency}}"

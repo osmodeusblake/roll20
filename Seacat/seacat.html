@@ -173,7 +173,7 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{proficiency}" name="rollagility">Proficiency</button>
+						<button class="sheet-blankrollbutton" type="roll" value="/roll @{statselection} + @{skilllevelselection}" name="rollagility">Proficiency</button>
 					</div>				
 				</div>
 				<div class="stat">
@@ -477,17 +477,38 @@
 	</div>
 </div>
 
-<div class="rollqueries" style="display: none;">
-	<input class="statrollquery" type="hidden" value="
-	
-		?{Choose}
-	
-	">
-</div>
+<!-- Roll Queries -->
+
+<input type="hidden" name="attr_statselection" value="?{Stat|Strength,@{strength}|Endurance,@{endurance}|Agility,@{agility}|Charisma,@{charisma}|Aura,@{aura}|Thought,@{thought}}">
+
+<input type="hidden" name="attr_skilllevelselection" value="?{Skill Level Selection&#124;
+	Unskilled,?{Advantage Selection&amp;#124;
+	   1&#44;1&amp;#124;
+	   2&#44;2&amp;#124;
+	   3&#44;3&amp;#124;
+	   4&#44;4&amp;#124;
+	   5&#44;5&amp;#124;
+	   6&#44;6&amp;#124;
+	   D&#44;0&amp;#125; &#124;
+	Skilled,?{Advantage Selection&amp;#124;
+		1&#44;1&amp;#124;
+		2&#44;2&amp;#124;
+		3&#44;3&amp;#124;
+		4&#44;4&amp;#124;
+		5&#44;5&amp;#124;
+		6&#44;6&amp;#124;
+		D&#44;0&amp;#125; &#124;
+	 Expert,?{Advantage Selection&amp;#124;
+		1&#44;1&amp;#124;
+		2&#44;2&amp;#124;
+		3&#44;3&amp;#124;
+		4&#44;4&amp;#124;
+		5&#44;5&amp;#124;
+		6&#44;6&amp;#124;
+		D&#44;0&amp;#125;
+ &#125;">
 
 <!-- Sheet Workers -->
-
-<input type="hidden" name="attr_seacatroll" value="/roll ?{Stat|Strength, @{strength}|Endurance, @{endurance}|Agility, @{agility}|Charisma, @{charisma}|Aura, @{aura}|Thought, @{thought}}+ {1d20?{Skill level|No relevant skill [-],&#44;1d20&#125kl1|Gifted amateur[+],&#44;1d20&#125kh1|Skilled, &#125+@{proficiency}|Perfect Match [+],&#44;1d20&#125kh1+@{proficiency}|Expert, &#125+@{proficiency}+@{proficiency}|Expert & Perfect Match[+],&#44;1d20&#125kh1+@{proficiency}+@{proficiency}}}">
 
 <script type="text/worker">
 
@@ -496,3 +517,32 @@
 	});
 	
 </script>
+
+?{Skill Level Selection&#124;
+	Unskilled, ?{Advantage Selection&amp;#124;
+	   1 Advantage&#44;1&amp;#124;
+	   1 Advantage&#44;1&amp;#124;
+	   1 Advantage&#44;1&amp;#124;
+	   1 Advantage&#44;1&amp;#124;
+	   1 Advantage&#44;1&amp;#124;
+	   1 Advantage&#44;1&amp;#124;
+	   Disadvantage&#44;1&amp;#125; &#124;
+	Skilled, ?{Advantage Selection&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		Disadvantage&#44;1&amp;#125; &#124;
+	 Expert, ?{Advantage Selection&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		1 Advantage&#44;1&amp;#124;
+		Disadvantage&#44;1&amp;#125;
+ }
+
+ ?{Skill Level Selection|Unskilled,?{Advantage Selection&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;Disadvantage&#44;1&#125;|Skilled,?{Advantage Selection&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;Disadvantage&#44;1&#125;|Expert,?{Advantage Selection&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;Disadvantage&#44;1&#125;|}

@@ -1,38 +1,77 @@
-<button type="roll" value="&{template:seacatroll} {{name=@{character_name}}} {{rollstat=?{Stat|Strength,strength|Endurance,endurance|Agility,agility|Charisma,charisma|Aura,aura|Thought,thought}}} {{rollcount=[[?{Skill ranks|0|1|2}+?{Advantage|-1|0|1|2|3|4|5|6}]]}} {{roll0=[[2d20kl1]]}} {{roll1=[[1d20]]}} {{roll2=[[2d20kh1]]}} {{roll3=[[3d20kh1]]}} {{roll4=[[4d20kh1]]}} {{roll5=[[5d20kh1]]}} {{roll6=[[6d20kh1]]}} {{roll7=[[7d20kh1]]}}">Roll Template</button>
+<input type="hidden" name="attr_statroll" value="&{template:seacat} {{name=D20 Stat Roll}} {{stat=[[@{statquery}]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{strengthstat=[[@{strength}]]}} {{endurancestat=[[@{endurance}]]}} {{agilitystat=[[@{agility}]]}} {{charismastat=[[@{charisma}]]}} {{aurastat=[[@{aura}]]}} {{thoughtstat=[[@{thought}]]}} {{unskilleddisadvantageroll=[[2d20kl1]]}} {{unskilledroll=[[(@{advantagequery})d20kh1]]}} {{skilleddisadvantageroll=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}}">
 
-<rolltemplate class="sheet-rolltemplate-seacatroll">
-	<span>{{rollname}}</span>
-	<span>Stat: {{rollstat}}</span>
-	<span>Dice to Roll: {{rollcount}}</span>
-	{{#rollLess() rollcount 1}}
-		<span>Disadvantage!</span>
-		<span>Result: {{roll0}}</span>
-	{{/rollLess() rollcount 1}}
-	{{#rollTotal() rollcount 1}}
-		<span>Normal</span>
-		<span>Result: {{roll1}}</span>
-	{{/rollTotal() rollcount 1}}
-	{{#rollGreater() rollcount 1}}
-		<span>Advantage!</span>
-			{{#rollTotal() rollcount 2}}
-			<span>Result: {{roll2}}</span>
-			{{/rollTotal() rollcount 2}}
-			{{#rollTotal() rollcount 3}}
-			<span>Result: {{roll3}}</span>
-			{{/rollTotal() rollcount 3}}
-			{{#rollTotal() rollcount 4}}
-			<span>Result: {{roll4}}</span>
-			{{/rollTotal() rollcount 4}}
-			{{#rollTotal() rollcount 5}}
-			<span>Result: {{roll5}}</span>
-			{{/rollTotal() rollcount 5}}
-			{{#rollTotal() rollcount 6}}
-			<span>Result: {{roll6}}</span>
-			{{/rollTotal() rollcount 6}}
-			{{#rollTotal() rollcount 7}}
-			<span>Result: {{roll6}}</span>
-			{{/rollTotal() rollcount 7}}
-	{{/rollGreater() rollcount 1}}
+<input type="hidden" name="attr_strengthroll" value="&{template:seacat} {{name=D20 Strength Roll}} {{stat=[[100]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{strengthstat=[[@{strength}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{strength}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{strength}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{strength}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{strength}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_enduranceroll" value="&{template:seacat} {{name=D20 Endurance Roll}} {{stat=[[200]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{endurancestat=[[@{endurance}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{endurance}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{endurance}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{endurance}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{endurance}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_agilityroll" value="&{template:seacat} {{name=D20 Agility Roll}} {{stat=[[300]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{agilitystat=[[@{agility}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{agility}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{agility}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{agility}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{agility}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_charismaroll" value="&{template:seacat} {{name=D20 Charisma Roll}} {{stat=[[400]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{charismastat=[[@{charisma}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{charisma}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{charisma}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{charisma}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{charisma}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_auraroll" value="&{template:seacat} {{name=D20 Aura Roll}} {{stat=[[500]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{aurastat=[[@{aura}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{aura}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{aura}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{aura}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{aura}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_thoughtroll" value="&{template:seacat} {{name=D20 Thought Roll}} {{stat=[[600]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{thoughtstat=[[@{thought}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{thought}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{thought}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{thought}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{thought}+(@{ranksquery}*@{proficiency})]]}}">
+
+
+<input type="hidden" name="attr_statquery" value="?{Stat|Strength,100|Endurance,200|Agility,300|Charisma,400|Aura,500|Thought,600}">
+<input type="hidden" name="attr_advantagequery" value="?{Advantages|0|1|2|3|4|5|6|7|-1}">
+<input type="hidden" name="attr_ranksquery" value="?{Skill ranks|Unskilled (0),-1|Skilled (1),1|Expert (2+),2}">
+
+<rolltemplate class="sheet-rolltemplate-seacat">
+	<br> 
+	<div>
+		<table>
+			<tr>
+				{{#rollTotal() stat 100}}
+				<caption>Strength Roll</caption>
+				{{/rollTotal() stat 100}}
+				{{#rollTotal() stat 200}}
+				<caption>Endurance Roll</caption>
+				{{/rollTotal() stat 200}}
+				{{#rollTotal() stat 300}}
+				<caption>Agility Roll</caption>
+				{{/rollTotal() stat 300}}
+			</tr>
+
+			<tr><td>Boons & Banes:</td><td>{{advantage}}</td></tr>
+
+			{{#rollLess() ranks 0}}
+				<tr><td>Skill Level:</td><td>Unskilled</td></tr>
+				{{#rollLess() advantage 1}}
+				<tr><td>Result:</td><td>{{unskilleddisadvantageroll}}</td></tr>
+				{{/rollLess() advantage 1}}
+				{{#rollGreater() advantage 0}}
+				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
+				{{/rollGreater() advantage 0}}
+			{{/rollLess() ranks 0}}
+
+			{{#rollTotal() ranks 1}}
+				<tr><td>Skill Level:</td><td>Unskilled</td></tr>
+				{{#rollLess() advantage 0}}
+				<tr></tr><td>Result:</td><td>{{skilleddisadvantageroll}}</td></tr>
+				{{/rollLess() advantage 0}}
+				{{#rollTotal() advantage 0}}
+				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
+				{{/rollTotal() advantage 0}}
+				{{#rollGreater() advantage 0}}
+				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
+				{{/rollGreater() advantage 0}}
+			{{/rollTotal() ranks 1}}
+
+			{{#rollTotal() ranks 2}}
+				<tr><td>Skill Level:</td><td>Unskilled</td></tr>
+				{{#rollLess() advantage 0}}
+				<tr></tr><td>Result:</td><td>{{skilleddisadvantageroll}}</td></tr>
+				{{/rollLess() advantage 0}}
+				{{#rollTotal() advantage 0}}
+				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
+				{{/rollTotal() advantage 0}}
+				{{#rollGreater() advantage 0}}
+				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
+				{{/rollGreater() advantage 0}}
+			{{/rollTotal() ranks 2}}
+		</table>
+	</div>
 </rolltemplate>
 
 <div></div>
@@ -174,7 +213,9 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{strength}" name="rollstrength">Strength</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_reducestrength">-</button>
+						<button class="sheet-blankrollbutton" type="roll" value="@{strengthroll}" name="rollstrength">STR</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_increasestrength">+</button>
 					</div>
 				</div>
 				<div class="stat">
@@ -187,7 +228,9 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{endurance}" name="rollendurance">Endurance</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_reduceendurance">-</button>
+						<button class="sheet-blankrollbutton" type="roll" value="@{enduranceroll}" name="rollendurance">END</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_increaseendurance">+</button>
 					</div>
 				</div>
 				<div class="stat">
@@ -200,7 +243,9 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{agility}" name="rollagility">Agility</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_reduceagility">-</button>
+						<button class="sheet-blankrollbutton" type="roll" value="@{agilityroll}" name="rollagility">AGI</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_increaseagility">+</button>
 					</div>
 				</div>
 				<div class="stat">
@@ -210,7 +255,7 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll [[@{combo}]]" name="rollproficiency">Proficiency</button>
+						<button class="sheet-blankrollbutton proficiencybutton" type="roll" value="@{statroll}" name="rollproficiency">PRO</button>
 					</div>				
 				</div>
 				<div class="stat">
@@ -223,7 +268,9 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{charisma}" name="rollcharisma">Charisma</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_reducecharisma">-</button>
+						<button class="sheet-blankrollbutton" type="roll" value="@{charismaroll}" name="rollcharisma">CHA</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_increasecharisma">+</button>
 					</div>
 				</div>
 				<div class="stat">
@@ -236,7 +283,9 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{aura}" name="rollaura">Aura</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_reduceaura">-</button>
+						<button class="sheet-blankrollbutton" type="roll" value="@{auraroll}" name="rollaura">AUR</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_increaseaura">+</button>
 					</div>
 				</div>
 				<div class="stat">
@@ -249,7 +298,9 @@
 						</div>
 					</div>
 					<div class="statlabel">
-						<button class="sheet-blankrollbutton" type="roll" value="/roll 1d20+@{thought}" name="rollthought">Thought</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_reducethought">-</button>
+						<button class="sheet-blankrollbutton" type="roll" value="@{thoughtroll}" name="rollthought">THO</button>
+						<button class="sheet-blankrollbutton" type="action" name="act_increasethought">+</button>
 					</div>
 				</div>
 			</div>
@@ -325,19 +376,35 @@
 					</div>
 				</div>
 			</div>
-			<div class="dicebox">
-				<div class="field">
-					<label class="labelh1">MAGIC COST:</label>
-					<input type="number" name="attr_magiccost">
+			<div class="diceandhurtbox">
+				<div class="dicebox">
+					<div class="stat">
+						<div class="statfields">
+								<input type="number" name="attr_magiccost" value="2">
+						</div>
+						<div class="statlabel">
+							<button class="sheet-blankrollbutton" type="action" name="act_reducemagiccost">-</button>
+							<div class="sheet-diceboxlabel">MAGIC COST</div>
+							<button class="sheet-blankrollbutton" type="action" name="act_increasemagiccost">+</button>
+						</div>
+					</div>
+					<div class="stat">
+						<div class="statfields">
+								<input type="number" name="attr_herodice" value="0">
+								<span>OF</span>
+								<input type="number" name="attr_herodice_max" value="0">
+						</div>
+						<div class="statlabel">
+							<button class="sheet-blankrollbutton" type="action" name="act_reduceherodice">-</button>
+							<div class="sheet-diceboxlabel">HERO DICE</div>
+							<button class="sheet-blankrollbutton" type="action" name="act_increaseherodice">+</button>
+						</div>
+					</div>
 				</div>
-				<div class="field">
-					<label class="labelh1">HERO DICE:</label>
-					<input type="number" name="attr_herodicecurrent">
-					<label>of:</label>
-					<input type="number" name="attr_herodice_max">
-				</div>		
-				<div class="field">
-					<label class="labelh1">LIFE:</label>
+				<div class="hurtbox">
+					<div class="field">
+						<label class="labelh1">HURT:</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -514,44 +581,316 @@
 	</div>
 </div>
 
-<!-- Roll Queries -->
+<!-- Macros -->
+
+<input type="hidden" name="attr_statroll" value="&{template:seacat} {{name=D20 Stat Roll}} {{stat=[[@{statquery}]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{strengthstat=[[@{strength}]]}} {{endurancestat=[[@{endurance}]]}} {{agilitystat=[[@{agility}]]}} {{charismastat=[[@{charisma}]]}} {{aurastat=[[@{aura}]]}} {{thoughtstat=[[@{thought}]]}} {{strbane=[[2d20kl1]]}} {{str=[[(@{advantagequery})d20kh1]]}} {{strprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{strprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{endbane=[[2d20kl1]]}} {{end=[[(@{advantagequery})d20kh1]]}} {{endprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{endprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{agibane=[[2d20kl1]]}} {{agi=[[(@{advantagequery})d20kh1]]}} {{agiprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{agiprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{chabane=[[2d20kl1]]}} {{cha=[[(@{advantagequery})d20kh1]]}} {{chaprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{chaprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{aurbane=[[2d20kl1]]}} {{aur=[[(@{advantagequery})d20kh1]]}} {{aurprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{aurprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{thobane=[[2d20kl1]]}} {{tho=[[(@{advantagequery})d20kh1]]}} {{thoprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{thoprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}}">
+
+<input type="hidden" name="attr_strengthroll" value="&{template:seacat} {{name=D20 Strength Roll}} {{stat=[[100]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{strengthstat=[[@{strength}]]}} {{strbane=[[2d20kl1+@{strength}]]}} {{str=[[(@{advantagequery})d20kh1+@{strength}]]}} {{strprofbane=[[2d20kl1+@{strength}+(@{ranksquery}*@{proficiency})]]}} {{strprof=[[(@{advantagequery}+1)d20kh1+@{strength}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_enduranceroll" value="&{template:seacat} {{name=D20 Endurance Roll}} {{stat=[[200]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{endurancestat=[[@{endurance}]]}} {{endbane=[[2d20kl1+@{endurance}]]}} {{end=[[(@{advantagequery})d20kh1+@{endurance}]]}} {{endprofbane=[[2d20kl1+@{endurance}+(@{ranksquery}*@{proficiency})]]}} {{endprof=[[(@{advantagequery}+1)d20kh1+@{endurance}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_agilityroll" value="&{template:seacat} {{name=D20 Agility Roll}} {{stat=[[300]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{agilitystat=[[@{agility}]]}} {{agibane=[[2d20kl1+@{agility}]]}} {{agi=[[(@{advantagequery})d20kh1+@{agility}]]}} {{agiprofbane=[[2d20kl1+@{agility}+(@{ranksquery}*@{proficiency})]]}} {{agiprof=[[(@{advantagequery}+1)d20kh1+@{agility}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_charismaroll" value="&{template:seacat} {{name=D20 Charisma Roll}} {{stat=[[400]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{charismastat=[[@{charisma}]]}} {{chabane=[[2d20kl1+@{charisma}]]}} {{cha=[[(@{advantagequery})d20kh1+@{charisma}]]}} {{chaprofbane=[[2d20kl1+@{charisma}+(@{ranksquery}*@{proficiency})]]}} {{chaprof=[[(@{advantagequery}+1)d20kh1+@{charisma}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_auraroll" value="&{template:seacat} {{name=D20 Aura Roll}} {{stat=[[500]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{aurastat=[[@{aura}]]}} {{aurbane=[[2d20kl1+@{aura}]]}} {{aur=[[(@{advantagequery})d20kh1+@{aura}]]}} {{aurprofbane=[[2d20kl1+@{aura}+(@{ranksquery}*@{proficiency})]]}} {{aurprof=[[(@{advantagequery}+1)d20kh1+@{aura}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_thoughtroll" value="&{template:seacat} {{name=D20 Thought Roll}} {{stat=[[600]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{thoughtstat=[[@{thought}]]}} {{thobane=[[2d20kl1+@{thought}]]}} {{tho=[[(@{advantagequery})d20kh1+@{thought}]]}} {{thoprofbane=[[2d20kl1+@{thought}+(@{ranksquery}*@{proficiency})]]}} {{thoprof=[[(@{advantagequery}+1)d20kh1+@{thought}+(@{ranksquery}*@{proficiency})]]}}">
+
+<input type="hidden" name="attr_statquery" value="?{Stat|Strength,100|Endurance,200|Agility,300|Charisma,400|Aura,500|Thought,600}">
+<input type="hidden" name="attr_advantagequery" value="?{Advantages|0|1|2|3|4|5|6|7|-1}">
+<input type="hidden" name="attr_ranksquery" value="?{Skill ranks|Unskilled (0),-1|Skilled (1),1|Expert (2+),2}">
+
+<!-- Roll Templates -->
+
+<rolltemplate class="sheet-rolltemplate-seacat">
+	<br> 
+	<div>
+		<table>
+			<tr>
+				{{#rollTotal() stat 100}}
+				<caption>Strength Roll</caption>
+				<tr><td>Strength</td><td>{{strengthstat}}</td></tr>
+				{{/rollTotal() stat 100}}
+
+				{{#rollTotal() stat 200}}
+				<caption>Endurance Roll</caption>
+				<tr><td>Endurance</td><td>{{endurancestat}}</td></tr>
+				{{/rollTotal() stat 200}}
+
+				{{#rollTotal() stat 300}}
+				<caption>Agility Roll</caption>
+				<tr><td>Agility</td><td>{{agilitystat}}</td></tr>
+				{{/rollTotal() stat 300}}
+
+				{{#rollTotal() stat 400}}
+				<caption>Charisma Roll</caption>
+				<tr><td>Charisma</td><td>{{charismastat}}</td></tr>
+				{{/rollTotal() stat 400}}
+
+				{{#rollTotal() stat 500}}
+				<caption>Aura Roll</caption>
+				<tr><td>Aura:</td><td>{{aurastat}}</td></tr>
+				{{/rollTotal() stat 500}}
+
+				{{#rollTotal() stat 600}}
+				<caption>Thought Roll</caption>
+				<tr><td>Thought</td><td>{{thoughtstat}}</td></tr>
+				{{/rollTotal() stat 600}}
+			</tr>
+
+			{{#rollLess() ranks 0}}
+				<tr><td>Skill Level</td><td>Unskilled</td></tr>
+				<tr><td>Boons & Banes</td><td>{{advantage}}</td></tr>
+				{{#rollLess() advantage 1}}
+				<tr>
+					{{#rollTotal() stat 100}}
+					<tr><td>Result</td><td>{{strbane}}</td></tr>
+					{{/rollTotal() stat 100}}
+	
+					{{#rollTotal() stat 200}}
+					<tr><td>Result</td><td>{{endbane}}</td></tr>
+					{{/rollTotal() stat 200}}
+	
+					{{#rollTotal() stat 300}}
+					<tr><td>Result</td><td>{{agibane}}</td></tr>
+					{{/rollTotal() stat 300}}
+	
+					{{#rollTotal() stat 400}}
+					<tr><td>Result</td><td>{{chabane}}</td></tr>
+					{{/rollTotal() stat 400}}
+	
+					{{#rollTotal() stat 500}}
+					<tr><td>Result</td><td>{{aurbane}}</td></tr>
+					{{/rollTotal() stat 500}}
+	
+					{{#rollTotal() stat 600}}
+					<tr><td>Result</td><td>{{thobane}}</td></tr>
+					{{/rollTotal() stat 600}}
+				</tr>
+				{{/rollLess() advantage 1}}
+				{{#rollGreater() advantage 0}}
+				<tr>
+					{{#rollTotal() stat 100}}
+					<tr><td>Result</td><td>{{str}}</td></tr>
+					{{/rollTotal() stat 100}}
+	
+					{{#rollTotal() stat 200}}
+					<tr><td>Result</td><td>{{end}}</td></tr>
+					{{/rollTotal() stat 200}}
+	
+					{{#rollTotal() stat 300}}
+					<tr><td>Result</td><td>{{agi}}</td></tr>
+					{{/rollTotal() stat 300}}
+	
+					{{#rollTotal() stat 400}}
+					<tr><td>Result</td><td>{{cha}}</td></tr>
+					{{/rollTotal() stat 400}}
+	
+					{{#rollTotal() stat 500}}
+					<tr><td>Result</td><td>{{aur}}</td></tr>
+					{{/rollTotal() stat 500}}
+	
+					{{#rollTotal() stat 600}}
+					<tr><td>Result</td><td>{{tho}}</td></tr>
+					{{/rollTotal() stat 600}}
+				</tr>
+				{{/rollGreater() advantage 0}}
+			{{/rollLess() ranks 0}}
+
+			{{#rollGreater() ranks 0}}
+				{{#rollTotal() ranks 1}}
+					<tr><td>Skill Level</td><td>Skilled/Professional</td></tr>
+				{{/rollTotal() ranks 1}}
+
+				{{#rollTotal() ranks 2}}
+					<tr><td>Skill Level</td><td>Expert</td></tr>
+				{{/rollTotal() ranks 2}}
+
+				<tr><td>Boons & Banes</td><td>{{advantage}}</td></tr>
+				{{#rollLess() advantage 0}}
+					<tr>
+						{{#rollTotal() stat 100}}
+						<tr><td>Result</td><td>{{strprofbane}}</td></tr>
+						{{/rollTotal() stat 100}}
+		
+						{{#rollTotal() stat 200}}
+						<tr><td>Result</td><td>{{endprofbane}}</td></tr>
+						{{/rollTotal() stat 200}}
+		
+						{{#rollTotal() stat 300}}
+						<tr><td>Result</td><td>{{agiprofbane}}</td></tr>
+						{{/rollTotal() stat 300}}
+		
+						{{#rollTotal() stat 400}}
+						<tr><td>Result</td><td>{{chaprofbane}}</td></tr>
+						{{/rollTotal() stat 400}}
+		
+						{{#rollTotal() stat 500}}
+						<tr><td>Result</td><td>{{aurprofbane}}</td></tr>
+						{{/rollTotal() stat 500}}
+		
+						{{#rollTotal() stat 600}}
+						<tr><td>Result</td><td>{{thoprofbane}}</td></tr>
+						{{/rollTotal() stat 600}}
+					</tr>
+				{{/rollLess() advantage 0}}
+
+				{{#rollGreater() advantage -1}}
+					<tr>
+						{{#rollTotal() stat 100}}
+						<tr><td>Result</td><td>{{strprof}}</td></tr>
+						{{/rollTotal() stat 100}}
+		
+						{{#rollTotal() stat 200}}
+						<tr><td>Result</td><td>{{endprof}}</td></tr>
+						{{/rollTotal() stat 200}}
+		
+						{{#rollTotal() stat 300}}
+						<tr><td>Result</td><td>{{agiprof}}</td></tr>
+						{{/rollTotal() stat 300}}
+		
+						{{#rollTotal() stat 400}}
+						<tr><td>Result</td><td>{{chaprof}}</td></tr>
+						{{/rollTotal() stat 400}}
+		
+						{{#rollTotal() stat 500}}
+						<tr><td>Result</td><td>{{aurprof}}</td></tr>
+						{{/rollTotal() stat 500}}
+		
+						{{#rollTotal() stat 600}}
+						<tr><td>Result</td><td>{{thoprof}}</td></tr>
+						{{/rollTotal() stat 600}}
+					</tr>
+				{{/rollGreater() advantage -1}}
+			{{/rollGreater() ranks 0}}
+		</table>
+	</div>
+</rolltemplate>
 
 
 <!-- Sheet Workers -->
 
 <script type="text/worker">
 
-	on("change:herodice_max", function() {
-	
+	on('clicked:reducestrength', function() {
+		getAttrs(['strength'], function(values) {
+			const strength = +values.strength || 0; 
+			const newstrength = strength -1;
+			setAttrs({
+			   strength: newstrength 
+			});
+	   });
+	});
+
+	on('clicked:increasestrength', function() {
+		getAttrs(['strength'], function(values) {
+			const strength = +values.strength || 0; 
+			const newstrength = strength +1;
+			setAttrs({
+			   strength: newstrength 
+			});
+	   });
 	});
 	
+	on('clicked:reduceendurance', function() {
+		getAttrs(['endurance'], function(values) {
+			const endurance = +values.endurance || 0; 
+			const newendurance = endurance -1;
+			setAttrs({
+				endurance: newendurance
+			});
+	   });
+	});
+
+	on('clicked:increaseendurance', function() {
+		getAttrs(['endurance'], function(values) {
+			const endurance = +values.endurance || 0; 
+			const newendurance = endurance +1;
+			setAttrs({
+				endurance: newendurance
+			});
+	   });
+	});
+
+	on('clicked:reduceagility', function() {
+		getAttrs(['agility'], function(values) {
+			const agility = +values.agility || 0; 
+			const newagility = agility -1;
+			setAttrs({
+				agility: newagility
+			});
+	   });
+	});
+
+	on('clicked:increaseagility', function() {
+		getAttrs(['agility'], function(values) {
+			const agility = +values.agility || 0; 
+			const newagility = agility +1;
+			setAttrs({
+				agility: newagility
+			});
+	   });
+	});
+
+	on('clicked:reducecharisma', function() {
+		getAttrs(['charisma'], function(values) {
+			const charisma = +values.charisma || 0; 
+			const newcharisma = charisma -1;
+			setAttrs({
+			   charisma: newcharisma 
+			});
+	   });
+	});
+
+	on('clicked:increasecharisma', function() {
+		getAttrs(['charisma'], function(values) {
+			const charisma = +values.charisma || 0; 
+			const newcharisma = charisma +1;
+			setAttrs({
+			   charisma: newcharisma 
+			});
+	   });
+	});
+
+	on('clicked:reduceaura', function() {
+		getAttrs(['aura'], function(values) {
+			const aura = +values.aura || 0; 
+			const newaura = aura -1;
+			setAttrs({
+			   aura: newaura 
+			});
+	   });
+	});
+
+	on('clicked:increaseaura', function() {
+		getAttrs(['aura'], function(values) {
+			const aura = +values.aura || 0; 
+			const newaura = aura +1;
+			setAttrs({
+			   aura: newaura 
+			});
+	   });
+	});
+
+	on('clicked:reducethought', function() {
+		getAttrs(['thought'], function(values) {
+			const thought = +values.thought || 0; 
+			const newthought = thought -1;
+			setAttrs({
+			   thought: newthought 
+			});
+	   });
+	});
+
+	on('clicked:increasethought', function() {
+		getAttrs(['thought'], function(values) {
+			const thought = +values.thought || 0; 
+			const newthought = thought +1;
+			setAttrs({
+			   thought: newthought 
+			});
+	   });
+	});
+
 </script>
-
-?{Skill Level Selection&#124;
-	Unskilled, ?{Advantage Selection&amp;#124;
-	   1 Advantage&#44;1&amp;#124;
-	   1 Advantage&#44;1&amp;#124;
-	   1 Advantage&#44;1&amp;#124;
-	   1 Advantage&#44;1&amp;#124;
-	   1 Advantage&#44;1&amp;#124;
-	   1 Advantage&#44;1&amp;#124;
-	   Disadvantage&#44;1&amp;#125; &#124;
-	Skilled, ?{Advantage Selection&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		Disadvantage&#44;1&amp;#125; &#124;
-	 Expert, ?{Advantage Selection&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		1 Advantage&#44;1&amp;#124;
-		Disadvantage&#44;1&amp;#125;
- }
-
- ?{Skill Level Selection|Unskilled,?{Advantage Selection&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;Disadvantage&#44;1&#125;|Skilled,?{Advantage Selection&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;Disadvantage&#44;1&#125;|Expert,?{Advantage Selection&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;1 Advantage&#44;1&#124;Disadvantage&#44;1&#125;|}

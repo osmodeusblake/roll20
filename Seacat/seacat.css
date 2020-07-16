@@ -139,8 +139,10 @@ label.sheet-labelh2 {
 }
 
 .sheet-statlabel {
-	text-align: center;
+	display:flex;
+	justify-content:center;
 	margin: 0;
+	width: 90%;
 }
 
 .sheet-statlabel label {
@@ -148,18 +150,29 @@ label.sheet-labelh2 {
 	margin: 0;
 }
 
-.sheet-stat button[type=roll] {
-	width: 90%;
+.sheet-stat button[type=roll], .sheet-stat button[type=action] {
+	width: 100%;
 	height: inherit;
 	padding: 0px;
 	margin: 0px;
 	font-family: 'Bebas Neue', sans-serif;
-	border: 0px;
+	border: 0;
 	border-radius: 0px;
 	background-image: none;
 	text-shadow: none;
 	color: black;
+	background-color: #ececd5;
+	text-align: center;
+	box-shadow:none;
+}
+
+.sheet-stat button[type=action]{
+	width: 30px;
 	background-color: #ddddbd;
+}
+
+.sheet-stat button.sheet-proficiencybutton[type=roll]{
+	width: 90%;
 }
 
 .sheet-statbig input[type=number] {
@@ -246,16 +259,71 @@ label.sheet-labelh2 {
 	width: 50%
 }
 
-.sheet-dicebox .sheet-field label {
-	width: 50%;
+.sheet-dicebox {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.sheet-dicebox .sheet-stat {
+	margin-bottom: 12px;
+	width: 45%;
+}
+
+.sheet-dicebox .sheet-stat .sheet-statfields {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 28px;
+}
+
+.sheet-dicebox .sheet-stat .sheet-statfields span {
+	font-size:12px;
+	margin-bottom: 0%;
 }
 
 .sheet-dicebox .sheet-hurtfield label {
 	width: 25%;
 }
 
-.sheet-dicebox input {
+.sheet-dicebox input[type=number] {
 	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	width: 25%;
+	font-size: 28px;
+	border: 0px;
+}
+
+.sheet-dicebox button[type=action] {
+	width: 18px;
+	height: inherit;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Bebas Neue', sans-serif;
+	border: 0;
+	border-radius: 0px;
+	background-image: none;
+	text-shadow: none;
+	color: black;
+	background-color: #ddddbd;
+	text-align: center;
+	box-shadow:none;
+}
+
+.sheet-diceboxlabel {
+	width: 50%;
+	padding: 0px;
+	margin: 0px;
+	font-size: 15.6px;
+	font-family: 'Bebas Neue', sans-serif;
+	border: 0;
+	border-radius: 0px;
+	background-image: none;
+	text-shadow: none;
+	color: black;
+	background-color: #ececd5;
+	text-align: center;
+	box-shadow:none;
 }
 
 .sheet-herodice {
@@ -272,7 +340,7 @@ label.sheet-labelh2 {
 	text-align: center;
 }
 
-.sheet-skills .sheet-field label, .sheet-abilities .sheet-field label, .sheet-gear-1 .sheet-field label, .sheet-gear2 .sheet-field label {
+.sheet-skills .sheet-field label, .sheet-abilities .sheet-field label, .sheet-gear1 .sheet-field label, .sheet-gear2 .sheet-field label {
 	width: 18px;
 }
 
@@ -294,6 +362,106 @@ label.sheet-labelh2 {
 	resize: none;
 	border: 1px solid #ccc;
 
+}
+
+/* Roll Template Styles */
+
+.sheet-rolltemplate-seacat table {
+	width: 100%;
+	border: 0px;
+	font-size: 1em;
+	font-family: "Alegreya Sans", sans-serif;
+	padding: 5px;
+}
+  
+.sheet-rolltemplate-seacat th, .sheet-rolltemplate-seacat caption {
+	background-color:#ffffff;
+	color: #A2A062;
+	padding: 5px;
+	padding-top: 10px;
+	padding-left: 10px;
+	line-height: 1.2em;
+	font-size: 1.2em;
+	font-family: "Bebas Neue", sans-serif;
+  }
+  
+.sheet-rolltemplate-seacat td {
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.sheet-rolltemplate-seacat table tr td:nth-child(1) {
+	font-weight: bold;
+}
+
+.sheet-rolltemplate-seacat tr {
+	background-color: #ffffff;
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .message.hidden3d .inlinerollresult{
+	color:rgba(255,255,255,0.0);
+	border:none!important
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .avatar{
+	position:absolute;
+	top:4px;
+	left:5px;
+	width:28px
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .inlinerollresult{
+	background-color:none;
+	border:2px solid #FEF68E;
+	padding:0 3px 0 3px;
+	font-weight:bold;
+	cursor:help;
+	font-size:1.1em
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .inlinerollresult.fullcrit{
+	border:2px solid #3FB315
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .inlinerollresult.fullfail{
+	border:2px solid #B31515
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .inlinerollresult.importantroll{
+	border:2px solid #4A57ED
+}
+
+.sheet-rolltemplate-seacat .textchatcontainer .formula .inlinerollresult{
+	font-size:inherit
+}
+
+.sheet-rolltemplate-seacat .tipsy-n.tipsy,.tipsy-n-right.tipsy{
+	opacity:1!important
+}
+
+.sheet-rolltemplate-seacat .inlinerollresult.fullcrit{
+	border:2px solid #3FB315
+}
+
+.sheet-rolltemplate-seacat .inlinerollresult.fullfail{
+	border:2px solid #B31515
+}
+
+.sheet-rolltemplate-seacat .inlinerollresult.importantroll{
+	border:2px solid #4A57ED
+}
+
+.sheet-rolltemplate-seacat .inlinerollresult{
+	font-size:inherit
+}
+
+.sheet-rolltemplate-seacat .inlinerollresult {
+	background-color:none;
+	border: 2px solid #FEF68E;
+	padding: 0 3px 0 3px;
+	font-weight: bold;
+	cursor: help;
+	font-size: 1.1em;
 }
 
 /* For presentation only, no need to copy the code below */

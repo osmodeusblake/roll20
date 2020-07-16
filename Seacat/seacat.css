@@ -260,20 +260,48 @@ label.sheet-labelh2 {
 }
 
 .sheet-dicebox {
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .sheet-dicebox .sheet-stat {
+	display: grid;
+	grid-template-rows: auto 21px;
 	margin-bottom: 12px;
-	width: 45%;
+	width: 100%;
 }
 
 .sheet-dicebox .sheet-stat .sheet-statfields {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 28px;
+}
+
+.sheet-dicebox .sheet-stat .sheet-statlabel {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sheet-diceboxlabel {
+	width: 50%;
+	padding: 0px;
+	margin: 0px;
+	font-size: 15.6px;
+	font-family: 'Bebas Neue', sans-serif;
+	border: 0;
+	border-radius: 0px;
+	background-image: none;
+	text-shadow: none;
+	color: black;
+	background-color: #ececd5;
+	text-align: center;
+	box-shadow:none;
+	height: 100%;
 }
 
 .sheet-dicebox .sheet-stat .sheet-statfields span {
@@ -296,7 +324,6 @@ label.sheet-labelh2 {
 
 .sheet-dicebox button[type=action] {
 	width: 18px;
-	height: inherit;
 	padding: 0px;
 	margin: 0px;
 	font-family: 'Bebas Neue', sans-serif;
@@ -308,22 +335,7 @@ label.sheet-labelh2 {
 	background-color: #ddddbd;
 	text-align: center;
 	box-shadow:none;
-}
-
-.sheet-diceboxlabel {
-	width: 50%;
-	padding: 0px;
-	margin: 0px;
-	font-size: 15.6px;
-	font-family: 'Bebas Neue', sans-serif;
-	border: 0;
-	border-radius: 0px;
-	background-image: none;
-	text-shadow: none;
-	color: black;
-	background-color: #ececd5;
-	text-align: center;
-	box-shadow:none;
+	height: 100%;
 }
 
 .sheet-herodice {

@@ -35,7 +35,7 @@ label {
 .sheet-row1 {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
-	margin-bottom: 12px;
+	margin-bottom: 24px;
 	gap: 0px;
 }
 
@@ -91,6 +91,7 @@ label.sheet-labelh2 {
 .sheet-infobox {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-top: 2px;
 }
 
 .sheet-gearbox {
@@ -103,8 +104,8 @@ label.sheet-labelh2 {
 	margin-right: 13px;
 }
 
-.sheet-hero {
-	margin-bottom: 6px;
+.sheet-info1, .sheet-info2, .sheet-skills, .sheet-abilities {
+	row-gap: 2px;
 }
 
 .sheet-abilities, .sheet-sidebox, .sheet-physicalcombat, .sheet-metaphysicalcombat {
@@ -114,13 +115,20 @@ label.sheet-labelh2 {
 .sheet-statbox {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	margin-right: 13px;
 	margin-bottom: 24px;
 }
 
 .sheet-statfields{
-	display: grid;
-	grid-template-columns: .8fr 1fr;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+
+.sheet-statfields span {
+	font-size:12px;
+	margin-bottom: 0%;
 }
 
 .sheet-statfieldsprof{
@@ -149,6 +157,7 @@ label.sheet-labelh2 {
 .sheet-stat {
 	margin: 3px;
 	height: min-content;
+	border: 2px solid #ececd5;
 }
 
 .sheet-stat button[type=roll], .sheet-stat button[type=action] {
@@ -162,7 +171,7 @@ label.sheet-labelh2 {
 	background-image: none;
 	text-shadow: none;
 	color: black;
-	background-color: #ececd5;
+	background-color: transparent;
 	text-align: center;
 	box-shadow:none;
 }
@@ -176,56 +185,60 @@ label.sheet-labelh2 {
 	width: 100%;
 }
 
-.sheet-statbig input[type=number] {
-	text-align: right;
-	padding: 0px;
-	padding-right: 5px;
-	margin: 0px;
-	width: 100%;
-	font-size: 28px;
-	border: 0px;
-}
-
-.sheet-statprof input[type=number] {
-	text-align: center;
-	padding: 0px;
-	padding-right: 5px;
-	margin: 0px;
-	width: 100%;
-	font-size: 28px;
-	border: 0px;
-}
-
-.sheet-statsmall input[type=number] {
+.sheet-statleft input[type=number] {
 	text-align: left;
 	padding: 0px;
-	padding-left: 5px;
+	padding-right: 3px;
 	margin: 0px;
 	width: 100%;
-	font-size: 18px;
+	font-size: 24px;
 	border: 0px;
 }
 
-.sheet-statbig {
+.sheet-statprof {
+	background-color: #ececd5;
+}
+
+.sheet-statcenter input[type=number] {
+	text-align: center;
+	padding: 0px;
+	padding-right: 15px;
+	margin: 0px;
+	width: 100%;
+	font-size: 24px;
+	border: 0px;
+	background-color: #ececd5;
+}
+
+.sheet-statright input[type=number] {
+	text-align: right;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	font-size: 24px;
+	border: 0px;
+	padding-left: 3px;
+}
+
+.sheet-statleft {
 	display: flex;
 	justify-content: right;
 	align-items: flex-end;
 }
 
-.sheet-statsmall {
+.sheet-statright {
 	display: flex;
 	align-items: flex-end;
 	justify-content: left;
-	padding-bottom: 3px;
 }
 
-.sheet-statprof {
+.sheet-statcenter {
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 }
 
-.sheet-statsmall input {
+.sheet-statright input {
 	border: 0px;
 }
 
@@ -262,7 +275,9 @@ label.sheet-labelh2 {
 
 .sheet-sidebox {
 	display: grid;
-	grid-auto-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-flow: column;
+	column-gap: 10px;
 }
 
 .sheet-sidebox .sheet-stat {
@@ -270,7 +285,7 @@ label.sheet-labelh2 {
 	grid-template-rows: auto 21px;
 	margin-bottom: 12px;
 	width: 100%;
-	border: 1px solid black;
+	background-color: #ececd5;
 }
 
 .sheet-sidebox .sheet-stat .sheet-statfields {
@@ -278,7 +293,7 @@ label.sheet-labelh2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .sheet-sidebox .sheet-stat .sheet-statlabel {
@@ -290,7 +305,7 @@ label.sheet-labelh2 {
 }
 
 .sheet-sideboxlabel {
-	width: 50%;
+	width: 100%;
 	padding: 0px;
 	margin: 0px;
 	font-size: 15.6px;
@@ -300,12 +315,9 @@ label.sheet-labelh2 {
 	background-image: none;
 	text-shadow: none;
 	color: black;
-	background-color: #ececd5;
 	text-align: center;
 	box-shadow:none;
 	height: 100%;
-	transform-origin: 0 0;
-	transform: rotate(90deg);
 }
 
 .sheet-sidebox .sheet-stat .sheet-statfields span {
@@ -321,25 +333,10 @@ label.sheet-labelh2 {
 	text-align: center;
 	padding: 0px;
 	margin: 0px;
-	width: 25%;
-	font-size: 28px;
+	width: 100%;
+	font-size: 24px;
 	border: 0px;
-}
-
-.sheet-sidebox button[type=action] {
-	width: 18px;
-	padding: 0px;
-	margin: 0px;
-	font-family: 'Bebas Neue', sans-serif;
-	border: 0;
-	border-radius: 0px;
-	background-image: none;
-	text-shadow: none;
-	color: black;
-	background-color: #ddddbd;
-	text-align: center;
-	box-shadow:none;
-	height: 100%;
+	background-color: #ececd5;
 }
 
 .sheet-herodice {

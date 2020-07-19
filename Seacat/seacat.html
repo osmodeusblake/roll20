@@ -78,14 +78,14 @@
 		<div class="row1">
 			<div class="info">
 				<div class="field hero">
-					<label class="labelh1">HERO:</label>
-					<input type="text" name="attr_hero" tabindex=1>
+					<label class="labelh1">NAME:</label>
+					<input type="text" name="attr_character_name" tabindex=1>
 				</div>
 				<div class="infobox">
 					<div class="info1">
 						<div class="field">
-							<label>Name:</label>
-							<input type="text" name="attr_character_name" tabindex=1>
+							<label>Archetype:</label>
+							<input type="text" name="attr_archetype" tabindex=1>
 						</div>
 						<div class="field">
 							<label>Friends:</label>
@@ -99,19 +99,6 @@
 							<label>Title:</label>
 							<input type="text" name="attr_title" tabindex=3>
 						</div>
-						<div class="field">&nbsp;</div>
-						<div class="field">
-							<label class="labelh1">EXPERIENCE:</label>
-							<input type="number"  name="attr_experience" tabindex=8>
-						</div>
-						<div class="field">
-							<label>Invested:</label>
-							<input type="number"  name="attr_invested" tabindex=9>
-						</div>
-						<div class="field">&nbsp;</div>
-
-					</div>
-					<div class="info2">
 						<div class="field">
 							<label>Species:</label>
 							<input type="text" name="attr_species" tabindex=4>
@@ -120,6 +107,8 @@
 							<label>Looks:</label>
 							<input type="text" name="attr_looks" tabindex=5>
 						</div>
+					</div>
+					<div class="info2">
 						<div class="field">
 							<label>Debt:</label>
 							<input type="text" name="attr_debt" tabindex=6>
@@ -128,13 +117,22 @@
 							<label>Likes:</label>
 							<input type="text" name="attr_likes" tabindex=7>
 						</div>
-						<div class="field">&nbsp;</div>
 						<div class="field">
-							<label class="labelh1">LEVEL:</label>
+							<label>Experience:</label>
+							<input type="number"  name="attr_experience" tabindex=8>
+						</div>
+						<div class="field">
+							<label>Invested:</label>
+							<input type="number"  name="attr_invested" tabindex=9>
+						</div>
+						<div class="field">
+							<label>Level:</label>
 							<input type="number"  name="attr_level" tabindex=10>
 						</div>
-						<div class="field">&nbsp;</div>
-						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label>Magic cost:</label>
+							<input type="number" name="attr_magiccost" tabindex=10>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -166,7 +164,6 @@
 					<label for="attr_skill6">6.</label>
 					<input type="text" name="attr_skill6">
 				</div>
-				<div class="field">&nbsp;</div>
 			</div>
 			<div class="abilities">
 				<div class="field">
@@ -196,203 +193,214 @@
 					<label for="attr_ability6">6.</label>
 					<input type="text" name="attr_ability6">
 				</div>
-				<div class="field">&nbsp;</div>
 			</div>
 		</div>
 		<div class="row2">
-			<div class="row2left">
-				<div class="statbox">
-					<div class="stat">
-						<div class="statfields">
-							<div class="statbig">
-								<input type="number" dir="rtl" name="attr_strength" value="0">
-							</div>
-							<div class="statsmall">
-								OF <input type="number" name="attr_strength_max" value="0">
-							</div>
+			<div class="statbox">
+				<div class="stat">
+					<div class="statfields">
+						<div class="statleft">
+							<input type="number" dir="rtl" name="attr_strength" value="0">
 						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="roll" value="@{strengthroll}" name="rollstrength">STR</button>
+						<span>OF</span>
+						<div class="statright">
+							<input type="number" name="attr_strength_max" value="0">
 						</div>
 					</div>
-					<div class="stat">
-						<div class="statfields">
-							<div class="statbig">
-								<input type="number" dir="rtl" name="attr_endurance" value="0">
-							</div>
-							<div class="statsmall">
-								OF <input type="number" name="attr_endurance_max" value="0">
-							</div>
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="roll" value="@{enduranceroll}" name="rollendurance">END</button>
-						</div>
-					</div>
-					<div class="stat">
-						<div class="statfields">
-							<div class="statbig">
-								<input type="number" dir="rtl" name="attr_agility" value="0">
-							</div>
-							<div class="statsmall">
-								OF <input type="number" name="attr_agility_max" value="0">
-							</div>
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="roll" value="@{agilityroll}" name="rollagility">AGI</button>
-						</div>
-					</div>
-					<div class="stat">
-						<div class="statfieldsprof">
-							<div class="statprof">
-								<input type="number" name="attr_proficiency" value="0">
-							</div>
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton proficiencybutton" type="roll" value="@{statroll}" name="rollproficiency">PRO</button>
-						</div>				
-					</div>
-					<div class="stat">
-						<div class="statfields">
-							<div class="statbig">
-								<input type="number" dir="rtl" name="attr_charisma" value="0">
-							</div>
-							<div class="statsmall">
-								OF <input type="number" name="attr_charisma_max" value="0">
-							</div>
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="roll" value="@{charismaroll}" name="rollcharisma">CHA</button>
-						</div>
-					</div>
-					<div class="stat">
-						<div class="statfields">
-							<div class="statbig">
-								<input type="number" dir="rtl" name="attr_aura" value="0">
-							</div>
-							<div class="statsmall">
-								OF <input type="number" name="attr_aura_max" value="0">
-							</div>
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="roll" value="@{auraroll}" name="rollaura">AUR</button>
-						</div>
-					</div>
-					<div class="stat">
-						<div class="statfields">
-							<div class="statbig">
-								<input type="number" dir="rtl" name="attr_thought" value="0">
-							</div>
-							<div class="statsmall">
-								OF <input type="number" name="attr_thought_max" value="0">
-							</div>
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="roll" value="@{thoughtroll}" name="rollthought">THO</button>
-						</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="@{strengthroll}" name="rollstrength">STR</button>
 					</div>
 				</div>
-				<div class="gearbox">
-					<div class="gear1">
-						<div class="field">
-							<label class="labelh1">GEAR</label>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statleft">
+							<input type="number" dir="rtl" name="attr_endurance" value="0">
 						</div>
-						<div class="field">
-							<label for="gear1item1">1.</label>
-							<input type="text" name="attr_gear1item1">
-						</div>
-						<div class="field">
-							<label for="gear1item2">2.</label>
-							<input type="text" name="attr_gear1item2">
-						</div>
-						<div class="field">
-							<label for="gear1item3">3.</label>
-							<input type="text" name="attr_gear1item3">
-						</div>
-						<div class="field">
-							<label for="gear1item4">4.</label>
-							<input type="text" name="attr_gear1item4">
-						</div>
-						<div class="field">
-							<label for="gear1item5">5.</label>
-							<input type="text" name="attr_gear1item5">
-						</div>
-						<div class="field">
-							<label for="gear1item6">6.</label>
-							<input type="text" name="attr_gear1item6">
+						<span>OF</span>
+						<div class="statright">
+							<input type="number" name="attr_endurance_max" value="0">
 						</div>
 					</div>
-					<div class="gear2">
-						<div class="field">
-							<label class="labelh1">CUMBERSOME GEAR</label>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="@{enduranceroll}" name="rollendurance">END</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statleft">
+							<input type="number" dir="rtl" name="attr_agility" value="0">
 						</div>
-						<div class="field">
-							<label for="gear2item1">1.</label>
-							<input type="text" name="attr_gear2item1">
+						<span>OF</span>
+						<div class="statright">
+							<input type="number" name="attr_agility_max" value="0">
 						</div>
-						<div class="field">
-							<label for="gear2item2">2.</label>
-							<input type="text" name="attr_gear2item2">
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="@{agilityroll}" name="rollagility">AGI</button>
+					</div>
+				</div>
+				<div class="stat statprof">
+					<div class="statfieldsprof">
+						<div class="statcenter">
+							<input type="number" dir="rtl" name="attr_proficiency" value="0">
 						</div>
-						<div class="field">
-							<label for="gear2item3">3.</label>
-							<input type="text" name="attr_gear2item3">
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton proficiencybutton" type="roll" value="@{statroll}" name="rollproficiency">PRO</button>
+					</div>				
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statleft">
+							<input type="number" dir="rtl" name="attr_charisma" value="0">
 						</div>
-						<div class="field">
-							<label for="gear2item4">4.</label>
-							<input type="text" name="attr_gear2item4">
+						<span>OF</span>
+						<div class="statright">
+							<input type="number" name="attr_charisma_max" value="0">
 						</div>
-						<div class="field">
-							<label for="gear2item5">5.</label>
-							<input type="text" name="attr_gear2item5">
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="@{charismaroll}" name="rollcharisma">CHA</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statleft">
+							<input type="number" dir="rtl" name="attr_aura" value="0">
 						</div>
-						<div class="field">
-							<label for="gear2item6">6.</label>
-							<input type="text" name="attr_gear2item6">
+						<span>OF</span>
+						<div class="statright">
+							<input type="number" name="attr_aura_max" value="0">
 						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="@{auraroll}" name="rollaura">AUR</button>
+					</div>
+				</div>
+				<div class="stat">
+					<div class="statfields">
+						<div class="statleft">
+							<input type="number" dir="rtl" name="attr_thought" value="0">
+						</div>
+						<span>OF</span>
+						<div class="statright">
+							<input type="number" name="attr_thought_max" value="0">
+						</div>
+					</div>
+					<div class="statlabel">
+						<button class="sheet-blankrollbutton" type="roll" value="@{thoughtroll}" name="rollthought">THO</button>
 					</div>
 				</div>
 			</div>
-			<div class="row2right">
-				<div class="sidebox">
-					<div class="stat">
-						<div class="statfields">
-								<input type="number" name="attr_life" value="0">
-								<span>OF</span>
-								<input type="number" name="attr_life_max" value="0">
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="action" name="act_reducelife">-</button>
-							<div class="sheet-sideboxlabel">LIFE</div>
-							<button class="sheet-blankrollbutton" type="action" name="act_increaselife">+</button>
-						</div>
+			<div class="sidebox">
+				<div class="stat">
+					<div class="statfields">
+							<input type="number" dir="rtl" name="attr_life" value="0">
+							<span>OF</span>
+							<input type="number" name="attr_life_max" value="0">
 					</div>
-					<div class="stat">
-						<div class="statfields">
-								<input type="number" name="attr_magiccost" value="2">
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="action" name="act_reducemagiccost">-</button>
-							<div class="sheet-sideboxlabel">MAGIC COST</div>
-							<button class="sheet-blankrollbutton" type="action" name="act_increasemagiccost">+</button>
-						</div>
-					</div>
-					<div class="stat">
-						<div class="statfields">
-								<input type="number" name="attr_herodice" value="0">
-								<span>OF</span>
-								<input type="number" name="attr_herodice_max" value="0">
-						</div>
-						<div class="statlabel">
-							<button class="sheet-blankrollbutton" type="action" name="act_reduceherodice">-</button>
-							<div class="sheet-sideboxlabel">HERO DICE</div>
-							<button class="sheet-blankrollbutton" type="action" name="act_increaseherodice">+</button>
-						</div>
+					<div class="statlabel">
+						<div class="sheet-sideboxlabel">LIFE</div>
 					</div>
 				</div>
-				<div class="hurtbox">
-					<div class="field">
-						<label class="labelh1">HURT:</label>
+				<div class="stat">
+					<div class="statfields">
+							<input type="number" dir="rtl" name="attr_herodice" value="0">
+							<span>OF</span>
+							<input type="number" name="attr_herodice_max" value="0">
 					</div>
+					<div class="statlabel">
+						<div class="sheet-sideboxlabel">HERO DICE</div>
+					</div>
+				</div>
+			</div>
+			<div class="gearbox">
+				<div class="gear1">
+					<div class="field">
+						<label class="labelh1">GEAR</label>
+					</div>
+					<div class="field">
+						<label for="gear1item1">1.</label>
+						<input type="text" name="attr_gear1item1">
+					</div>
+					<div class="field">
+						<label for="gear1item2">2.</label>
+						<input type="text" name="attr_gear1item2">
+					</div>
+					<div class="field">
+						<label for="gear1item3">3.</label>
+						<input type="text" name="attr_gear1item3">
+					</div>
+					<div class="field">
+						<label for="gear1item4">4.</label>
+						<input type="text" name="attr_gear1item4">
+					</div>
+					<div class="field">
+						<label for="gear1item5">5.</label>
+						<input type="text" name="attr_gear1item5">
+					</div>
+					<div class="field">
+						<label for="gear1item6">6.</label>
+						<input type="text" name="attr_gear1item6">
+					</div>
+				</div>
+				<div class="gear2">
+					<div class="field">
+						<label class="labelh1">CUMBERSOME GEAR</label>
+					</div>
+					<div class="field">
+						<label for="gear2item1">1.</label>
+						<input type="text" name="attr_gear2item1">
+					</div>
+					<div class="field">
+						<label for="gear2item2">2.</label>
+						<input type="text" name="attr_gear2item2">
+					</div>
+					<div class="field">
+						<label for="gear2item3">3.</label>
+						<input type="text" name="attr_gear2item3">
+					</div>
+					<div class="field">
+						<label for="gear2item4">4.</label>
+						<input type="text" name="attr_gear2item4">
+					</div>
+					<div class="field">
+						<label for="gear2item5">5.</label>
+						<input type="text" name="attr_gear2item5">
+					</div>
+					<div class="field">
+						<label for="gear2item6">6.</label>
+						<input type="text" name="attr_gear2item6">
+					</div>
+				</div>
+			</div>
+			<div class="hurtbox">
+				<div class="field">
+					<label class="labelh1">HURT:</label>
+				</div>
+				<div class="field">
+					<input type="checkbox" name="attr_hurt1">
+					<input type="text" name="attr_hurt1description" value="Fine">
+				</div>
+				<div class="field">
+					<input type="checkbox" name="attr_hurt2">
+					<input type="text" name="attr_hurt2description" value="Disadvantage [-]">
+				</div>
+				<div class="field">
+					<input type="checkbox" name="attr_hurt3">
+					<input type="text" name="attr_hurt3description" value="Slow, half movement">
+				</div>
+				<div class="field">
+					<input type="checkbox" name="attr_hurt4">
+					<input type="text" name="attr_hurt4description" value="Max Life halved">
+				</div>
+				<div class="field">
+					<input type="checkbox" name="attr_hurt5">
+					<input type="text" name="attr_hurt5description" value="Out of the scene">
+				</div>
+				<div class="field">
+					<input type="checkbox" name="attr_hurt6">
+					<input type="text" name="attr_hurt6description" value="Defeat, out of the game">
 				</div>
 			</div>
 		</div>
@@ -817,184 +825,58 @@
 
 <script type="text/worker">
 
-	on('clicked:reducestrength', function() {
-		getAttrs(['strength'], function(values) {
-			const strength = +values.strength || 0; 
-			const newstrength = strength -1;
-			setAttrs({
-			   strength: newstrength 
-			});
-	   });
-	});
+	on("change:skill1 sheet:opened", function() {  
+		getAttrs(["skill1"], function(values) {
+	      let learning = values.skill1.includes("*").toString();
+		  setAttrs({                            
+			skill1learning: learning
+		  });
+		});
+	  });
 
-	on('clicked:increasestrength', function() {
-		getAttrs(['strength'], function(values) {
-			const strength = +values.strength || 0; 
-			const newstrength = strength +1;
-			setAttrs({
-			   strength: newstrength 
-			});
-	   });
-	});
-	
-	on('clicked:reduceendurance', function() {
-		getAttrs(['endurance'], function(values) {
-			const endurance = +values.endurance || 0; 
-			const newendurance = endurance -1;
-			setAttrs({
-				endurance: newendurance
-			});
-	   });
-	});
+	  on("change:skill2 sheet:opened", function() {  
+		getAttrs(["skill2"], function(values) {
+	      let learning = values.skill2.includes("*").toString();
+		  setAttrs({                            
+			skill2learning: learning
+		  });
+		});
+	  });
 
-	on('clicked:increaseendurance', function() {
-		getAttrs(['endurance'], function(values) {
-			const endurance = +values.endurance || 0; 
-			const newendurance = endurance +1;
-			setAttrs({
-				endurance: newendurance
-			});
-	   });
-	});
+	  on("change:skill3 sheet:opened", function() {  
+		getAttrs(["skill3"], function(values) {
+	      let learning = values.skill3.includes("*").toString();
+		  setAttrs({                            
+			skill3learning: learning
+		  });
+		});
+	  });
 
-	on('clicked:reduceagility', function() {
-		getAttrs(['agility'], function(values) {
-			const agility = +values.agility || 0; 
-			const newagility = agility -1;
-			setAttrs({
-				agility: newagility
-			});
-	   });
-	});
+	  on("change:skill4 sheet:opened", function() {  
+		getAttrs(["skill4"], function(values) {
+	      let learning = values.skill4.includes("*").toString();
+		  setAttrs({                            
+			skill4learning: learning
+		  });
+		});
+	  });
 
-	on('clicked:increaseagility', function() {
-		getAttrs(['agility'], function(values) {
-			const agility = +values.agility || 0; 
-			const newagility = agility +1;
-			setAttrs({
-				agility: newagility
-			});
-	   });
-	});
+	  on("change:skill5 sheet:opened", function() {  
+		getAttrs(["skill5"], function(values) {
+	      let learning = values.skill5.includes("*").toString();
+		  setAttrs({                            
+			skill5learning: learning
+		  });
+		});
+	  });
 
-	on('clicked:reducecharisma', function() {
-		getAttrs(['charisma'], function(values) {
-			const charisma = +values.charisma || 0; 
-			const newcharisma = charisma -1;
-			setAttrs({
-			   charisma: newcharisma 
-			});
-	   });
-	});
-
-	on('clicked:increasecharisma', function() {
-		getAttrs(['charisma'], function(values) {
-			const charisma = +values.charisma || 0; 
-			const newcharisma = charisma +1;
-			setAttrs({
-			   charisma: newcharisma 
-			});
-	   });
-	});
-
-	on('clicked:reduceaura', function() {
-		getAttrs(['aura'], function(values) {
-			const aura = +values.aura || 0; 
-			const newaura = aura -1;
-			setAttrs({
-			   aura: newaura 
-			});
-	   });
-	});
-
-	on('clicked:increaseaura', function() {
-		getAttrs(['aura'], function(values) {
-			const aura = +values.aura || 0; 
-			const newaura = aura +1;
-			setAttrs({
-			   aura: newaura 
-			});
-	   });
-	});
-
-	on('clicked:reducethought', function() {
-		getAttrs(['thought'], function(values) {
-			const thought = +values.thought || 0; 
-			const newthought = thought -1;
-			setAttrs({
-			   thought: newthought 
-			});
-	   });
-	});
-
-	on('clicked:increasethought', function() {
-		getAttrs(['thought'], function(values) {
-			const thought = +values.thought || 0; 
-			const newthought = thought +1;
-			setAttrs({
-			   thought: newthought 
-			});
-	   });
-	});
-
-	on('clicked:reducelife', function() {
-		getAttrs(['life'], function(values) {
-			const life = +values.life || 0; 
-			const newlife = life -1;
-			setAttrs({
-			   life: newlife
-			});
-	   });
-	});
-
-	on('clicked:increaselife', function() {
-		getAttrs(['life'], function(values) {
-			const life = +values.life || 0; 
-			const newlife = life +1;
-			setAttrs({
-			   life: newlife
-			});
-	   });
-	});
-
-	on('clicked:reducemagiccost', function() {
-		getAttrs(['magiccost'], function(values) {
-			const magiccost = +values.magiccost || 0; 
-			const newmagiccost = magiccost -1;
-			setAttrs({
-				magiccost: newmagiccost
-			});
-	   });
-	});
-
-	on('clicked:increasemagiccost', function() {
-		getAttrs(['magiccost'], function(values) {
-			const magiccost = +values.magiccost || 0; 
-			const newmagiccost = magiccost +1;
-			setAttrs({
-				magiccost: newmagiccost
-			});
-	   });
-	});
-
-	on('clicked:reduceherodice', function() {
-		getAttrs(['herodice'], function(values) {
-			const herodice = +values.herodice || 0; 
-			const newherodice = herodice -1;
-			setAttrs({
-				herodice: newherodice
-			});
-	   });
-	});
-
-	on('clicked:increaseherodice', function() {
-		getAttrs(['herodice'], function(values) {
-			const herodice = +values.herodice || 0; 
-			const newherodice = herodice +1;
-			setAttrs({
-				herodice: newherodice
-			});
-	   });
-	});
+	  on("change:skill6 sheet:opened", function() {  
+		getAttrs(["skill6"], function(values) {
+	      let learning = values.skill6.includes("*").toString();
+		  setAttrs({                            
+			skill6learning: learning
+		  });
+		});
+	  });
 
 </script>

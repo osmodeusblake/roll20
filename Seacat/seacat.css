@@ -62,7 +62,7 @@ label {
 
 .sheet-row5 {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 3fr 1fr;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -286,6 +286,80 @@ label.sheet-labelh2 {
 	width: 100%
 }
 
+/* Configure the button styling. This example makes it look like a radio. */
+.sheet-learningtrack {
+	display: none;
+	height: 14px;
+	width: 14px;
+}
+
+input.sheet-showlearningtrack {
+	display: none;
+}
+
+input.sheet-showlearningtrack[type=checkbox]:checked {
+	display: none;
+}
+
+input.sheet-showlearningtrack[type=checkbox]:checked ~ .sheet-learningtrack {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+input.sheet-showlearningtrack[type=checkbox]:checked ~ button.sheet-clearlearningtrack {
+	display: inline;
+}
+
+input.sheet-showlearningtrack[type=checkbox]:checked ~  button.sheet-showlearningtrack {
+	display: none;
+}
+
+button.sheet-learningsuccess {
+	padding: 0;
+	background-color: white;
+	cursor: pointer;
+	width: 6px;
+	height: 6px;
+	border-radius: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	box-shadow: none;
+	background-image: none;
+	border: 1px solid #A2A062;
+  }
+
+button.sheet-learningsuccess:focus {
+	outline:none;
+}
+  
+button.sheet-learningsuccess > span {
+	width: 6px;
+	height: 6px;
+	background-color: #A2A062;
+}
+  
+  /* Hide the "checked" section of the radio if the hidden attribute value is greater than the button value */
+  input.sheet-learningsuccess[value="0"] ~ button > span.sheet-checked {
+	display: none;
+  }
+  input.sheet-learningsuccess[value="1"] ~ button.sheet-gt-1 > span.sheet-checked {
+	display: none;
+  }
+  input.sheet-learningsuccess[value="2"] ~ button.sheet-gt-2 > span.sheet-checked {
+	display: none;
+  }
+  input.sheet-learningsuccess[value="3"] ~ button.sheet-gt-3 > span.sheet-checked {
+	display: none;
+  }
+  input.sheet-learningsuccess[value="4"] ~ button.sheet-gt-4 > span.sheet-checked {
+	display: none;
+  }
+
 .sheet-sidebox {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
@@ -373,6 +447,12 @@ label.sheet-labelh2 {
 	display: grid;
 	grid-template-columns: repeat(6, minmax(0, 1fr));
 	grid-area: buttons;
+}
+
+.sheet-petbox {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: #ececd5;
 }
 
 .sheet-notes {

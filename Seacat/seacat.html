@@ -143,26 +143,122 @@
 				<div class="field">
 					<label for="attr_skill1">1.</label>
 					<input type="text" name="attr_skill1">
+					<input type="checkbox" class="showlearningtrack" name="attr_skill1learning">
+					<div class="learningtrack">
+						<input type="hidden" name="attr_skill1successes" class="learningsuccess" value="0" />
+						<button type="action" name="act_skill1success1" class="learningsuccess">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill1success2" class="learningsuccess gt-1">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill1success4" class="learningsuccess gt-1 gt-2 gt-3">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill1success3" class="learningsuccess gt-1 gt-2">
+							<span class="checked"></span>
+						</button>
+					</div>
 				</div>
 				<div class="field">
 					<label for="attr_skill2">2.</label>
 					<input type="text" name="attr_skill2">
+					<input type="checkbox" class="showlearningtrack" name="attr_skill2learning">
+					<div class="learningtrack">
+						<input type="hidden" name="attr_skill2successes" class="learningsuccess" value="0" />
+						<button type="action" name="act_skill2success1" class="learningsuccess">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill2success2" class="learningsuccess gt-1">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill2success4" class="learningsuccess gt-1 gt-2 gt-3">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill2success3" class="learningsuccess gt-1 gt-2">
+							<span class="checked"></span>
+						</button>
+					</div>
 				</div>
 				<div class="field">
 					<label for="attr_skill3">3.</label>
 					<input type="text" name="attr_skill3">
+					<input type="checkbox" class="showlearningtrack" name="attr_skill3learning">
+					<div class="learningtrack">
+						<input type="hidden" name="attr_skill3successes" class="learningsuccess" value="0" />
+						<button type="action" name="act_skill3success1" class="learningsuccess">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill3success2" class="learningsuccess gt-1">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill3success4" class="learningsuccess gt-1 gt-2 gt-3">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill3success3" class="learningsuccess gt-1 gt-2">
+							<span class="checked"></span>
+						</button>
+					</div>
 				</div>
 				<div class="field">
 					<label for="attr_skill4">4.</label>
 					<input type="text" name="attr_skill4">
+					<input type="checkbox" class="showlearningtrack" name="attr_skill4learning">
+					<div class="learningtrack">
+						<input type="hidden" name="attr_skill4successes" class="learningsuccess" value="0" />
+						<button type="action" name="act_skill4success1" class="learningsuccess">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill4success2" class="learningsuccess gt-1">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill4success4" class="learningsuccess gt-1 gt-2 gt-3">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill4success3" class="learningsuccess gt-1 gt-2">
+							<span class="checked"></span>
+						</button>
+					</div>
 				</div>
 				<div class="field">
 					<label for="attr_skill5">5.</label>
 					<input type="text" name="attr_skill5">
+					<input type="checkbox" class="showlearningtrack" name="attr_skill5learning">
+					<div class="learningtrack">
+						<input type="hidden" name="attr_skill5successes" class="learningsuccess" value="0" />
+						<button type="action" name="act_skill5success1" class="learningsuccess">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill5success2" class="learningsuccess gt-1">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill5success4" class="learningsuccess gt-1 gt-2 gt-3">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill5success3" class="learningsuccess gt-1 gt-2">
+							<span class="checked"></span>
+						</button>
+					</div>
 				</div>
 				<div class="field">
 					<label for="attr_skill6">6.</label>
 					<input type="text" name="attr_skill6">
+					<input type="checkbox" class="showlearningtrack" name="attr_skill6learning">
+					<div class="learningtrack">
+						<input type="hidden" name="attr_skill6successes" class="learningsuccess" value="0" />
+						<button type="action" name="act_skill6success1" class="learningsuccess">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill6success2" class="learningsuccess gt-1">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill6success4" class="learningsuccess gt-1 gt-2 gt-3">
+							<span class="checked"></span>
+						</button>
+						<button type="action" name="act_skill6success3" class="learningsuccess gt-1 gt-2">
+							<span class="checked"></span>
+						</button>
+					</div>
 				</div>
 			</div>
 			<div class="abilities">
@@ -488,52 +584,54 @@
 			</div>
 		</div>
 		<div class="row5">
-			<div class="petcolumn1">
-				<div class="field">
-					<label class="labelh1">SIDEKICK/PET</label>
+			<div class="petbox">
+				<div class="petcolumn1">
+					<div class="field">
+						<label class="labelh1">SIDEKICK/PET</label>
+					</div>
+					<div class="field">
+						<label>Name:</label>
+						<input type="text" name="attr_PetName">
+					</div>
+					<div class="field">
+						<label>Invested XP:</label>
+						<input type="text" name="attr_PetInvestedXP">
+					</div>
+					<div class="field">
+						<label>Level:</label>
+						<input type="text" name="attr_PetLevel">
+					</div>
 				</div>
-				<div class="field">
-					<label>Name:</label>
-					<input type="text" name="attr_PetName">
+				<div class="petcolumn2">
+					<div class="field">&nbsp;</div>
+					<div class="field">
+						<label>Defense:</label>
+						<input type="text" name="attr_PetDefense">
+					</div>
+					<div class="field">
+						<label>Sum:</label>
+						<input type="text" name="attr_PetSum">
+					</div>
+					<div class="field">
+						<label>Life:</label>
+						<input type="text" name="attr_PetLife">
+					</div>			
 				</div>
-				<div class="field">
-					<label>Invested XP:</label>
-					<input type="text" name="attr_PetInvestedXP">
+				<div class="petcolumn3">
+					<div class="field">&nbsp;</div>
+					<div class="field">
+						<label for="PetAbility1">Ability:</label>
+						<input type="text" name="attr_PetAbility1">
+					</div>
+					<div class="field">
+						<label for="PetAbility2">Ability:</label>
+						<input type="text" name="attr_PetAbility2">
+					</div>	
+					<div class="field">
+						<label for="PetAbility3">Ability:</label>
+						<input type="text" name="attr_PetAbility3">
+					</div>	
 				</div>
-				<div class="field">
-					<label>Level:</label>
-					<input type="text" name="attr_PetLevel">
-				</div>
-			</div>
-			<div class="petcolumn2">
-				<div class="field">&nbsp;</div>
-				<div class="field">
-					<label>Defense:</label>
-					<input type="text" name="attr_PetDefense">
-				</div>
-				<div class="field">
-					<label>Sum:</label>
-					<input type="text" name="attr_PetSum">
-				</div>
-				<div class="field">
-					<label>Life:</label>
-					<input type="text" name="attr_PetLife">
-				</div>			
-			</div>
-			<div class="petcolumn3">
-				<div class="field">&nbsp;</div>
-				<div class="field">
-					<label for="PetAbility1">Ability:</label>
-					<input type="text" name="attr_PetAbility1">
-				</div>
-				<div class="field">
-					<label for="PetAbility2">Ability:</label>
-					<input type="text" name="attr_PetAbility2">
-				</div>	
-				<div class="field">
-					<label for="PetAbility3">Ability:</label>
-					<input type="text" name="attr_PetAbility3">
-				</div>	
 			</div>
 			<div class="metaphysicalcombat">
 				<div class="field">
@@ -827,63 +925,36 @@
 
 <script type="text/worker">
 
-on("change:skill1 sheet:opened", function() {  
-	getAttrs(["skill1"], function(values) {
-		if (values.skill1.includes("*")) {
-			setAttrs({                            
-				skill1learning: 1
+	const skillNumbers = ["1","2","3","4","5","6"];
+	const learningSuccesses = ["1","2","3","4"];
+
+	skillNumbers.forEach(function(skillNumber) {
+		on("change:skill" + skillNumber + " sheet:opened", function() {  
+		    getAttrs(["skill" + skillNumber], function(skill) {
+				skilltext = skill[Object.keys(skill)[0]]
+			    if (skilltext.includes("*")) {
+			    	setObj = {};
+			    	setObj["skill" + skillNumber + "learning"]="on";
+					setObj["skill" + skillNumber + "successes"]=0
+				    setAttrs(setObj)
+			    } else {
+			    	setObj = {};
+				    setObj["skill" + skillNumber + "learning"]="0";
+					setObj["skill" + skillNumber + "successes"]=0
+				    setAttrs(setObj)
+		    	};
+		    });
+        });
+    });
+
+	skillNumbers.forEach(function(skillNumber) {
+		learningSuccesses.forEach(function(successCount) {
+			on("clicked:skill" + skillNumber + "success" + successCount, function() {
+				setObj = {};
+				setObj["skill" + skillNumber + "successes"]=successCount;
+				setAttrs(setObj)
 			});
-		else {
-			setAttrs({
-				skill1learning: 0
-			});
-		};
+		});
 	});
-});
-
-	  on("change:skill2 sheet:opened", function() {  
-		getAttrs(["skill2"], function(values) {
-	      let learning = values.skill2.includes("*").toString();
-		  setAttrs({                            
-			skill2learning: learning
-		  });
-		});
-	  });
-
-	  on("change:skill3 sheet:opened", function() {  
-		getAttrs(["skill3"], function(values) {
-	      let learning = values.skill3.includes("*").toString();
-		  setAttrs({                            
-			skill3learning: learning
-		  });
-		});
-	  });
-
-	  on("change:skill4 sheet:opened", function() {  
-		getAttrs(["skill4"], function(values) {
-	      let learning = values.skill4.includes("*").toString();
-		  setAttrs({                            
-			skill4learning: learning
-		  });
-		});
-	  });
-
-	  on("change:skill5 sheet:opened", function() {  
-		getAttrs(["skill5"], function(values) {
-	      let learning = values.skill5.includes("*").toString();
-		  setAttrs({                            
-			skill5learning: learning
-		  });
-		});
-	  });
-
-	  on("change:skill6 sheet:opened", function() {  
-		getAttrs(["skill6"], function(values) {
-	      let learning = values.skill6.includes("*").toString();
-		  setAttrs({                            
-			skill6learning: learning
-		  });
-		});
-	  });
 
 </script>

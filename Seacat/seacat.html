@@ -294,26 +294,28 @@
 			</div>
 			<div class="sidebox">
 				<div class="stat">
+					<div class="statlabel">
+						<div class="sheet-sideboxlabel">LIFE</div>
+					</div>
 					<div class="statfields">
 							<input type="number" dir="rtl" name="attr_life" value="0">
 							<span>OF</span>
 							<input type="number" name="attr_life_max" value="0">
 					</div>
-					<div class="statlabel">
-						<div class="sheet-sideboxlabel">LIFE</div>
-					</div>
 				</div>
 				<div class="stat">
+					<div class="statlabel">
+						<div class="sheet-sideboxlabel">HERO DICE</div>
+					</div>
 					<div class="statfields">
 							<input type="number" dir="rtl" name="attr_herodice" value="0">
 							<span>OF</span>
 							<input type="number" name="attr_herodice_max" value="0">
 					</div>
-					<div class="statlabel">
-						<div class="sheet-sideboxlabel">HERO DICE</div>
-					</div>
 				</div>
 			</div>
+		</div>
+		<div class="row3">
 			<div class="gearbox">
 				<div class="gear1">
 					<div class="field">
@@ -404,7 +406,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row3">
+		<div class="row4">
 			<div class="mode1">
 				<div class="field">
 					<label class="labelh1">ATTACK MODES</label>
@@ -485,7 +487,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row4">
+		<div class="row5">
 			<div class="petcolumn1">
 				<div class="field">
 					<label class="labelh1">SIDEKICK/PET</label>
@@ -551,14 +553,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="row5">
+		<div class="row6">
 			<div class="field">
 				<div class="heading">
 					<label class="labelh1">OTHER THINGS</label>
 				</div>
 			</div>
 		</div>
-		<div class="row6">
+		<div class="row7">
 			<div class="notes">
 				<div class="notes1">
 					<textarea name="attr_notes1"></textarea>
@@ -825,14 +827,19 @@
 
 <script type="text/worker">
 
-	on("change:skill1 sheet:opened", function() {  
-		getAttrs(["skill1"], function(values) {
-	      let learning = values.skill1.includes("*").toString();
-		  setAttrs({                            
-			skill1learning: learning
-		  });
-		});
-	  });
+on("change:skill1 sheet:opened", function() {  
+	getAttrs(["skill1"], function(values) {
+		if (values.skill1.includes("*")) {
+			setAttrs({                            
+				skill1learning: 1
+			});
+		else {
+			setAttrs({
+				skill1learning: 0
+			});
+		};
+	});
+});
 
 	  on("change:skill2 sheet:opened", function() {  
 		getAttrs(["skill2"], function(values) {

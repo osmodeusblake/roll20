@@ -48,7 +48,7 @@ label {
 
 .sheet-row3 {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 3fr 1fr;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -60,12 +60,19 @@ label {
 	gap: 0px;
 }
 
-.sheet-row5{
+.sheet-row5 {
 	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-bottom: 24px;
 	gap: 0px;
 }
 
 .sheet-row6 {
+	display: grid;
+	gap: 0px;
+}
+
+.sheet-row7 {
 	display: grid;
 	height: 320px;
 	gap: 0px;
@@ -115,7 +122,6 @@ label.sheet-labelh2 {
 .sheet-statbox {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	margin-bottom: 24px;
 }
 
 .sheet-statfields{
@@ -155,9 +161,11 @@ label.sheet-labelh2 {
 }
 
 .sheet-stat {
+	display: grid;
+	grid-template-rows: 1fr .7fr;
 	margin: 3px;
-	height: min-content;
 	border: 2px solid #ececd5;
+	min-width: 72px;
 }
 
 .sheet-stat button[type=roll], .sheet-stat button[type=action] {
@@ -174,6 +182,7 @@ label.sheet-labelh2 {
 	background-color: transparent;
 	text-align: center;
 	box-shadow:none;
+	font-size: 18px;
 }
 
 .sheet-stat button[type=action]{
@@ -193,9 +202,10 @@ label.sheet-labelh2 {
 	width: 100%;
 	font-size: 24px;
 	border: 0px;
+	color: black;
 }
 
-.sheet-statprof {
+.sheet-statprof .sheet-statlabel {
 	background-color: #ececd5;
 }
 
@@ -207,7 +217,8 @@ label.sheet-labelh2 {
 	width: 100%;
 	font-size: 24px;
 	border: 0px;
-	background-color: #ececd5;
+	color: black;
+	margin-bottom: 4px;
 }
 
 .sheet-statright input[type=number] {
@@ -218,6 +229,7 @@ label.sheet-labelh2 {
 	font-size: 24px;
 	border: 0px;
 	padding-left: 3px;
+	color: black;
 }
 
 .sheet-statleft {
@@ -262,6 +274,7 @@ label.sheet-labelh2 {
 .sheet-field input[type=number]{
 	margin-left: 8px;
 	width: 100%;
+	color: black;
 }
 
 .sheet-field input[type=text] {
@@ -275,17 +288,19 @@ label.sheet-labelh2 {
 
 .sheet-sidebox {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-auto-flow: column;
-	column-gap: 10px;
+	grid-template-rows: 1fr 1fr;
 }
 
 .sheet-sidebox .sheet-stat {
 	display: grid;
-	grid-template-rows: auto 21px;
-	margin-bottom: 12px;
+	grid-template-columns: 2fr 3fr;
+	grid-template-rows: 1fr;
 	width: 100%;
-	background-color: #ececd5;
+	margin: 3px;
+	border: 2px solid #ececd5;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-width: 200px;
 }
 
 .sheet-sidebox .sheet-stat .sheet-statfields {
@@ -297,27 +312,28 @@ label.sheet-labelh2 {
 }
 
 .sheet-sidebox .sheet-stat .sheet-statlabel {
-	width: 100%;
-	height: 100%;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	background-color: #ececd5;
 }
 
 .sheet-sideboxlabel {
 	width: 100%;
 	padding: 0px;
+	padding-top: 3px;
 	margin: 0px;
-	font-size: 15.6px;
+	font-size: 18px;
 	font-family: 'Bebas Neue', sans-serif;
 	border: 0;
 	border-radius: 0px;
 	background-image: none;
 	text-shadow: none;
 	color: black;
-	text-align: center;
-	box-shadow:none;
-	height: 100%;
+	box-shadow: none;
+	padding-left: 10px;
+	background-color: #ececd5;
 }
 
 .sheet-sidebox .sheet-stat .sheet-statfields span {
@@ -336,7 +352,7 @@ label.sheet-labelh2 {
 	width: 100%;
 	font-size: 24px;
 	border: 0px;
-	background-color: #ececd5;
+	color: black;
 }
 
 .sheet-herodice {

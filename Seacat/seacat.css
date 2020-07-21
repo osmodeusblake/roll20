@@ -35,6 +35,7 @@ label {
 .sheet-row1 {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr;
+	column-gap: 12px;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -42,6 +43,7 @@ label {
 .sheet-row2 {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	column-gap: 12px;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -49,6 +51,7 @@ label {
 .sheet-row3 {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	column-gap: 12px;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -56,6 +59,7 @@ label {
 .sheet-row4 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	column-gap: 12px;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -63,6 +67,7 @@ label {
 .sheet-row5 {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	column-gap: 12px;
 	margin-bottom: 24px;
 	gap: 0px;
 }
@@ -70,12 +75,14 @@ label {
 .sheet-row6 {
 	display: grid;
 	gap: 0px;
+	column-gap: 12px;
 }
 
 .sheet-row7 {
 	display: grid;
 	height: 320px;
 	gap: 0px;
+	column-gap: 12px;
 }
 .sheet-labelh1 {
 	width: 25%;
@@ -289,8 +296,9 @@ label.sheet-labelh2 {
 /* Configure the button styling. This example makes it look like a radio. */
 .sheet-learningtrack {
 	display: none;
-	height: 14px;
-	width: 14px;
+	height: 10px;
+	width: 10px;
+	margin-left: 2px;
 }
 
 input.sheet-showlearningtrack {
@@ -305,6 +313,7 @@ input.sheet-showlearningtrack[type=checkbox]:checked ~ .sheet-learningtrack {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
+	row-gap: 0px;
 }
 
 input.sheet-showlearningtrack[type=checkbox]:checked ~ button.sheet-clearlearningtrack {
@@ -326,11 +335,11 @@ button.sheet-learningsuccess {
 	justify-content: center;
 	align-items: center;
 	outline: none;
-	margin-right: 1px;
-	margin-bottom: 1px;
+	margin-right: -1px;
+	margin-bottom: -1px;
 	box-shadow: none;
 	background-image: none;
-	border: 1px solid #A2A062;
+	border: 1px solid #bbb871;
   }
 
 button.sheet-learningsuccess:focus {
@@ -338,9 +347,9 @@ button.sheet-learningsuccess:focus {
 }
   
 button.sheet-learningsuccess > span {
-	width: 6px;
-	height: 6px;
-	background-color: #A2A062;
+	width: 4px;
+	height: 4px;
+	background-color: #bbb871;
 }
   
   /* Hide the "checked" section of the radio if the hidden attribute value is greater than the button value */
@@ -452,7 +461,11 @@ button.sheet-learningsuccess > span {
 .sheet-petbox {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	background-color: #ececd5;
+	border: 2px solid #ececd5;
+	padding: 10px;
+	padding-bottom: 15px;
+	margin-right: 10px;
+	margin-left: -12px;
 }
 
 .sheet-notes {

@@ -5,12 +5,6 @@ input, textarea {
 	border-radius: 0%;
 }
 
-/* input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    margin: 0;
-} */
-
 button {
 	padding: 0px;
 }
@@ -21,69 +15,67 @@ label {
 	font-weight: normal;
 }
 
-.sheet-gridcontainer {
+div {
 	font-family: "Alegreya Sans", sans-serif;
 	font-size: 12px;
+}
+
+.sheet-herosheet, .sheet-caravansheet {
+	display: none;
+}
+
+.sheet-sheettoggle[value="hero"] ~ .sheet-herosheet,
+.sheet-sheettoggle[value="caravan"] ~ .sheet-caravansheet {
+	display: block;
+}
+
+.sheet-gridcontainer {
 	white-space: nowrap;
     height: 100%;
     margin: 0;
 	display: grid;
-	grid-template-rows: min-content min-content min-content min-content min-content auto;
+	grid-template-rows: min-content min-content min-content min-content auto;
 	margin: 16px;
 }
 
-.sheet-row1 {
+.sheet-caravangridcontainer {
+	white-space: nowrap;
+    height: 100%;
+    margin: 0;
 	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-rows: min-content auto;
+	margin: 16px;
+}
+
+.sheet-row1, .sheet-row2, .sheet-row3, .sheet-row4, .sheet-row5, .sheet-row6, .sheet-row7 {
+	display: grid;
 	column-gap: 12px;
-	margin-bottom: 24px;
 	gap: 0px;
+	margin-bottom: 24px;
+}
+
+.sheet-row1 {
+	grid-template-columns: 2fr 1fr 1fr;
 }
 
 .sheet-row2 {
-	display: grid;
 	grid-template-columns: 3fr 1fr;
-	column-gap: 12px;
-	margin-bottom: 24px;
-	gap: 0px;
 }
 
 .sheet-row3 {
-	display: grid;
 	grid-template-columns: 3fr 1fr;
-	column-gap: 12px;
-	margin-bottom: 24px;
-	gap: 0px;
 }
 
 .sheet-row4 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	column-gap: 12px;
-	margin-bottom: 24px;
-	gap: 0px;
-}
-
-.sheet-row5 {
-	display: grid;
 	grid-template-columns: 3fr 1fr;
 	column-gap: 12px;
-	margin-bottom: 24px;
-	gap: 0px;
-}
-
-.sheet-row6 {
-	display: grid;
-	gap: 0px;
-	column-gap: 12px;
+	margin-bottom: 12px;
 }
 
 .sheet-row7 {
-	display: grid;
 	height: 320px;
-	gap: 0px;
-	column-gap: 12px;
 }
+
 .sheet-labelh1 {
 	width: 25%;
 }
@@ -118,11 +110,21 @@ label.sheet-labelh2 {
 	margin-right: 13px;
 }
 
+.sheet-attackmodes {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 23px;
+}
+
+.sheet-mode1, .sheet-mode2, .sheet-mode3 {
+	row-gap: 2px;
+}
+
 .sheet-info1, .sheet-info2, .sheet-skills, .sheet-abilities {
 	row-gap: 2px;
 }
 
-.sheet-abilities, .sheet-sidebox, .sheet-physicalcombat, .sheet-metaphysicalcombat {
+.sheet-abilities, .sheet-sidebox {
 	display: grid;
 }
 
@@ -293,7 +295,6 @@ label.sheet-labelh2 {
 	width: 100%
 }
 
-/* Configure the button styling. This example makes it look like a radio. */
 .sheet-learningtrack {
 	display: none;
 	height: 10px;
@@ -349,10 +350,9 @@ button.sheet-learningsuccess:focus {
 button.sheet-learningsuccess > span {
 	width: 4px;
 	height: 4px;
-	background-color: #bbb871;
+	background-color: black;
 }
   
-  /* Hide the "checked" section of the radio if the hidden attribute value is greater than the button value */
   input.sheet-learningsuccess[value="0"] ~ button > span.sheet-checked {
 	display: none;
   }
@@ -383,7 +383,6 @@ button.sheet-learningsuccess > span {
 	border: 2px solid #ececd5;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	min-width: 200px;
 }
 
 .sheet-sidebox .sheet-stat .sheet-statfields {
@@ -402,20 +401,21 @@ button.sheet-learningsuccess > span {
 	background-color: #ececd5;
 }
 
-.sheet-sideboxlabel {
+.sheet-sideboxlabel, button[type=roll].sheet-sidebutton {
 	width: 100%;
-	padding: 0px;
+	padding-left: 4px;
 	padding-top: 3px;
 	margin: 0px;
-	font-size: 18px;
+	font-size: 14px;
+	text-align: left;
 	font-family: 'Bebas Neue', sans-serif;
+	font-weight: bold;
 	border: 0;
 	border-radius: 0px;
 	background-image: none;
 	text-shadow: none;
 	color: black;
 	box-shadow: none;
-	padding-left: 10px;
 	background-color: #ececd5;
 }
 
@@ -433,7 +433,27 @@ button.sheet-learningsuccess > span {
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
-	font-size: 24px;
+	font-size: 18px;
+	border: 0px;
+	color: black;
+}
+
+.sheet-physicalcombat, .sheet-metaphysicalcombat {
+	display: grid;
+	margin-bottom: 28px;
+}
+
+.sheet-physicalcombat .sheet-stat, .sheet-metaphysicalcombat .sheet-stat {
+	margin-bottom: 3px;
+}
+
+.sheet-physicalcombat input[type=number], .sheet-metaphysicalcombat input[type=number] {
+	text-align: center;
+	padding: 0px;
+	padding-right: 16px;
+	margin: 0px;
+	width: 100%;
+	font-size: 14px;
 	border: 0px;
 	color: black;
 }
@@ -461,11 +481,10 @@ button.sheet-learningsuccess > span {
 .sheet-petbox {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	border: 2px solid #ececd5;
-	padding: 10px;
-	padding-bottom: 15px;
-	margin-right: 10px;
-	margin-left: -12px;
+}
+
+.sheet-petcolumn1, .sheet-petcolumn2, .sheet-petcolumn3 {
+	row-gap: 2px;
 }
 
 .sheet-notes {
@@ -478,7 +497,119 @@ button.sheet-learningsuccess > span {
 	width: 97%;
 	resize: none;
 	border: 1px solid #ccc;
+}
 
+/* Caravan Sheet Styles */
+
+/* .sheet-caravansheet * {
+	border: 1px solid grey;
+} */
+
+.sheet-caravangridcontainer {
+	display: grid;
+	grid-template-rows: min-content min-content auto;
+}
+
+.sheet-caravangridcontainer input{
+	border: 0px;
+	border-bottom: 2px dotted #ccc;
+	height: 18px;
+}
+
+.sheet-caravanrow1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 12px;
+	margin-bottom: 24px;
+}
+
+.sheet-caravanleftcol, .sheet-caravanmidcol, .sheet-caravanrightcol {
+	display: grid;
+	row-gap: 12px;
+}
+
+.sheet-caravanrow2 {
+	display: grid;
+	grid-template-rows: min-content auto;
+	column-gap: 12px;
+	margin-bottom: 24px;
+}
+
+.sheet-caravanrow3 {
+	display: grid;
+	grid-template-rows: min-content auto;
+}
+
+.sheet-caravansheet input {
+	width: 100%;
+}
+
+.sheet-caravanasset, .sheet-caravanassetheadings {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sheet-caravanhero, .sheet-caravanheroheadings {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sheet-caravanhelper, .sheet-caravanhelperheadings {
+	display: grid;
+	grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+}
+
+.sheet-caravanassetheadings, .sheet-caravanhelperheadings, .sheet-caravanheroheadings {
+	border-bottom: 1px solid black;
+	height: min-content;
+	margin-bottom: 6px;
+}
+
+.sheet-caravangridcontainer label.sheet-labelh2 {
+	margin-bottom: 0px;
+}
+
+.sheet-caravanspeed {
+	display: grid;
+	grid-template-rows: min-content min-content auto;
+}
+
+.sheet-caravantagheadings {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 6px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-caravantags {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 6px;
+}
+
+.sheet-caravanmounts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 12px;
+}
+
+.sheet-caravanmount {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.sheet-caravannotes {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 12px;
+	height: 320px;
+}
+
+.sheet-caravannotes textarea {
+	height: 97%;
+	width: 97%;
+	resize: none;
+	border: 1px solid #ccc;
 }
 
 /* Roll Template Styles */

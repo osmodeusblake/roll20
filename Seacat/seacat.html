@@ -1,79 +1,6 @@
-<input type="hidden" name="attr_statroll" value="&{template:seacat} {{name=D20 Stat Roll}} {{stat=[[@{statquery}]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{strengthstat=[[@{strength}]]}} {{endurancestat=[[@{endurance}]]}} {{agilitystat=[[@{agility}]]}} {{charismastat=[[@{charisma}]]}} {{aurastat=[[@{aura}]]}} {{thoughtstat=[[@{thought}]]}} {{unskilleddisadvantageroll=[[2d20kl1]]}} {{unskilledroll=[[(@{advantagequery})d20kh1]]}} {{skilleddisadvantageroll=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}}">
+<input type='hidden' class='sheet-sheettoggle' name='attr_sheetTab' value='hero'>
 
-<input type="hidden" name="attr_strengthroll" value="&{template:seacat} {{name=D20 Strength Roll}} {{stat=[[100]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{strengthstat=[[@{strength}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{strength}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{strength}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{strength}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{strength}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_enduranceroll" value="&{template:seacat} {{name=D20 Endurance Roll}} {{stat=[[200]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{endurancestat=[[@{endurance}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{endurance}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{endurance}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{endurance}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{endurance}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_agilityroll" value="&{template:seacat} {{name=D20 Agility Roll}} {{stat=[[300]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{agilitystat=[[@{agility}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{agility}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{agility}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{agility}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{agility}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_charismaroll" value="&{template:seacat} {{name=D20 Charisma Roll}} {{stat=[[400]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{charismastat=[[@{charisma}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{charisma}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{charisma}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{charisma}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{charisma}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_auraroll" value="&{template:seacat} {{name=D20 Aura Roll}} {{stat=[[500]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{aurastat=[[@{aura}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{aura}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{aura}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{aura}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{aura}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_thoughtroll" value="&{template:seacat} {{name=D20 Thought Roll}} {{stat=[[600]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{thoughtstat=[[@{thought}]]}} {{unskilleddisadvantageroll=[[2d20kl1+@{thought}]]}} {{unskilledroll=[[(@{advantagequery})d20kh1+@{thought}]]}} {{skilleddisadvantageroll=[[2d20kl1+@{thought}+(@{ranksquery}*@{proficiency})]]}} {{skilledroll=[[(@{advantagequery}+1)d20kh1+@{thought}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_statquery" value="?{Stat|Strength,100|Endurance,200|Agility,300|Charisma,400|Aura,500|Thought,600}">
-<input type="hidden" name="attr_advantagequery" value="?{Advantages|0|1|2|3|4|5|6|7|-1}">
-<input type="hidden" name="attr_ranksquery" value="?{Skill ranks|Unskilled (0),-1|Skilled (1),1|Expert (2+),2}">
-
-<rolltemplate class="sheet-rolltemplate-seacat">
-	<br> 
-	<div>
-		<table>
-			<tr>
-				{{#rollTotal() stat 100}}
-				<caption>Strength Roll</caption>
-				{{/rollTotal() stat 100}}
-				{{#rollTotal() stat 200}}
-				<caption>Endurance Roll</caption>
-				{{/rollTotal() stat 200}}
-				{{#rollTotal() stat 300}}
-				<caption>Agility Roll</caption>
-				{{/rollTotal() stat 300}}
-			</tr>
-
-			<tr><td>Boons & Banes:</td><td>{{advantage}}</td></tr>
-
-			{{#rollLess() ranks 0}}
-				<tr><td>Skill Level:</td><td>Unskilled</td></tr>
-				{{#rollLess() advantage 1}}
-				<tr><td>Result:</td><td>{{unskilleddisadvantageroll}}</td></tr>
-				{{/rollLess() advantage 1}}
-				{{#rollGreater() advantage 0}}
-				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
-				{{/rollGreater() advantage 0}}
-			{{/rollLess() ranks 0}}
-
-			{{#rollTotal() ranks 1}}
-				<tr><td>Skill Level:</td><td>Unskilled</td></tr>
-				{{#rollLess() advantage 0}}
-				<tr></tr><td>Result:</td><td>{{skilleddisadvantageroll}}</td></tr>
-				{{/rollLess() advantage 0}}
-				{{#rollTotal() advantage 0}}
-				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
-				{{/rollTotal() advantage 0}}
-				{{#rollGreater() advantage 0}}
-				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
-				{{/rollGreater() advantage 0}}
-			{{/rollTotal() ranks 1}}
-
-			{{#rollTotal() ranks 2}}
-				<tr><td>Skill Level:</td><td>Unskilled</td></tr>
-				{{#rollLess() advantage 0}}
-				<tr></tr><td>Result:</td><td>{{skilleddisadvantageroll}}</td></tr>
-				{{/rollLess() advantage 0}}
-				{{#rollTotal() advantage 0}}
-				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
-				{{/rollTotal() advantage 0}}
-				{{#rollGreater() advantage 0}}
-				<tr><td>Result:</td><td>{{unskilledroll}}</td></tr>
-				{{/rollGreater() advantage 0}}
-			{{/rollTotal() ranks 2}}
-		</table>
-	</div>
-</rolltemplate>
-
-<div></div>
+<div class="herosheet">
 	<div class="gridcontainer">
 		<div class="row1">
 			<div class="info">
@@ -503,151 +430,194 @@
 			</div>
 		</div>
 		<div class="row4">
-			<div class="mode1">
-				<div class="field">
-					<label class="labelh1">ATTACK MODES</label>
+			<div class="row4left">
+				<div class="attackmodes">
+					<div class="mode1">
+						<div class="field">
+							<label class="labelh1">ATTACK MODES</label>
+						</div>
+						<div class="field">
+								<label class="labelh2">Method:</label>
+							<input type="text" name="attr_Method1">
+						</div>
+						<div class="field">
+							<label for="Damage1">Damage:</label>
+							<input type="text" name="attr_Damage1">
+						</div>
+						<div class="field">
+							<label for="Range1">Range:</label>
+							<input type="text" name="attr_Range1">
+						</div>
+						<div class="field">
+							<label for="Tags1">Tags:</label>
+							<input type="text" name="attr_Tags1">
+						</div>
+					</div>
+					<div class="mode2">
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label class="labelh2">Method:</label>
+							<input type="text" name="attr_Method2">
+						</div>
+						<div class="field">
+							<label for="Damage1">Damage:</label>
+							<input type="text" name="attr_Damage2">
+						</div>
+						<div class="field">
+							<label for="Range1">Range:</label>
+							<input type="text" name="attr_Range2">
+						</div>
+						<div class="field">
+							<label for="Tags1">Tags:</label>
+							<input type="text" name="attr_Tags2">
+						</div>
+					</div>
+					<div class="mode3">
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label class="labelh2">Method:</label>
+							<input type="text" name="attr_Method3">
+						</div>
+						<div class="field">
+							<label for="Damage1">Damage:</label>
+							<input type="text" name="attr_Damage3">
+						</div>
+						<div class="field">
+							<label for="Range1">Range:</label>
+							<input type="text" name="attr_Range3">
+						</div>
+						<div class="field">
+							<label for="Tags1">Tags:</label>
+							<input type="text" name="attr_Tags3">
+						</div>
+					</div>
 				</div>
-				<div class="field">
-						<label class="labelh2">Method:</label>
-					<input type="text" name="attr_Method1">
-				</div>
-				<div class="field">
-					<label for="Damage1">Damage:</label>
-					<input type="text" name="attr_Damage1">
-				</div>
-				<div class="field">
-					<label for="Range1">Range:</label>
-					<input type="text" name="attr_Range1">
-				</div>
-				<div class="field">
-					<label for="Tags1">Tags:</label>
-					<input type="text" name="attr_Tags1">
+				<div class="petbox">
+					<div class="petcolumn1">
+						<div class="field">
+							<label class="labelh1">SIDEKICK/PET</label>
+						</div>
+						<div class="field">
+							<label>Name:</label>
+							<input type="text" name="attr_PetName">
+						</div>
+						<div class="field">
+							<label>Invested XP:</label>
+							<input type="text" name="attr_PetInvestedXP">
+						</div>
+						<div class="field">
+							<label>Level:</label>
+							<input type="text" name="attr_PetLevel">
+						</div>
+					</div>
+					<div class="petcolumn2">
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label>Defense:</label>
+							<input type="text" name="attr_PetDefense">
+						</div>
+						<div class="field">
+							<label>Sum:</label>
+							<input type="text" name="attr_PetSum">
+						</div>
+						<div class="field">
+							<label>Life:</label>
+							<input type="text" name="attr_PetLife">
+						</div>
+					</div>
+					<div class="petcolumn3">
+						<div class="field">&nbsp;</div>
+						<div class="field">
+							<label for="PetAbility1">Ability:</label>
+							<input type="text" name="attr_PetAbility1">
+						</div>
+						<div class="field">
+							<label for="PetAbility2">Ability:</label>
+							<input type="text" name="attr_PetAbility2">
+						</div>	
+						<div class="field">
+							<label for="PetAbility3">Ability:</label>
+							<input type="text" name="attr_PetAbility3">
+						</div>	
+					</div>
 				</div>
 			</div>
-			<div class="mode2">
-				<div class="field">&nbsp;</div>
-				<div class="field">
-					<label class="labelh2">Method:</label>
-					<input type="text" name="attr_Method2">
-				</div>
-				<div class="field">
-					<label for="Damage1">Damage:</label>
-					<input type="text" name="attr_Damage2">
-				</div>
-				<div class="field">
-					<label for="Range1">Range:</label>
-					<input type="text" name="attr_Range2">
-				</div>
-				<div class="field">
-					<label for="Tags1">Tags:</label>
-					<input type="text" name="attr_Tags2">
-				</div>
-			</div>
-			<div class="mode3">
-				<div class="field">&nbsp;</div>
-				<div class="field">
-					<label class="labelh2">Method:</label>
-					<input type="text" name="attr_Method3">
-				</div>
-				<div class="field">
-					<label for="Damage1">Damage:</label>
-					<input type="text" name="attr_Damage3">
-				</div>
-				<div class="field">
-					<label for="Range1">Range:</label>
-					<input type="text" name="attr_Range3">
-				</div>
-				<div class="field">
-					<label for="Tags1">Tags:</label>
-					<input type="text" name="attr_Tags3">
-				</div>
-			</div>
-			<div class="physicalcombat">
-				<div class="field">
-					<label class="labelh1">COMBAT</label>
-				</div>
-				<div class="field">
-					<label class="labelh2">Physical</label>
-				</div>
-				<div class="field">
-					<label>Defense:</label>
-					<input type="text" name="attr_defense">
-				</div>
-				<div class="field">
-					<label>Range Attack:</label>
-					<input type="text" name="attr_rangeattack">
-				</div>
-				<div class="field">
-					<label>Melee Attack:</label>
-					<input type="text" name="attr_meleeattack">
-				</div>
-			</div>
-		</div>
-		<div class="row5">
-			<div class="petbox">
-				<div class="petcolumn1">
-					<div class="field">
-						<label class="labelh1">SIDEKICK/PET</label>
+			<div class="row4right">
+				<div class="sidebox">
+					<div class="physicalcombat">
+						<div class="field">
+							<label class="labelh1">PHYSICAL COMBAT</label>
+						</div>
+						<div class="stat">
+							<div class="statlabel">
+								<div class="sheet-sideboxlabel">ARMOUR</div>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_armour" value="0">
+							</div>
+						</div>
+						<div class="stat">
+							<div class="statlabel">
+								<div class="sheet-sideboxlabel">DEFENSE</div>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_defense" value="0">
+							</div>
+						</div>
+						<!-- <div class="stat">
+							<div class="statlabel">
+								<button class="sheet-blankrollbutton sidebutton" type="roll" value="@{statroll}" name="rollrangeattack">RANGE ATTACK</button>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_rangeattack" value="0">
+							</div>
+						</div>
+						<div class="stat">
+							<div class="statlabel">
+								<button class="sheet-blankrollbutton sidebutton" type="roll" value="@{statroll}" name="rollmeleeattack">MELEE ATTACK</button>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_meleeattack" value="0">
+							</div>
+						</div> -->
 					</div>
-					<div class="field">
-						<label>Name:</label>
-						<input type="text" name="attr_PetName">
+					<div class="metaphysicalcombat">
+						<div class="field">
+							<label class="labelh1">METAPHYSICAL COMBAT</label>
+						</div>
+						<div class="stat">
+							<div class="statlabel">
+								<div class="sheet-sideboxlabel">PSYCHIC ARMOUR</div>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_psychicarmour" value="0">
+							</div>
+						</div>
+						<div class="stat">
+							<div class="statlabel">
+								<div class="sheet-sideboxlabel">WARDING</div>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_warding" value="0">
+							</div>
+						</div>
+						<!-- <div class="stat">
+							<div class="statlabel">
+								<button class="sheet-blankrollbutton sidebutton" type="roll" value="@{statroll}" name="rollmagicattack">MAGIC ATTACK</button>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_magicattack" value="0">
+							</div>
+						</div>
+						<div class="stat">
+							<div class="statlabel">
+								<button class="sheet-blankrollbutton sidebutton" type="roll" value="@{statroll}" name="rollsocialcattack">SOCIAL ATTACK</button>
+							</div>
+							<div class="statfields">
+								<input type="number" dir="rtl" name="attr_socialattack" value="0">
+							</div>
+						</div> -->
 					</div>
-					<div class="field">
-						<label>Invested XP:</label>
-						<input type="text" name="attr_PetInvestedXP">
-					</div>
-					<div class="field">
-						<label>Level:</label>
-						<input type="text" name="attr_PetLevel">
-					</div>
-				</div>
-				<div class="petcolumn2">
-					<div class="field">&nbsp;</div>
-					<div class="field">
-						<label>Defense:</label>
-						<input type="text" name="attr_PetDefense">
-					</div>
-					<div class="field">
-						<label>Sum:</label>
-						<input type="text" name="attr_PetSum">
-					</div>
-					<div class="field">
-						<label>Life:</label>
-						<input type="text" name="attr_PetLife">
-					</div>			
-				</div>
-				<div class="petcolumn3">
-					<div class="field">&nbsp;</div>
-					<div class="field">
-						<label for="PetAbility1">Ability:</label>
-						<input type="text" name="attr_PetAbility1">
-					</div>
-					<div class="field">
-						<label for="PetAbility2">Ability:</label>
-						<input type="text" name="attr_PetAbility2">
-					</div>	
-					<div class="field">
-						<label for="PetAbility3">Ability:</label>
-						<input type="text" name="attr_PetAbility3">
-					</div>	
-				</div>
-			</div>
-			<div class="metaphysicalcombat">
-				<div class="field">
-					<label class="labelh2">Metaphysical</label>
-				</div>
-				<div class="field">
-					<label>Warding:</label>
-					<input type="text" name="attr_warding">
-				</div>
-				<div class="field">
-					<label>Magic Attack:</label>
-					<input type="text" name="attr_magicattack">
-				</div>
-				<div class="field">
-					<label>Social Attack:</label>
-					<input type="text" name="attr_socialattack">
 				</div>
 			</div>
 		</div>
@@ -677,28 +647,324 @@
 	</div>
 </div>
 
+<div class="caravansheet">
+	<div class="caravangridcontainer">
+		<div class="caravanrow1">
+			<div class="caravanleftcol">
+				<div class="caravaninfobox">
+					<div class="field">
+						<label class="labelh1">CARAVAN</label>
+					</div>
+					<div class="field">
+						<label>Company Name:</label>
+						<input type="text" name="attr_character_name" tabindex=1>
+					</div>
+					<div class="field">
+						<label>This Caravan:</label>
+						<input type="text" name="attr_thiscaravan" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Financier:</label>
+						<input type="text" name="attr_caravanfinancier" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Debt (Due):</label>
+						<input type="text" name="attr_caravandebt" tabindex=1>
+						(<input type="text" name="attr_caravandebtdue" tabindex=1>)
+					</div>
+				</div>
+				<div class="caravanmoney">
+					<div class="field">
+						<label class="labelh1">MONEY</label>
+					</div>
+					<div class="field">
+						<label>Ready Cash:</label>
+						<input type="text" name="attr_caravancash" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Wages:</label>
+						<input type="text" name="attr_caravanwages" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Supplies cost:</label>
+						<input type="text" name="attr_caravansuppliescost" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Fuel cost:</label>
+						<input type="text" name="attr_caravanfuelcost" tabindex=1>
+					</div>
+				</div>
+				<div class="caravanassets">
+					<div class="field">
+						<label class="labelh1">ASSETS</label>
+					</div>
+					<div class="caravanassetheadings">
+						<label class="labelh2">Name</label>
+						<label class="labelh2">Capital</label>
+						<label class="labelh2">Risk</label>
+					</div>
+					<fieldset class="repeating_caravanassets">
+						<div class="caravanasset">
+							<input type="text" name="attr_caravanassetname">
+							<input type="text" name="attr_caravanassetcapital">
+							<input type="text" name="attr_caravanassetrisk">
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="caravanmidcol">
+				<div class="caravanheroes">
+					<div class="field">
+						<label class="labelh1">HEROES</label>
+					</div>
+					<div class="caravanheroheadings">
+						<label class="labelh2">Name</label>
+						<label class="labelh2">Level</label>
+						<label class="labelh2">Role</label>
+					</div>
+					<fieldset class="repeating_caravanheroes">
+						<div class="caravanhero">
+							<input type="text" name="attr_caravanheroname">
+							<input type="text" name="attr_caravanherolevel">
+							<input type="text" name="attr_caravanherorole">
+						</div>
+					</fieldset>
+				</div>
+				<div class="caravanhelpers">
+					<div class="field">
+						<label class="labelh1">HELPERS</label>
+					</div>
+					<div class="caravanhelperheadings">
+						<label class="labelh2">Name</label>
+						<label class="labelh2">Level</label>
+						<label class="labelh2">Bonus</label>
+						<label class="labelh2">Skill</label>
+					</div>
+					<fieldset class="repeating_caravanhelpers">
+						<div class="caravanhelper">
+							<input type="text" name="attr_caravanhelpername">
+							<input type="text" name="attr_caravanhelperlevel">
+							<input type="text" name="attr_caravanhelperbonus">
+							<input type="text" name="attr_caravanhelperskill">
+						</div>
+					</fieldset>
+				</div>
+				<div class="caravansize">
+					<div class="field">
+						<label class="labelh1">SIZE:</label>
+						<input type="text" name="attr_caravansize" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Mouths:</label>
+						<input type="text" name="attr_caravanmouthcount" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Mounts:</label>
+						<input type="text" name="attr_caravanmountcount" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Motors:</label>
+						<input type="text" name="attr_caravanmotorcount" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Magicals:</label>
+						<input type="text" name="attr_caravanmagicalcount" tabindex=1>
+					</div>
+				</div>
+			</div>
+			<div class="caravanrightcol">
+				<div class="caravanpower">
+					<div class="field">
+						<label class="labelh1">POWER:</label>
+						<input type="text" name="attr_caravanpower_max" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Remaining:</label>
+						<input type="text" name="attr_caravanpower" tabindex=1>
+					</div>
+				</div>
+				<div class="caravanspeed">
+					<div class="field">
+						<label class="labelh1">SPEED:</label>
+						<input type="text" name="attr_caravanspeed" tabindex=1>
+					</div>
+					<div class="caravantagheadings">
+						<label class="labelh2">Slow Tags</label>
+						<label class="labelh2">Fast Tags</label>
+					</div>
+					<div class="caravantags">
+						<div class="caravanslowtags">
+							<fieldset class="repeating_caravanslowtag">
+								<div class="caravanslowtag">
+									<input type="text" name="attr_caravanslowtags">
+								</div>
+							</fieldset>
+						</div>
+						<div class="caravanfasttags">
+							<fieldset class="repeating_caravanfasttags">
+								<div class="caravanfasttag">
+									<input type="text" name="attr_caravanfasttag">
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+				<div class="caravantime">
+					<div class="field">
+						<label class="labelh1">TIME</label>
+					</div>
+					<div class="field">
+						<label>Day Tally:</label>
+						<input type="text" name="attr_caravandaytally" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Weeks:</label>
+						<input type="text" name="attr_caravanweeks" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Season:</label>
+						<input type="text" name="attr_caravanseason" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Year of the:</label>
+						<input type="text" name="attr_caravanyearofthe" tabindex=1>
+					</div>
+					<div class="field">
+						<label>Years elapsed:</label>
+						<input type="text" name="attr_caravanyearselapsed" tabindex=1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="caravanrow2">
+			<div class="field">
+				<label class="labelh1">MOUNTS, MOTORS, PORTERS</label>
+			</div>
+			<div class="caravanmounts">
+				<div class="carvanmountscol1">
+					<fieldset class="repeating_caravanmountsleft">
+						<div class="caravanmount">
+							<div class="field">
+								<label>Name:</label>
+								<input type="text" name="attr_caravanmountleftname" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Level:</label>
+								<input type="text" name="attr_caravanmountleftlevel" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Tags:</label>
+								<input type="text" name="attr_caravanmountlefttags" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Total cost/week:</label>
+								<input type="text" name="attr_caravanmountleftcost" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Value:</label>
+								<input type="text" name="attr_caravanmountleftvalue" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Number:</label>
+								<input type="text" name="attr_caravanmountleftnumber" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Capacity (sacks):</label>
+								<input type="text" name="attr_caravanmountleftcapacity" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Cargo:</label>
+								<input type="textarea" name="attr_caravanmountleftcargo" tabindex=1>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="carvanmountscol2">
+					<fieldset class="repeating_caravanmountsright">
+						<div class="caravanmount">
+							<div class="field">
+								<label>Name:</label>
+								<input type="text" name="attr_caravanmountrightname" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Level:</label>
+								<input type="text" name="attr_caravanmountrightlevel" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Tags:</label>
+								<input type="text" name="attr_caravanmountrighttags" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Total cost/week:</label>
+								<input type="text" name="attr_caravanmountrightcost" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Value:</label>
+								<input type="text" name="attr_caravanmountrightvalue" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Number:</label>
+								<input type="text" name="attr_caravanmountrightnumber" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Capacity (sacks):</label>
+								<input type="text" name="attr_caravanmountrightcapacity" tabindex=1>
+							</div>
+							<div class="field">
+								<label>Cargo:</label>
+								<input type="textarea" name="attr_caravanmountrightcargo" tabindex=1>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		<div class="caravanrow3">
+			<div class="field">
+				<label class="labelh1">NOTES</label>
+			</div>
+			<div class="caravannotes">
+				<div class="caravannotes1">
+					<textarea name="attr_caravannotes1"></textarea>
+				</div>
+				<div class="caravannotes2">
+					<textarea name="attr_caravannotes2"></textarea>
+				</div>
+				<div class="caravannotes3">
+					<textarea name="attr_caravannotes3"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+    <button type="action" name="act_hero">HERO</button>
+    <button type="action" name="act_caravan">CARAVAN</button>
+</div>
+
 <!-- Macros -->
+<div>
+	<input type="hidden" name="attr_statroll" value="&{template:seacat} {{name=D20 Stat Roll}} {{stat=[[@{statquery}]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{strengthstat=[[@{strength}]]}} {{endurancestat=[[@{endurance}]]}} {{agilitystat=[[@{agility}]]}} {{charismastat=[[@{charisma}]]}} {{aurastat=[[@{aura}]]}} {{thoughtstat=[[@{thought}]]}} {{strbane=[[2d20kl1]]}} {{str=[[(@{advantagequery})d20kh1]]}} {{strprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{strprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{endbane=[[2d20kl1]]}} {{end=[[(@{advantagequery})d20kh1]]}} {{endprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{endprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{agibane=[[2d20kl1]]}} {{agi=[[(@{advantagequery})d20kh1]]}} {{agiprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{agiprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{chabane=[[2d20kl1]]}} {{cha=[[(@{advantagequery})d20kh1]]}} {{chaprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{chaprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{aurbane=[[2d20kl1]]}} {{aur=[[(@{advantagequery})d20kh1]]}} {{aurprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{aurprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{thobane=[[2d20kl1]]}} {{tho=[[(@{advantagequery})d20kh1]]}} {{thoprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{thoprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}}">
 
-<input type="hidden" name="attr_statroll" value="&{template:seacat} {{name=D20 Stat Roll}} {{stat=[[@{statquery}]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{strengthstat=[[@{strength}]]}} {{endurancestat=[[@{endurance}]]}} {{agilitystat=[[@{agility}]]}} {{charismastat=[[@{charisma}]]}} {{aurastat=[[@{aura}]]}} {{thoughtstat=[[@{thought}]]}} {{strbane=[[2d20kl1]]}} {{str=[[(@{advantagequery})d20kh1]]}} {{strprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{strprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{endbane=[[2d20kl1]]}} {{end=[[(@{advantagequery})d20kh1]]}} {{endprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{endprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{agibane=[[2d20kl1]]}} {{agi=[[(@{advantagequery})d20kh1]]}} {{agiprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{agiprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{chabane=[[2d20kl1]]}} {{cha=[[(@{advantagequery})d20kh1]]}} {{chaprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{chaprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{aurbane=[[2d20kl1]]}} {{aur=[[(@{advantagequery})d20kh1]]}} {{aurprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{aurprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}} {{thobane=[[2d20kl1]]}} {{tho=[[(@{advantagequery})d20kh1]]}} {{thoprofbane=[[2d20kl1+@{ranksquery}*@{proficiency}]]}} {{thoprof=[[(@{advantagequery}+1)d20kh1+@{ranksquery}*@{proficiency}]]}}">
+	<input type="hidden" name="attr_strengthroll" value="&{template:seacat} {{name=D20 Strength Roll}} {{stat=[[100]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{strengthstat=[[@{strength}]]}} {{strbane=[[2d20kl1+@{strength}]]}} {{str=[[(@{advantagequery})d20kh1+@{strength}]]}} {{strprofbane=[[2d20kl1+@{strength}+(@{ranksquery}*@{proficiency})]]}} {{strprof=[[(@{advantagequery}+1)d20kh1+@{strength}+(@{ranksquery}*@{proficiency})]]}}">
 
-<input type="hidden" name="attr_strengthroll" value="&{template:seacat} {{name=D20 Strength Roll}} {{stat=[[100]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{strengthstat=[[@{strength}]]}} {{strbane=[[2d20kl1+@{strength}]]}} {{str=[[(@{advantagequery})d20kh1+@{strength}]]}} {{strprofbane=[[2d20kl1+@{strength}+(@{ranksquery}*@{proficiency})]]}} {{strprof=[[(@{advantagequery}+1)d20kh1+@{strength}+(@{ranksquery}*@{proficiency})]]}}">
+	<input type="hidden" name="attr_enduranceroll" value="&{template:seacat} {{name=D20 Endurance Roll}} {{stat=[[200]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{endurancestat=[[@{endurance}]]}} {{endbane=[[2d20kl1+@{endurance}]]}} {{end=[[(@{advantagequery})d20kh1+@{endurance}]]}} {{endprofbane=[[2d20kl1+@{endurance}+(@{ranksquery}*@{proficiency})]]}} {{endprof=[[(@{advantagequery}+1)d20kh1+@{endurance}+(@{ranksquery}*@{proficiency})]]}}">
 
-<input type="hidden" name="attr_enduranceroll" value="&{template:seacat} {{name=D20 Endurance Roll}} {{stat=[[200]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{endurancestat=[[@{endurance}]]}} {{endbane=[[2d20kl1+@{endurance}]]}} {{end=[[(@{advantagequery})d20kh1+@{endurance}]]}} {{endprofbane=[[2d20kl1+@{endurance}+(@{ranksquery}*@{proficiency})]]}} {{endprof=[[(@{advantagequery}+1)d20kh1+@{endurance}+(@{ranksquery}*@{proficiency})]]}}">
+	<input type="hidden" name="attr_agilityroll" value="&{template:seacat} {{name=D20 Agility Roll}} {{stat=[[300]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{agilitystat=[[@{agility}]]}} {{agibane=[[2d20kl1+@{agility}]]}} {{agi=[[(@{advantagequery})d20kh1+@{agility}]]}} {{agiprofbane=[[2d20kl1+@{agility}+(@{ranksquery}*@{proficiency})]]}} {{agiprof=[[(@{advantagequery}+1)d20kh1+@{agility}+(@{ranksquery}*@{proficiency})]]}}">
 
-<input type="hidden" name="attr_agilityroll" value="&{template:seacat} {{name=D20 Agility Roll}} {{stat=[[300]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{agilitystat=[[@{agility}]]}} {{agibane=[[2d20kl1+@{agility}]]}} {{agi=[[(@{advantagequery})d20kh1+@{agility}]]}} {{agiprofbane=[[2d20kl1+@{agility}+(@{ranksquery}*@{proficiency})]]}} {{agiprof=[[(@{advantagequery}+1)d20kh1+@{agility}+(@{ranksquery}*@{proficiency})]]}}">
+	<input type="hidden" name="attr_charismaroll" value="&{template:seacat} {{name=D20 Charisma Roll}} {{stat=[[400]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{charismastat=[[@{charisma}]]}} {{chabane=[[2d20kl1+@{charisma}]]}} {{cha=[[(@{advantagequery})d20kh1+@{charisma}]]}} {{chaprofbane=[[2d20kl1+@{charisma}+(@{ranksquery}*@{proficiency})]]}} {{chaprof=[[(@{advantagequery}+1)d20kh1+@{charisma}+(@{ranksquery}*@{proficiency})]]}}">
 
-<input type="hidden" name="attr_charismaroll" value="&{template:seacat} {{name=D20 Charisma Roll}} {{stat=[[400]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{charismastat=[[@{charisma}]]}} {{chabane=[[2d20kl1+@{charisma}]]}} {{cha=[[(@{advantagequery})d20kh1+@{charisma}]]}} {{chaprofbane=[[2d20kl1+@{charisma}+(@{ranksquery}*@{proficiency})]]}} {{chaprof=[[(@{advantagequery}+1)d20kh1+@{charisma}+(@{ranksquery}*@{proficiency})]]}}">
+	<input type="hidden" name="attr_auraroll" value="&{template:seacat} {{name=D20 Aura Roll}} {{stat=[[500]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{aurastat=[[@{aura}]]}} {{aurbane=[[2d20kl1+@{aura}]]}} {{aur=[[(@{advantagequery})d20kh1+@{aura}]]}} {{aurprofbane=[[2d20kl1+@{aura}+(@{ranksquery}*@{proficiency})]]}} {{aurprof=[[(@{advantagequery}+1)d20kh1+@{aura}+(@{ranksquery}*@{proficiency})]]}}">
 
-<input type="hidden" name="attr_auraroll" value="&{template:seacat} {{name=D20 Aura Roll}} {{stat=[[500]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{proficiency=[[@{proficiency}]]}} {{aurastat=[[@{aura}]]}} {{aurbane=[[2d20kl1+@{aura}]]}} {{aur=[[(@{advantagequery})d20kh1+@{aura}]]}} {{aurprofbane=[[2d20kl1+@{aura}+(@{ranksquery}*@{proficiency})]]}} {{aurprof=[[(@{advantagequery}+1)d20kh1+@{aura}+(@{ranksquery}*@{proficiency})]]}}">
+	<input type="hidden" name="attr_thoughtroll" value="&{template:seacat} {{name=D20 Thought Roll}} {{stat=[[600]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{thoughtstat=[[@{thought}]]}} {{thobane=[[2d20kl1+@{thought}]]}} {{tho=[[(@{advantagequery})d20kh1+@{thought}]]}} {{thoprofbane=[[2d20kl1+@{thought}+(@{ranksquery}*@{proficiency})]]}} {{thoprof=[[(@{advantagequery}+1)d20kh1+@{thought}+(@{ranksquery}*@{proficiency})]]}}">
 
-<input type="hidden" name="attr_thoughtroll" value="&{template:seacat} {{name=D20 Thought Roll}} {{stat=[[600]]}} {{ranks=[[@{ranksquery}]]}} {{advantage=[[@{advantagequery}]]}} {{thoughtstat=[[@{thought}]]}} {{thobane=[[2d20kl1+@{thought}]]}} {{tho=[[(@{advantagequery})d20kh1+@{thought}]]}} {{thoprofbane=[[2d20kl1+@{thought}+(@{ranksquery}*@{proficiency})]]}} {{thoprof=[[(@{advantagequery}+1)d20kh1+@{thought}+(@{ranksquery}*@{proficiency})]]}}">
-
-<input type="hidden" name="attr_statquery" value="?{Stat|Strength,100|Endurance,200|Agility,300|Charisma,400|Aura,500|Thought,600}">
-<input type="hidden" name="attr_advantagequery" value="?{Advantages|0|1|2|3|4|5|6|7|-1}">
-<input type="hidden" name="attr_ranksquery" value="?{Skill ranks|Unskilled (0),-1|Skilled (1),1|Expert (2+),2}">
+	<input type="hidden" name="attr_statquery" value="?{Stat|Strength,100|Endurance,200|Agility,300|Charisma,400|Aura,500|Thought,600}">
+	<input type="hidden" name="attr_advantagequery" value="?{Advantages|0|1|2|3|4|5|6|7|-1}">
+	<input type="hidden" name="attr_ranksquery" value="?{Skill ranks|Unskilled (0),-1|Skilled (1),1|Expert (2+),2}">
+</div>
 
 <!-- Roll Templates -->
-
 <rolltemplate class="sheet-rolltemplate-seacat">
 	<div class="sheet-rolltemplate-seacat-container">
 		<div class="sheet-rolltemplate-seacat-left">
@@ -922,7 +1188,6 @@
 </rolltemplate>
 
 <!-- Sheet Workers -->
-
 <script type="text/worker">
 
 	const skillNumbers = ["1","2","3","4","5","6"];
@@ -955,5 +1220,36 @@
 			});
 		});
 	});
+
+	on("change:armour change:agility sheet:opened", function() {  
+		getAttrs(["armour","agility"], function(values) {
+		  let armour = parseInt(values.armour)||0;
+		  let agility = parseInt(values.agility)||0;
+		  let defense = 10 + armour + agility;
+		  setAttrs({                            
+			"defense": defense
+		  });
+		});
+	  });
+
+	on("change:psychicarmour change:thought sheet:opened", function() {  
+	getAttrs(["psychicarmour","thought"], function(values) {
+		let psychicarmour = parseInt(values.psychicarmour)||0;
+		let thought = parseInt(values.thought)||0;
+		let warding = 10 + psychicarmour + thought;
+		setAttrs({                            
+		"warding": warding
+		});
+	});
+	});
+
+	const buttonlist = ["hero","caravan"];
+   	buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
 
 </script>
